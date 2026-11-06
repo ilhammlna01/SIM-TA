@@ -17,6 +17,8 @@
     "scan:sql": "node scripts/scan_sql_columns.mjs",
     "scan:konektivitas": "node scripts/audit_frontend_connectivity.mjs",
     "bersihkan:orphan": "node scripts/cleanup_orphans.mjs",
+    "bersihkan:proses": "node scripts/reset_academic_processes.mjs",
+    "bersihkan:riwayat": "node scripts/clean_activity_logs.mjs",
     "test:security": "node tests/security.test.js",
     "test:uat": "node tests/uat_workflow.test.js",
     "test:regression": "node tests/regression_bugfix.test.js",
