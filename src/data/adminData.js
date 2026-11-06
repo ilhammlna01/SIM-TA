@@ -92,7 +92,7 @@ export const INITIAL_VERIFIKASI_BERKAS = [
   {
     id: 'berkas-s2-01',
     mhsId: 'mhs-s2-1',
-    nim: '220221100089',
+    nim: '230221600018',
     namaMahasiswa: 'Rahmat Hidayat, S.E.',
     jenjang: 'S2',
     programStudi: 'S-2 Magister Manajemen',
@@ -115,7 +115,7 @@ export const INITIAL_VERIFIKASI_BERKAS = [
   {
     id: 'berkas-d3-01',
     mhsId: 'mhs-d3-1',
-    nim: '230201100021',
+    nim: '230201100055',
     namaMahasiswa: 'Siti Nurhaliza',
     jenjang: 'D3',
     programStudi: 'D-3 Entrepreneurship',
@@ -241,7 +241,7 @@ export const INITIAL_RUANGAN_UJIAN = [
   {
     id: 'plot-03',
     namaMahasiswa: 'Rahmat Hidayat, S.E.',
-    nim: '220221100089',
+    nim: '230221600018',
     jenjang: 'S2',
     jenisUjian: 'Seminar Hasil Tesis',
     ruangId: 'ruang-5',

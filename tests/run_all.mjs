@@ -74,7 +74,11 @@ async function waitForServer(timeoutMs = 30000) {
 function runSuite(file) {
   return new Promise((resolve) => {
     console.log(`\n>>> Menjalankan ${file}`);
-    const child = spawn(process.execPath, [file], { cwd: ROOT, stdio: 'inherit' });
+    const child = spawn(process.execPath, [file], {
+      cwd: ROOT,
+      stdio: 'inherit',
+      env: { ...process.env, ALLOW_TEST_CREDENTIALS: '1' }
+    });
     child.on('exit', (code) => resolve(code ?? 1));
   });
 }
@@ -85,7 +89,11 @@ async function main() {
 
   if (!alreadyUp) {
     console.log('[runner] Server API belum aktif — menjalankan server sementara...');
-    serverProc = spawn(process.execPath, ['server/index.js'], { cwd: ROOT, stdio: 'ignore' });
+    serverProc = spawn(process.execPath, ['server/index.js'], {
+      cwd: ROOT,
+      stdio: 'ignore',
+      env: { ...process.env, ALLOW_TEST_CREDENTIALS: '1' }
+    });
     const up = await waitForServer();
     if (!up) {
       console.error('[runner] GAGAL: server tidak siap dalam batas waktu.');

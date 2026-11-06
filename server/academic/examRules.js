@@ -32,6 +32,7 @@ export const JENIS_UJIAN_TAHAP = {
   'sidang tugas akhir': 'S1-T4',
   'ujian tugas akhir': 'S1-T4',
   'sidang diseminasi & portofolio bisnis takk': 'S1-T4',
+  'ujian sidang komprehensif (takk)': 'S1-T4',
 
   // ---- Program Magister (S2) ----
   'sidang tesis magister': 'S2-T4',
@@ -66,6 +67,8 @@ export const JENIS_UJIAN_TAHAP_JENJANG = {
     'sidang tugas akhir': 'S1-T4',
     'ujian tugas akhir': 'S1-T4',
     'sidang skripsi': 'S1-T4',
+    'sidang diseminasi & portofolio bisnis takk': 'S1-T4',
+    'ujian sidang komprehensif (takk)': 'S1-T4',
     'seminar proposal': 'S1-T2',
     'seminar proposal skripsi': 'S1-T2'
   },
@@ -112,6 +115,7 @@ export const JENIS_UJIAN_RUBRIK = {
   'sidang tugas akhir d-iii': 'D3_S1',
   'sidang tugas akhir d3': 'D3_S1',
   'sidang diseminasi & portofolio bisnis takk': 'D3_S1',
+  'ujian sidang komprehensif (takk)': 'D3_S1',
 
   // ---- S2: Rubrik Sidang Tesis Magister ----
   'sidang tesis magister': 'S2',

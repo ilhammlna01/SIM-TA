@@ -22,6 +22,8 @@ import { INITIAL_APPROVAL_QUEUE } from '../../src/data/pembimbingData.js';
 
 export function seedInitialData() {
   console.log('[Database Seeder] Memeriksa data awal database...');
+  db.exec('PRAGMA foreign_keys = OFF');
+  try {
 
   // 1. Seed Users
   //
@@ -340,9 +342,9 @@ export function seedInitialData() {
     `);
     const defaultFiles = [
       { id: 'f-1', filename: 'Proposal_Skripsi_Final_Sempro_Dinda.pdf', originalName: 'Proposal_Skripsi_Final_Sempro_Dinda.pdf', category: 'naskah', uploaderId: 'usr-02', uploaderNim: '210211100142', uploaderRole: 'mahasiswa' },
-      { id: 'f-2', filename: 'Draf_Lengkap_Tesis_Magister_Rahmat.pdf', originalName: 'Draf_Lengkap_Tesis_Magister_Rahmat.pdf', category: 'naskah', uploaderId: 'usr-mhs-230211200015', uploaderNim: '230211200015', uploaderRole: 'mahasiswa' },
-      { id: 'f-3', filename: 'Draf_Disertasi_Kelayakan_Bambang.pdf', originalName: 'Draf_Disertasi_Kelayakan_Bambang.pdf', category: 'naskah', uploaderId: 'usr-mhs-210211300001', uploaderNim: '210211300001', uploaderRole: 'mahasiswa' },
-      { id: 'f-4', filename: 'naskah_rahasia_bambang_s3.pdf', originalName: 'naskah_rahasia_bambang_s3.pdf', category: 'naskah', uploaderId: 'usr-mhs-210211300001', uploaderNim: '210211300001', uploaderRole: 'mahasiswa' },
+      { id: 'f-2', filename: 'Draf_Lengkap_Tesis_Magister_Rahmat.pdf', originalName: 'Draf_Lengkap_Tesis_Magister_Rahmat.pdf', category: 'naskah', uploaderId: 'usr-02-s2', uploaderNim: '230221600018', uploaderRole: 'mahasiswa' },
+      { id: 'f-3', filename: 'Draf_Disertasi_Kelayakan_Bambang.pdf', originalName: 'Draf_Disertasi_Kelayakan_Bambang.pdf', category: 'naskah', uploaderId: 'usr-01', uploaderNim: '220231600004', uploaderRole: 'mahasiswa' },
+      { id: 'f-4', filename: 'naskah_rahasia_bambang_s3.pdf', originalName: 'naskah_rahasia_bambang_s3.pdf', category: 'naskah', uploaderId: 'usr-01', uploaderNim: '220231600004', uploaderRole: 'mahasiswa' },
       { id: 'f-5', filename: 'skripsi_andi.pdf', originalName: 'skripsi_andi.pdf', category: 'naskah', uploaderId: 'usr-mhs-210211100099', uploaderNim: '210211100099', uploaderRole: 'mahasiswa' }
     ];
     for (const f of defaultFiles) {
@@ -409,5 +411,28 @@ export function seedInitialData() {
     console.warn('[Database Seeder] Warning approval-queue seeding:', approvalErr.message);
   }
 
+  // 14. Progresi tahap awal untuk mahasiswa yang sudah terjadwal Sempro pada data bawaan (Dinda Ayu Larasati).
+  // Tahap S1-T1 (Pengajuan Topik) dinyatakan 'Selesai' agar gerbang pendaftaran Sempro (S1-T2) terbuka.
+  try {
+    const dindaTa = ensureTaForNim('210211100142');
+    if (dindaTa) {
+      db.prepare(`
+        UPDATE tahap_status
+        SET status = 'Selesai', updated_at = CURRENT_TIMESTAMP
+        WHERE tugas_akhir_id = ? AND kode_tahap = 'S1-T1'
+      `).run(dindaTa.id);
+      db.prepare(`
+        UPDATE tugas_akhir
+        SET tahap_aktif_kode = 'S1-T2'
+        WHERE id = ?
+      `).run(dindaTa.id);
+    }
+  } catch (dindaErr) {
+    console.warn('[Database Seeder] Warning initial stage progression for Dinda:', dindaErr.message);
+  }
+
   console.log('[Database Seeder] Data awal SQLite berhasil terverifikasi/diseed!');
+  } finally {
+    db.exec('PRAGMA foreign_keys = ON');
+  }
 }

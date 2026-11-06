@@ -16,6 +16,8 @@ jobs:
     env:
       NODE_ENV: development
       PORT: 5001
+      ALLOW_TEST_CREDENTIALS: "1"
+      JWT_SECRET: "ci-test-jwt-secret-utm-feb-2026-super-long-secure-key"
       # CI memakai secret acak non-produksi agar server boleh start tanpa JWT_SECRET produksi.
       CORS_ORIGIN: http://localhost:5001
       EMAIL_ALLOWED_DOMAINS: trunojoyo.ac.id

@@ -323,6 +323,17 @@ export const INITIAL_USER_ACCOUNTS = [
     lastLogin: 'Kemarin, 09:45'
   },
   {
+    id: 'usr-mhs-210211100099',
+    nomorInduk: '210211100099',
+    nama: 'Andi Pratama',
+    email: 'andi.pratama@student.trunojoyo.ac.id',
+    role: 'mahasiswa',
+    jenjang: 'S1',
+    prodi: 'S-1 Manajemen',
+    status: 'Aktif',
+    lastLogin: 'Belum pernah login'
+  },
+  {
     id: 'usr-03',
     nomorInduk: '196201081987032001',
     nama: 'Dr. Dra. Hj. Iriani Ismail, M.M.',

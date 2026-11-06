@@ -258,7 +258,7 @@ export const InAppNotificationService = {
   markAllAsRead(role = 'semua') {
     try {
       if (role && role !== 'semua') {
-        db.prepare('UPDATE notifications SET is_read = 1 WHERE role = ? OR role = "semua"').run(role);
+        db.prepare("UPDATE notifications SET is_read = 1 WHERE role = ? OR role = 'semua'").run(role);
       } else {
         db.prepare('UPDATE notifications SET is_read = 1').run();
       }

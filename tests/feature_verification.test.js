@@ -484,6 +484,25 @@ async function main() {
     ok(setujuiNaskah.status === 200, 'Pembimbing menyetujui naskah (memenuhi butir checklist)', `status=${setujuiNaskah.status}`);
   }
 
+  // Syarat tahap akhir (S1-T4) mewajibkan publikasi terverifikasi
+  const upPub = await call('POST', '/akademik/publikasi', {
+    token: T.mahasiswa,
+    body: {
+      judul: 'Uji verifikasi fitur - artikel publikasi ilmiah',
+      jurnal: 'Jurnal Manajemen FEB UTM',
+      tahun: '2026',
+      tautan: 'https://journal.trunojoyo.ac.id/feb/article/1',
+      buktiUrl: '/api/storage/files/publikasi/bukti.pdf'
+    }
+  });
+  const idPubUji = upPub.json?.data?.id;
+  if (idPubUji) {
+    await call('PUT', `/akademik/publikasi/${idPubUji}/verifikasi`, {
+      token: T.koorprodi,
+      body: { statusVerifikasi: 'Terverifikasi', catatan: 'Publikasi diverifikasi untuk tahap akhir' }
+    });
+  }
+
   const STAGES = ['S1-T1', 'S1-T2', 'S1-T3', 'S1-T4'];
   for (const kode of STAGES) {
     const ajukan = await call('POST', `/akademik/tugas-akhir/${TA_ID}/tahap/${kode}/ajukan`, {
@@ -564,6 +583,7 @@ async function main() {
     const info = db
       .prepare("DELETE FROM bimbingan_log WHERE catatan LIKE 'Uji verifikasi fitur%' OR topik LIKE 'Uji verifikasi fitur%'")
       .run();
+    db.prepare("DELETE FROM publikasi WHERE judul LIKE 'Uji verifikasi fitur%'").run();
     console.log(`  (pembersihan) log bimbingan uji dihapus: ${info.changes}`);
     db.close();
   } catch (err) {
