@@ -1,0 +1,1457 @@
+{
+  "mahasiswa": {
+    "Dashboard": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Lanjutkan Tahap Ini",
+        "T1 Proposal Tugas Akhir",
+        "T2 Seminar Proposal",
+        "T3 Penelitian",
+        "T4 Bimbingan",
+        "T5 Sidang",
+        "T6 Revisi",
+        "T7 Pengesahan",
+        "Lihat Logbook",
+        "Semua Syarat",
+        "Matriks Lengkap",
+        "Pusat Dokumen"
+      ],
+      "inputs": []
+    },
+    "Detail Tugas Akhir": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unduh Lembar Pengesahan (PDF)",
+        "Ajukan Perubahan Judul"
+      ],
+      "inputs": []
+    },
+    "Tahapan": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Lihat Persyaratan Tahap Ini",
+        "Buka Rincian & Jadwal Ujian"
+      ],
+      "inputs": []
+    },
+    "Persyaratan": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unggah Berkas Persyaratan",
+        "Perbarui",
+        "Unggah"
+      ],
+      "inputs": []
+    },
+    "Bimbingan": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unduh Kartu Bimbingan (PDF)",
+        "Catat Sesi Bimbingan",
+        "Scan_Kartu_Bimbingan_Sempro_Dinda.jpg",
+        "Scan_Lembar_Kendali_TatapMuka_Bab4.jpg"
+      ],
+      "inputs": []
+    },
+    "Naskah": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unduh Naskah Terkini",
+        "Unggah Versi Baru",
+        "Dossier Naskah Aktif",
+        "Uji Plagiasi Turnitin",
+        "Riwayat Versi Draf 3",
+        "Buka Rincian Turnitin",
+        "Unduh SK"
+      ],
+      "inputs": []
+    },
+    "Ujian": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unduh Jadwal Resmi (PDF)",
+        "Pendaftaran Ujian"
+      ],
+      "inputs": []
+    },
+    "Revisi": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unduh Pengesahan Revisi (PDF)",
+        "Tindak Lanjuti"
+      ],
+      "inputs": []
+    },
+    "Portofolio": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Unduh Rekap Portofolio (PDF)",
+        "Unggah Portofolio Baru",
+        "Daftar Portofolio (0)",
+        "Pedoman & Rubrik Poin TAKK FEB UTM",
+        "Ketentuan Publikasi Ilmiah (Sarjana (S-1))",
+        "Unggah Portofolio Sekarang"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    },
+    "Dokumen": {
+      "buttons": [
+        "2",
+        "D Dinda Ayu Larasati MAHASISWA",
+        "Dashboard",
+        "Detail Tugas Akhir",
+        "Tahapan",
+        "Persyaratan",
+        "Bimbingan",
+        "Naskah",
+        "Ujian",
+        "Revisi",
+        "Portofolio",
+        "Dokumen",
+        "Cetak Lembar Pengesahan",
+        "Cetak Kartu Bimbingan",
+        "Unggah Naskah / Berkas",
+        "Semua",
+        "Bukti Plagiasi",
+        "Publikasi",
+        "Berita Acara"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    }
+  },
+  "dosen": {
+    "Dashboard": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Review Naskah Masuk (1)",
+        "Buka Antrean Approval (2)",
+        "Tindak Lanjuti Approval",
+        "MAHASISWA BIMBINGAN 2 S3: 2 | S2: 1 | S1: 2 | D3: 1",
+        "NASKAH PERLU REVIEW 1 Termasuk draf proposal S3",
+        "ANTREAN PERSETUJUAN 2 Maju Ujian & Validasi Nilai",
+        "JADWAL UJIAN TERDEKAT 0 Belum ada agenda ujian",
+        "Lihat Semua (2)",
+        "Periksa & Putuskan",
+        "Daftar Naskah (2)",
+        "Buka Review",
+        "Buka Direktori Lengkap",
+        "Buka",
+        "Semua Jadwal",
+        "Rincian"
+      ],
+      "inputs": []
+    },
+    "Mahasiswa Bimbingan 2": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Catat Konsultasi Baru",
+        "Semua Jenjang",
+        "S3",
+        "S2",
+        "S1",
+        "D3",
+        "Detail"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Bimbingan": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Catat Sesi Bimbingan Baru",
+        "Scan_Kartu_Bimbingan_Bambang_Sesi1.jpg"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Naskah Masuk 1": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Buka Lembar Persetujuan (Approval)",
+        "Semua Jenjang",
+        "S3",
+        "S2",
+        "S1",
+        "D3",
+        "Review"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Review Naskah": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Daftar Naskah",
+        "Kembali ke Daftar Naskah",
+        "Lanjut ke Persetujuan (Approval)",
+        "Tambah Catatan Telaah",
+        "Mode PDF",
+        "Teks Bab",
+        "Status Terbuka"
+      ],
+      "inputs": []
+    },
+    "Persetujuan 2": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Tolak Permohonan",
+        "Kembalikan untuk Perbaikan",
+        "Setujui Maju Ujian"
+      ],
+      "inputs": []
+    },
+    "Pemantauan Revisi": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Jadwal Ujian 1": {
+      "buttons": [
+        "2",
+        "D Dr. Dra. Hj. Iriani Ismail, M.M. DOSEN",
+        "Dashboard",
+        "Mahasiswa Bimbingan 2",
+        "Bimbingan",
+        "Naskah Masuk 1",
+        "Review Naskah",
+        "Persetujuan 2",
+        "Pemantauan Revisi",
+        "Jadwal Ujian 1",
+        "SIM-TA FEB UTM",
+        "Lihat Sidang"
+      ],
+      "inputs": []
+    }
+  },
+  "koorprodi": {
+    "Dashboard": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Penetapan Dewan Penguji",
+        "Verifikasi Pengajuan (3)",
+        "Verifikasi Berkas (3)",
+        "Penerbitan Dokumen Kolektif",
+        "Plotting Dosen Pembimbing",
+        "Penetapan Dewan Penguji (4)",
+        "TOTAL MAHASISWA TA 6 Mahasiswa S1: 2 • S2: 1 • S3: 2 • D3: 1",
+        "PENGAJUAN MASUK 3 Menunggu Verifikasi prasyarat Pedoman 2026",
+        "SIDANG & UJIAN 3 Sidang Sempro, Skripsi, Tesis, Kelayakan S3",
+        "MONITORING REVISI 3 Mahasiswa Batas waktu 30 hari kalender",
+        "Buka Generator Dokumen Kolektif",
+        "Semua Program Studi (4)",
+        "S-1 Manajemen (2)",
+        "S-2 Magister (1)",
+        "S-3 Doktor (1)",
+        "D-III Diploma (0)",
+        "Buka Halaman Verifikasi",
+        "Verifikasi Berkas",
+        "Lihat Detail",
+        "Buka Agenda Ujian (4)",
+        "Semua Revisi",
+        "Buka Arsip (4)"
+      ],
+      "inputs": []
+    },
+    "Daftar Mahasiswa 6": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Ekspor Data (XLSX)",
+        "Semua Jenjang",
+        "S1",
+        "S2",
+        "S3",
+        "D3",
+        "Detail",
+        "1"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        },
+        {
+          "tag": "select",
+          "id": "ui-page-size-select",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    },
+    "Pengajuan Masuk 3": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Semua Jenjang",
+        "S1",
+        "S2",
+        "S3",
+        "D3",
+        "Semua Status (4)",
+        "Menunggu Verifikasi (3)",
+        "Disetujui (1)",
+        "Ditolak (0)",
+        "Tolak Pengajuan",
+        "Sahkan & Alokasikan Penguji"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Plotting Pembimbing": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Alokasikan Pembimbing Baru",
+        "Semua",
+        "Pemasaran",
+        "Sumber Daya Manusia",
+        "Keuangan",
+        "Plotting"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Dewan Penguji": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Tetapkan Tim Penguji Baru",
+        "Semua Jenjang",
+        "S3",
+        "S2",
+        "S1"
+      ],
+      "inputs": []
+    },
+    "Penerbitan Dokumen Kolektif Kolektif": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Input PIN Otorisasi Dekan",
+        "Unduh Master Bundle PDF",
+        "Proses Penerbitan (12 Berkas)",
+        "Pilih Semua (12)",
+        "Kosongkan Pilihan",
+        "1. SK Dekan Kolektif (Master)",
+        "2. Berita Acara Ujian (12 Berkas)",
+        "3. Surat Tugas Kolektif Dewan Penguji",
+        "Unduh Master SK Dekan Kolektif (PDF)",
+        "Semua",
+        "S1",
+        "S2",
+        "S3",
+        "D3"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "select-all-mhs",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "checkbox"
+        }
+      ]
+    },
+    "Jadwal Ujian & Sidang 4": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Jadwalkan Sidang Baru",
+        "Semua Jenjang",
+        "S-1 Manajemen",
+        "S-2 Magister",
+        "S-3 Doktor",
+        "Rincian & BA"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        }
+      ]
+    },
+    "Matriks Persyaratan": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Semua Jenjang",
+        "S-1 Sarjana",
+        "S-2 Magister",
+        "S-3 Doktor"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Pemantauan Revisi": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Semua Jenjang",
+        "S-1 Sarjana",
+        "S-2 Magister",
+        "S-3 Doktor",
+        "Matriks"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Arsip Dokumen Prodi": {
+      "buttons": [
+        "2",
+        "D Dr. Hj. Siti Aminah, S.E., M.Si. KOORPRODI",
+        "Dashboard",
+        "Daftar Mahasiswa 6",
+        "Pengajuan Masuk 3",
+        "Plotting Pembimbing",
+        "Dewan Penguji",
+        "Penerbitan Dokumen Kolektif Kolektif",
+        "Jadwal Ujian & Sidang 4",
+        "Matriks Persyaratan",
+        "Pemantauan Revisi",
+        "Arsip Dokumen Prodi",
+        "SIM-TA FEB UTM",
+        "Arsipkan Dokumen Baru",
+        "Semua Dokumen",
+        "Surat Keputusan Dekan",
+        "Berita Acara Sidang"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    }
+  },
+  "penguji": {
+    "Dashboard": {
+      "buttons": [
+        "2",
+        "D Dr. Faidal, S.E., M.M. PENGUJI",
+        "Dashboard",
+        "Daftar Ujian",
+        "Naskah Ujian",
+        "Form Penilaian",
+        "Catatan / Koreksi",
+        "Verifikasi Revisi",
+        "SIM-TA FEB UTM",
+        "Input Nilai Sidang (0)",
+        "Approval Revisi (0)",
+        "Lihat Semua 0 Sidang",
+        "SIDANG DITUGASKAN 0 Sidang Terdiri dari D3, S1 (TAKT & TAKK), S2, dan S3",
+        "PERLU DINILAI 0 Formulir Buka rubrik & simpan nilai",
+        "NASKAH & TURNITIN 0 Naskah PDF Seluruh naskah lolos ambang Turnitin",
+        "APPROVAL REVISI 0 Menunggu 0 total catatan lembar koreksi",
+        "Semua Jenjang (0)",
+        "Diploma D-III (0)",
+        "Sarjana S-1 (0)",
+        "Magister S-2 (0)",
+        "Doktor S-3 (0)",
+        "Buka Tabel Lengkap",
+        "Semua Berkas",
+        "Catatan",
+        "Semua (0)"
+      ],
+      "inputs": []
+    },
+    "Daftar Ujian": {
+      "buttons": [
+        "2",
+        "D Dr. Faidal, S.E., M.M. PENGUJI",
+        "Dashboard",
+        "Daftar Ujian",
+        "Naskah Ujian",
+        "Form Penilaian",
+        "Catatan / Koreksi",
+        "Verifikasi Revisi",
+        "SIM-TA FEB UTM",
+        "Semua Jenjang",
+        "D3",
+        "S1",
+        "S2",
+        "S3",
+        "Semua Status",
+        "Perlu Dinilai",
+        "Selesai Dinilai"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        }
+      ]
+    },
+    "Naskah Ujian": {
+      "buttons": [
+        "2",
+        "D Dr. Faidal, S.E., M.M. PENGUJI",
+        "Dashboard",
+        "Daftar Ujian",
+        "Naskah Ujian",
+        "Form Penilaian",
+        "Catatan / Koreksi",
+        "Verifikasi Revisi",
+        "SIM-TA FEB UTM"
+      ],
+      "inputs": []
+    },
+    "Form Penilaian": {
+      "buttons": [
+        "2",
+        "D Dr. Faidal, S.E., M.M. PENGUJI",
+        "Dashboard",
+        "Daftar Ujian",
+        "Naskah Ujian",
+        "Form Penilaian",
+        "Catatan / Koreksi",
+        "Verifikasi Revisi",
+        "SIM-TA FEB UTM"
+      ],
+      "inputs": []
+    },
+    "Catatan / Koreksi": {
+      "buttons": [
+        "2",
+        "D Dr. Faidal, S.E., M.M. PENGUJI",
+        "Dashboard",
+        "Daftar Ujian",
+        "Naskah Ujian",
+        "Form Penilaian",
+        "Catatan / Koreksi",
+        "Verifikasi Revisi",
+        "SIM-TA FEB UTM",
+        "Buka Naskah Ujian",
+        "Tambah Catatan Koreksi"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "search"
+        },
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    },
+    "Verifikasi Revisi": {
+      "buttons": [
+        "2",
+        "D Dr. Faidal, S.E., M.M. PENGUJI",
+        "Dashboard",
+        "Daftar Ujian",
+        "Naskah Ujian",
+        "Form Penilaian",
+        "Catatan / Koreksi",
+        "Verifikasi Revisi",
+        "SIM-TA FEB UTM",
+        "Baca Naskah Ujian",
+        "Semua (0)",
+        "Menunggu Verifikasi (0)",
+        "Telah Disetujui (0)"
+      ],
+      "inputs": []
+    }
+  },
+  "admin": {
+    "Dashboard": {
+      "buttons": [
+        "2",
+        "A Ahmad Fauzi, S.Kom., M.T. ADMIN",
+        "Dashboard",
+        "Jadwal Tahapan 13",
+        "Otomasi Dokumen Auto",
+        "Verifikasi Berkas 30",
+        "Penerbitan SK",
+        "Alokasi Ruang Sidang",
+        "SIM-TA FEB UTM",
+        "Jadwal Tahapan (13)",
+        "Verifikasi Berkas (30)",
+        "Lihat Semua",
+        "Periksa Berkas",
+        "Kelola Ruangan"
+      ],
+      "inputs": []
+    },
+    "Jadwal Tahapan 13": {
+      "buttons": [
+        "2",
+        "A Ahmad Fauzi, S.Kom., M.T. ADMIN",
+        "Dashboard",
+        "Jadwal Tahapan 13",
+        "Otomasi Dokumen Auto",
+        "Verifikasi Berkas 30",
+        "Penerbitan SK",
+        "Alokasi Ruang Sidang",
+        "Broadcast Pengumuman",
+        "Buat Jadwal Tahapan",
+        "Semua Jenjang",
+        "D3",
+        "S1",
+        "S2",
+        "S3",
+        "Buka Periode",
+        "Jadwalkan",
+        "Siarkan Pengumuman",
+        "Edit",
+        "Tutup Periode"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        }
+      ]
+    },
+    "Otomasi Dokumen Auto": {
+      "buttons": [
+        "2",
+        "A Ahmad Fauzi, S.Kom., M.T. ADMIN",
+        "Dashboard",
+        "Jadwal Tahapan 13",
+        "Otomasi Dokumen Auto",
+        "Verifikasi Berkas 30",
+        "Penerbitan SK",
+        "Alokasi Ruang Sidang",
+        "Sinkron Arsip",
+        "Paket Ujian Kilat",
+        "1-Click Exam Package Generator",
+        "Generator Dokumen Mandiri",
+        "Arsip Dokumen Resmi Terbit (50)",
+        "Format & Nomor Urut Dinas (5)",
+        "Generate Paket Dokumen Lengkap (3 Berkas Sekaligus)",
+        "Muat Data Ilham Maulana (S-1)"
+      ],
+      "inputs": [
+        {
+          "tag": "select",
+          "id": "",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "textarea",
+          "id": "",
+          "name": "",
+          "type": "textarea"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        }
+      ]
+    },
+    "Verifikasi Berkas 30": {
+      "buttons": [
+        "2",
+        "A Ahmad Fauzi, S.Kom., M.T. ADMIN",
+        "Dashboard",
+        "Jadwal Tahapan 13",
+        "Otomasi Dokumen Auto",
+        "Verifikasi Berkas 30",
+        "Penerbitan SK",
+        "Alokasi Ruang Sidang",
+        "Periksa Berkas"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "verifikasi-search-input",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "select",
+          "id": "verifikasi-filter-jenjang",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "select",
+          "id": "verifikasi-filter-status",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    },
+    "Penerbitan SK": {
+      "buttons": [
+        "2",
+        "A Ahmad Fauzi, S.Kom., M.T. ADMIN",
+        "Dashboard",
+        "Jadwal Tahapan 13",
+        "Otomasi Dokumen Auto",
+        "Verifikasi Berkas 30",
+        "Penerbitan SK",
+        "Alokasi Ruang Sidang",
+        "Buat SK Baru",
+        "Lihat SK",
+        "PDF"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "sk-search-input",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "select",
+          "id": "sk-filter-jenis",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "select",
+          "id": "sk-filter-jenjang",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    },
+    "Alokasi Ruang Sidang": {
+      "buttons": [
+        "2",
+        "A Ahmad Fauzi, S.Kom., M.T. ADMIN",
+        "Dashboard",
+        "Jadwal Tahapan 13",
+        "Otomasi Dokumen Auto",
+        "Verifikasi Berkas 30",
+        "Penerbitan SK",
+        "Alokasi Ruang Sidang",
+        "Plotting Ruang Ujian",
+        "Batalkan"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "ruangan-search-input",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "select",
+          "id": "ruangan-filter-ruang",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "select",
+          "id": "ruangan-filter-moda",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    }
+  },
+  "superadmin": {
+    "Dashboard": {
+      "buttons": [
+        "2",
+        "I Ir. Supriyanto, M.Kom. SUPERADMIN",
+        "Dashboard",
+        "Master Data Prodi",
+        "Tahapan & Regulasi",
+        "Kuota Bimbingan",
+        "Manajemen Pengguna 64",
+        "SIM-TA FEB UTM",
+        "Konfigurasi Jenjang",
+        "Kelola Akun (64)",
+        "Kelola Master Prodi",
+        "Atur Tahapan"
+      ],
+      "inputs": []
+    },
+    "Master Data Prodi": {
+      "buttons": [
+        "2",
+        "I Ir. Supriyanto, M.Kom. SUPERADMIN",
+        "Dashboard",
+        "Master Data Prodi",
+        "Tahapan & Regulasi",
+        "Kuota Bimbingan",
+        "Manajemen Pengguna 64",
+        "Tambah Program Studi",
+        "Aktif",
+        "Edit"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "prodi-search-input",
+          "name": "",
+          "type": "text"
+        }
+      ]
+    },
+    "Tahapan & Regulasi": {
+      "buttons": [
+        "2",
+        "I Ir. Supriyanto, M.Kom. SUPERADMIN",
+        "Dashboard",
+        "Master Data Prodi",
+        "Tahapan & Regulasi",
+        "Kuota Bimbingan",
+        "Manajemen Pengguna 64",
+        "Simpan Konfigurasi S1",
+        "D3 Entrepreneurship 3 Tahap",
+        "S1 Manajemen 4 Tahap",
+        "S2 Magister 5 Tahap",
+        "S3 Doktor 8 Tahap",
+        "Simpan Perubahan Regulasi S1"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "rule-min-bimbingan",
+          "name": "",
+          "type": "number"
+        },
+        {
+          "tag": "input",
+          "id": "rule-min-sks",
+          "name": "",
+          "type": "number"
+        },
+        {
+          "tag": "input",
+          "id": "rule-min-toefl",
+          "name": "",
+          "type": "number"
+        },
+        {
+          "tag": "input",
+          "id": "rule-max-turnitin",
+          "name": "",
+          "type": "number"
+        },
+        {
+          "tag": "input",
+          "id": "rule-skor-kelulusan-min",
+          "name": "",
+          "type": "number"
+        },
+        {
+          "tag": "textarea",
+          "id": "rule-syarat-publikasi",
+          "name": "",
+          "type": "textarea"
+        }
+      ]
+    },
+    "Kuota Bimbingan": {
+      "buttons": [
+        "2",
+        "I Ir. Supriyanto, M.Kom. SUPERADMIN",
+        "Dashboard",
+        "Master Data Prodi",
+        "Tahapan & Regulasi",
+        "Kuota Bimbingan",
+        "Manajemen Pengguna 64",
+        "Atur Kuota"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "",
+          "name": "",
+          "type": "text"
+        }
+      ]
+    },
+    "Manajemen Pengguna 64": {
+      "buttons": [
+        "2",
+        "I Ir. Supriyanto, M.Kom. SUPERADMIN",
+        "Dashboard",
+        "Master Data Prodi",
+        "Tahapan & Regulasi",
+        "Kuota Bimbingan",
+        "Manajemen Pengguna 64",
+        "Unduh Template Excel",
+        "Import dari Excel",
+        "Tambah Akun Pengguna",
+        "Aktif",
+        "Reset"
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "id": "users-search-input",
+          "name": "",
+          "type": "text"
+        },
+        {
+          "tag": "select",
+          "id": "users-filter-role",
+          "name": "",
+          "type": "select-one"
+        },
+        {
+          "tag": "select",
+          "id": "users-filter-status",
+          "name": "",
+          "type": "select-one"
+        }
+      ]
+    }
+  }
+}

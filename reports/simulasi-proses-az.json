@@ -1,0 +1,2156 @@
+{
+  "dibuat": "2026-10-21T17:28:46.134Z",
+  "target": "http://localhost:5001 (API + SPA produksi, NODE_ENV=production)",
+  "ringkasan": {
+    "total": 291,
+    "lulus": 291,
+    "gagal": 0,
+    "catatan": 0
+  },
+  "perFase": {
+    "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI": {
+      "lulus": 14,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)": {
+      "lulus": 17,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE C — KALENDER AKADEMIK & PEMBUKAAN GELOMBANG (ADMIN)": {
+      "lulus": 5,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)": {
+      "lulus": 11,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE E — VERIFIKASI KELAYAKAN BERKAS (ADMIN AKADEMIK)": {
+      "lulus": 4,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)": {
+      "lulus": 6,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)": {
+      "lulus": 8,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING": {
+      "lulus": 8,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE I — PUBLIKASI ILMIAH & VERIFIKASI": {
+      "lulus": 4,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)": {
+      "lulus": 27,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI": {
+      "lulus": 8,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)": {
+      "lulus": 8,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE M — CATATAN KOREKSI PENGAJU & PENYELESAIAN REVISI": {
+      "lulus": 5,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP": {
+      "lulus": 12,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)": {
+      "lulus": 8,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL": {
+      "lulus": 9,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE Q — LAPORAN, PROGRESS & MONITORING": {
+      "lulus": 5,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE R — PENCADANGAN & PEMULIHAN BENCANA (DISASTER RECOVERY)": {
+      "lulus": 4,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE S — PERGANTIAN SEMESTER (QUOTA RECLAIM & BRIDGING)": {
+      "lulus": 5,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN": {
+      "lulus": 7,
+      "gagal": 0,
+      "catatan": 0
+    },
+    "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3": {
+      "lulus": 116,
+      "gagal": 0,
+      "catatan": 0
+    }
+  },
+  "langkah": [
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun mahasiswa (210211100142)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.066Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun dosen (196201081987032001)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.179Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun dosen2 (196203031988032001)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.271Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun dosen3 (196306231989031002)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.380Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun penguji (197703032003121002)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.451Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun koorprodi (197802142003122001)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.518Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun admin (198104122008121002)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.594Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Login akun superadmin (197405102000031001)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.681Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Profil /auth/me terbaca",
+      "hasil": "LULUS",
+      "detail": "role=mahasiswa",
+      "waktu": "2026-10-21T17:28:33.690Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Endpoint terlindungi menolak anonim",
+      "hasil": "LULUS",
+      "detail": "status=401",
+      "waktu": "2026-10-21T17:28:33.703Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Switch-role dosen -> penguji",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.721Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Switch-role mahasiswa -> superadmin DITOLAK",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:33.738Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Permintaan pemulihan kata sandi tidak membocorkan email",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.745Z"
+    },
+    {
+      "fase": "FASE A — AUTENTIKASI, IDENTITAS & MANAJEMEN SESI",
+      "langkah": "Token mati setelah logout (sesi dicabut)",
+      "hasil": "LULUS",
+      "detail": "status=401",
+      "waktu": "2026-10-21T17:28:33.853Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Baca daftar program studi",
+      "hasil": "LULUS",
+      "detail": "jumlah=4",
+      "waktu": "2026-10-21T17:28:33.938Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Buat program studi baru",
+      "hasil": "LULUS",
+      "detail": "status=200 Program studi S-1 Manajemen (Simulasi A-Z) berhasil ditambahkan ke database.",
+      "waktu": "2026-10-21T17:28:33.942Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Ubah program studi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.955Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Perubahan program studi tersimpan",
+      "hasil": "LULUS",
+      "detail": "terdaftar=true",
+      "waktu": "2026-10-21T17:28:33.969Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Baca pagu kuota bimbingan dosen",
+      "hasil": "LULUS",
+      "detail": "jumlah=7",
+      "waktu": "2026-10-21T17:28:33.986Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Ubah pagu kuota dosen",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:33.991Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Baca template tahapan per jenjang",
+      "hasil": "LULUS",
+      "detail": "jenjang=D3,S1,S2,S3",
+      "waktu": "2026-10-21T17:28:34.005Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Template S1 memiliki tahapan",
+      "hasil": "LULUS",
+      "detail": "jumlah=4",
+      "waktu": "2026-10-21T17:28:34.019Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Ubah template tahapan S1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.038Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Template tahapan TIDAK dapat dihapus dengan larik kosong (400)",
+      "hasil": "LULUS",
+      "detail": "status=400",
+      "waktu": "2026-10-21T17:28:34.042Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Template tahapan S1 utuh setelah percobaan penghapusan",
+      "hasil": "LULUS",
+      "detail": "jumlah=4",
+      "waktu": "2026-10-21T17:28:34.055Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Buat akun mahasiswa simulasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.162Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Akun baru memperoleh kata sandi sementara ACAK (bukan default seragam)",
+      "hasil": "LULUS",
+      "detail": "pwd acak tersedia",
+      "waktu": "2026-10-21T17:28:34.162Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Akun simulasi terdaftar",
+      "hasil": "LULUS",
+      "detail": "id=usr-1792603714064",
+      "waktu": "2026-10-21T17:28:34.177Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Ubah data akun",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.186Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Reset kata sandi menerbitkan sandi sementara acak",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.281Z"
+    },
+    {
+      "fase": "FASE B — MASTER DATA & TATA KELOLA (SUPER ADMIN)",
+      "langkah": "Daftar pengguna tidak membocorkan kata sandi/hash",
+      "hasil": "LULUS",
+      "detail": "",
+      "waktu": "2026-10-21T17:28:34.290Z"
+    },
+    {
+      "fase": "FASE C — KALENDER AKADEMIK & PEMBUKAAN GELOMBANG (ADMIN)",
+      "langkah": "Baca kalender tahapan",
+      "hasil": "LULUS",
+      "detail": "jumlah=22",
+      "waktu": "2026-10-21T17:28:34.303Z"
+    },
+    {
+      "fase": "FASE C — KALENDER AKADEMIK & PEMBUKAAN GELOMBANG (ADMIN)",
+      "langkah": "Buka gelombang pendaftaran",
+      "hasil": "LULUS",
+      "detail": "status=200 Jadwal tahapan berhasil dibuat dan disimpan di basis data.",
+      "waktu": "2026-10-21T17:28:34.323Z"
+    },
+    {
+      "fase": "FASE C — KALENDER AKADEMIK & PEMBUKAAN GELOMBANG (ADMIN)",
+      "langkah": "Ubah jadwal tahapan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.338Z"
+    },
+    {
+      "fase": "FASE C — KALENDER AKADEMIK & PEMBUKAAN GELOMBANG (ADMIN)",
+      "langkah": "Perubahan jadwal tersimpan di basis data",
+      "hasil": "LULUS",
+      "detail": "target=60",
+      "waktu": "2026-10-21T17:28:34.354Z"
+    },
+    {
+      "fase": "FASE C — KALENDER AKADEMIK & PEMBUKAAN GELOMBANG (ADMIN)",
+      "langkah": "Hapus jadwal tahapan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.357Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Mahasiswa simulasi login dengan kata sandi sementara",
+      "hasil": "LULUS",
+      "detail": "",
+      "waktu": "2026-10-21T17:28:34.525Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Entri Tugas Akhir mahasiswa simulasi dibuat sebelum pendaftaran",
+      "hasil": "LULUS",
+      "detail": "status=201 id=ta-210211990001",
+      "waktu": "2026-10-21T17:28:34.533Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Plotting pembimbing sebelum tahapan pertama",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.552Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Tahap 1 ajukan -> berhasil",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.737Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Tahap 1 approve -> berhasil",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.754Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Tahap 1 verifikasi -> berhasil",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.770Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Tahap 1 selesai -> berhasil",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.792Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Mahasiswa mendaftar-upload berkas persyaratan",
+      "hasil": "LULUS",
+      "detail": "status=201 Pendaftaran ujian mahasiswa berhasil diajukan dan disimpan ke database.",
+      "waktu": "2026-10-21T17:28:34.800Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Berkas pendaftaran masuk antrean verifikasi",
+      "hasil": "LULUS",
+      "detail": "id=berkas-sim-1792603714792",
+      "waktu": "2026-10-21T17:28:34.816Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Metrik akademik tersimpan bersama berkas",
+      "hasil": "LULUS",
+      "detail": "IPK 3.74 tercatat",
+      "waktu": "2026-10-21T17:28:34.817Z"
+    },
+    {
+      "fase": "FASE D — PENDAFTARAN UJIAN & PEMENUHAN PERSYARATAN (MAHASISWA)",
+      "langkah": "Mahasiswa tidak dapat membaca antrean verifikasi admin",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:34.836Z"
+    },
+    {
+      "fase": "FASE E — VERIFIKASI KELAYAKAN BERKAS (ADMIN AKADEMIK)",
+      "langkah": "Admin membaca antrean berkas",
+      "hasil": "LULUS",
+      "detail": "jumlah=74",
+      "waktu": "2026-10-21T17:28:34.846Z"
+    },
+    {
+      "fase": "FASE E — VERIFIKASI KELAYAKAN BERKAS (ADMIN AKADEMIK)",
+      "langkah": "Admin memverifikasi berkas",
+      "hasil": "LULUS",
+      "detail": "status=200 Status verifikasi berkas berhasil diperbarui di basis data.",
+      "waktu": "2026-10-21T17:28:34.851Z"
+    },
+    {
+      "fase": "FASE E — VERIFIKASI KELAYAKAN BERKAS (ADMIN AKADEMIK)",
+      "langkah": "Status verifikasi tersimpan",
+      "hasil": "LULUS",
+      "detail": "status=Terverifikasi",
+      "waktu": "2026-10-21T17:28:34.878Z"
+    },
+    {
+      "fase": "FASE E — VERIFIKASI KELAYAKAN BERKAS (ADMIN AKADEMIK)",
+      "langkah": "Admin dapat menolak berkas",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.886Z"
+    },
+    {
+      "fase": "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)",
+      "langkah": "Koordinator membuat entri Tugas Akhir",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.906Z"
+    },
+    {
+      "fase": "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)",
+      "langkah": "Entri Tugas Akhir terdaftar",
+      "hasil": "LULUS",
+      "detail": "id=ta-210211990001",
+      "waktu": "2026-10-21T17:28:34.911Z"
+    },
+    {
+      "fase": "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)",
+      "langkah": "Plotting pembimbing utama & pendamping",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:34.917Z"
+    },
+    {
+      "fase": "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)",
+      "langkah": "NIP pembimbing otoritatif tersimpan",
+      "hasil": "LULUS",
+      "detail": "nip=196201081987032001",
+      "waktu": "2026-10-21T17:28:34.918Z"
+    },
+    {
+      "fase": "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)",
+      "langkah": "Plotting dengan payload tak dikenal ditolak (tidak ada sukses palsu)",
+      "hasil": "LULUS",
+      "detail": "status=400",
+      "waktu": "2026-10-21T17:28:34.935Z"
+    },
+    {
+      "fase": "FASE F — PLOTTING PEMBIMBING (KOORDINATOR PRODI)",
+      "langkah": "Mahasiswa DITOLAK menetapkan pembimbing",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:34.954Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Mahasiswa mencatat sesi bimbingan",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:34.971Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Sesi bimbingan masuk daftar mahasiswa",
+      "hasil": "LULUS",
+      "detail": "status awal=Menunggu Approval",
+      "waktu": "2026-10-21T17:28:34.986Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Sesi mahasiswa berstatus \"Menunggu Approval\" (menunggu paraf pembimbing)",
+      "hasil": "LULUS",
+      "detail": "status=Menunggu Approval",
+      "waktu": "2026-10-21T17:28:34.986Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Dosen non-pembimbing DITOLAK mencatat bimbingan",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:35.006Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Pembimbing menyetujui sesi bimbingan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.022Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Status bimbingan menjadi \"Disetujui\"",
+      "hasil": "LULUS",
+      "detail": "status=Disetujui",
+      "waktu": "2026-10-21T17:28:35.026Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Pembimbing dapat mencatat sesi (otomatis tervalidasi)",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:35.038Z"
+    },
+    {
+      "fase": "FASE G — SIKLUS BIMBINGAN (MAHASISWA & PEMBIMING)",
+      "langkah": "Tersedia cukup sesi bimbingan disetujui untuk checklist (>=8)",
+      "hasil": "LULUS",
+      "detail": "disetujui=10",
+      "waktu": "2026-10-21T17:28:35.240Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Mahasiswa mengunggah versi naskah",
+      "hasil": "LULUS",
+      "detail": "status=201 Naskah versi 1 tersimpan.",
+      "waktu": "2026-10-21T17:28:35.256Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Nomor versi naskah otomatis",
+      "hasil": "LULUS",
+      "detail": "versi=1",
+      "waktu": "2026-10-21T17:28:35.256Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Daftar naskah mahasiswa terbaca",
+      "hasil": "LULUS",
+      "detail": "jumlah=1",
+      "waktu": "2026-10-21T17:28:35.260Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Pembimbing memberi komentar pada naskah",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:35.265Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Mahasiswa membaca komentar pembimbing",
+      "hasil": "LULUS",
+      "detail": "jumlah=1",
+      "waktu": "2026-10-21T17:28:35.271Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Pembimbing menutup komentar",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.287Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Pembimbing menyetujui naskah (memenuhi butir checklist tahapan)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.444Z"
+    },
+    {
+      "fase": "FASE H — UNGGAH NASKAH, REVIEW & KOMENTAR PEMBIMBING",
+      "langkah": "Mahasiswa lain DITOLAK mengomentari naskah milik orang lain",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:35.460Z"
+    },
+    {
+      "fase": "FASE I — PUBLIKASI ILMIAH & VERIFIKASI",
+      "langkah": "Mahasiswa mengajukan publikasi",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:35.466Z"
+    },
+    {
+      "fase": "FASE I — PUBLIKASI ILMIAH & VERIFIKASI",
+      "langkah": "Koordinator memverifikasi publikasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.477Z"
+    },
+    {
+      "fase": "FASE I — PUBLIKASI ILMIAH & VERIFIKASI",
+      "langkah": "Status publikasi menjadi Terverifikasi",
+      "hasil": "LULUS",
+      "detail": "status=Terverifikasi",
+      "waktu": "2026-10-21T17:28:35.492Z"
+    },
+    {
+      "fase": "FASE I — PUBLIKASI ILMIAH & VERIFIKASI",
+      "langkah": "Mahasiswa DITOLAK memverifikasi publikasi sendiri",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:35.507Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Baca progres tahapan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.523Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Empat tahapan S1 terdaftar",
+      "hasil": "LULUS",
+      "detail": "jumlah=4",
+      "waktu": "2026-10-21T17:28:35.523Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa mengajukan S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200| Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:35.540Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa lain DITOLAK mengajukan S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:35.631Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Pembimbing menyetujui S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.647Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Dosen non-pembimbing DITOLAK menyetujui S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=409",
+      "waktu": "2026-10-21T17:28:35.663Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator memverifikasi S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.668Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator menutup S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.677Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa mengajukan S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200| Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:35.695Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa lain DITOLAK mengajukan S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:35.771Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Pembimbing menyetujui S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.787Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Dosen non-pembimbing DITOLAK menyetujui S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=409",
+      "waktu": "2026-10-21T17:28:35.801Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator memverifikasi S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.805Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator menutup S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.818Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa mengajukan S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200| Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:35.834Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa lain DITOLAK mengajukan S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:35.926Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Pembimbing menyetujui S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.943Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Dosen non-pembimbing DITOLAK menyetujui S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=409",
+      "waktu": "2026-10-21T17:28:35.958Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator memverifikasi S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.975Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator menutup S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:35.991Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa mengajukan S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200| Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:36.006Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Mahasiswa lain DITOLAK mengajukan S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:36.100Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Pembimbing menyetujui S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.116Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Dosen non-pembimbing DITOLAK menyetujui S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=409",
+      "waktu": "2026-10-21T17:28:36.130Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator memverifikasi S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.146Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Koordinator menutup S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.151Z"
+    },
+    {
+      "fase": "FASE J — STATE MACHINE TAHAPAN TUGAS AKHIR (AJUKAN → APPROVE → VERIFIKASI → SELESAI)",
+      "langkah": "Seluruh tahapan S1 berstatus Selesai",
+      "hasil": "LULUS",
+      "detail": "selesai=4/4",
+      "waktu": "2026-10-21T17:28:36.160Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Admin membuat alokasi ruang sidang",
+      "hasil": "LULUS",
+      "detail": "status=200 Alokasi ruangan berhasil dijadwalkan di database.",
+      "waktu": "2026-10-21T17:28:36.175Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Daftar alokasi ruang terbaca",
+      "hasil": "LULUS",
+      "detail": "jumlah=140",
+      "waktu": "2026-10-21T17:28:36.193Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Admin menerbitkan Surat Keputusan",
+      "hasil": "LULUS",
+      "detail": "status=200 SK Nomor 126194/UN46.1.1/SK.TA/2026 berhasil disimpan di basis data.",
+      "waktu": "2026-10-21T17:28:36.206Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Daftar SK terbaca",
+      "hasil": "LULUS",
+      "detail": "jumlah=43",
+      "waktu": "2026-10-21T17:28:36.222Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Koordinator membuat penjadwalan ujian + penetapan dekwan penguji",
+      "hasil": "LULUS",
+      "detail": "status=201 id=uj-1792603716241-4t7zs msg=Penjadwalan Seminar Proposal Skripsi untuk Mahasiswa Simulasi A-Z berhasil disimpan beserta susunan dewan penguji.",
+      "waktu": "2026-10-21T17:28:36.238Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Setiap anggota dekwan terikat pada NIP pengguna nyata",
+      "hasil": "LULUS",
+      "detail": "nip=197703032003121002, 196201081987032001",
+      "waktu": "2026-10-21T17:28:36.238Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Penetapan tanpa dekwan penguji ditolak 400",
+      "hasil": "LULUS",
+      "detail": "status=400",
+      "waktu": "2026-10-21T17:28:36.251Z"
+    },
+    {
+      "fase": "FASE K — PENJADWALAN SIDANG, ALOKASI RUANG & DEWAN PENGUJI",
+      "langkah": "Mahasiswa DITOLAK membuat penjadwalan ujian",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:36.268Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Dewan penguji membaca daftar ujian",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.286Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Ujian yang ditugaskan muncul pada daftar",
+      "hasil": "LULUS",
+      "detail": "id=uj-1792603716241-4t7zs",
+      "waktu": "2026-10-21T17:28:36.286Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Mahasiswa DITOLAK membaca daftar ujian",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:36.360Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Dewan penguji menyimpan penilaian",
+      "hasil": "LULUS",
+      "detail": "status=200 Nilai ujian berhasil disimpan secara resmi ke database.",
+      "waktu": "2026-10-21T17:28:36.366Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Nilai final tersimpan di basis data",
+      "hasil": "LULUS",
+      "detail": "nilai=82.55",
+      "waktu": "2026-10-21T17:28:36.370Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Grade tersimpan",
+      "hasil": "LULUS",
+      "detail": "grade=A",
+      "waktu": "2026-10-21T17:28:36.370Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Rekomendasi kelayakan tersimpan",
+      "hasil": "LULUS",
+      "detail": "rekomendasi=Layak Diteruskan dengan Perbaikan Minor",
+      "waktu": "2026-10-21T17:28:36.370Z"
+    },
+    {
+      "fase": "FASE L — PENILAIAN DEWAN PENGUJI (RUBRIK BERBOBOT)",
+      "langkah": "Dosen non-dekwan DITOLAK menilai ujian ini",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:36.376Z"
+    },
+    {
+      "fase": "FASE M — CATATAN KOREKSI PENGAJU & PENYELESAIAN REVISI",
+      "langkah": "Dewan penguji membuat catatan koreksi",
+      "hasil": "LULUS",
+      "detail": "status=200 Catatan koreksi penguji berhasil dicatat ke database.",
+      "waktu": "2026-10-21T17:28:36.393Z"
+    },
+    {
+      "fase": "FASE M — CATATAN KOREKSI PENGAJU & PENYELESAIAN REVISI",
+      "langkah": "Catatan koreksi tersimpan & terbaca",
+      "hasil": "LULUS",
+      "detail": "jumlah=4",
+      "waktu": "2026-10-21T17:28:36.408Z"
+    },
+    {
+      "fase": "FASE M — CATATAN KOREKSI PENGAJU & PENYELESAIAN REVISI",
+      "langkah": "Catatan koreksi tanpa isi ditolak 400",
+      "hasil": "LULUS",
+      "detail": "status=400",
+      "waktu": "2026-10-21T17:28:36.411Z"
+    },
+    {
+      "fase": "FASE M — CATATAN KOREKSI PENGAJU & PENYELESAIAN REVISI",
+      "langkah": "Status verifikasi revisi diperbarui",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.424Z"
+    },
+    {
+      "fase": "FASE M — CATATAN KOREKSI PENGAJU & PENYELESAIAN REVISI",
+      "langkah": "Catatan koreksi dapat dihapus",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.439Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Berita Acara ujian terbit",
+      "hasil": "LULUS",
+      "detail": "status=201 Berita Acara Ujian digital berhasil dicetak dan diarsipkan dengan QR Code validasi.",
+      "waktu": "2026-10-21T17:28:36.504Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Lembar Pengesahan terbit (semua tahapan selesai)",
+      "hasil": "LULUS",
+      "detail": "status=201 Lembar Pengesahan Tugas Akhir berhasil dicetak dengan stempel digital resmi.",
+      "waktu": "2026-10-21T17:28:36.548Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Kartu Kendali Bimbingan terbit",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:36.591Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Surat Tugas Penguji terbit",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:36.631Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Surat Tugas Pembimbing terbit",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:36.668Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "SK Dekan terbit",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:36.709Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Paket Berkas Ujian terbit",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:36.841Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Verifikasi publik dokumen resmi = ASLI",
+      "hasil": "LULUS",
+      "detail": "status=200 verified=true",
+      "waktu": "2026-10-21T17:28:36.845Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Verifikasi kode tak dikenal ditolak tanpa membocorkan data",
+      "hasil": "LULUS",
+      "detail": "status=404",
+      "waktu": "2026-10-21T17:28:36.860Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Arsip dokumen resmi terbaca",
+      "hasil": "LULUS",
+      "detail": "jumlah=50",
+      "waktu": "2026-10-21T17:28:36.885Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Auto-counter nomor dokumen terbaca",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.891Z"
+    },
+    {
+      "fase": "FASE N — DOKUMEN RESMI, QR VERIFIKASI & ARSIP",
+      "langkah": "Auto-counter dapat disesuaikan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.907Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Mahasiswa mengunggah berkas naskah",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:36.943Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Admin membaca daftar berkas",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.965Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Token unduhan scoped diterbitkan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.970Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Berkas dapat diunduh oleh pemiliknya",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:36.986Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Berkas terproteksi TIDAK dikirim dengan Cache-Control public",
+      "hasil": "LULUS",
+      "detail": "cache-control=private, no-store, max-age=0",
+      "waktu": "2026-10-21T17:28:36.986Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Mahasiswa TIDAK dapat menghapus berkas unggahannya (khusus admin/superadmin)",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:37.000Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Admin dapat menghapus berkas",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:37.012Z"
+    },
+    {
+      "fase": "FASE O — PENYIMPANAN BERKAS (UNGGAH, UNDUH, HAPUS)",
+      "langkah": "Path traversal ditolak",
+      "hasil": "LULUS",
+      "detail": "status=400",
+      "waktu": "2026-10-21T17:28:37.016Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Mahasiswa membaca notifikasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:37.037Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Notifikasi bersifat milik pengguna yang login",
+      "hasil": "LULUS",
+      "detail": "jumlah=40",
+      "waktu": "2026-10-21T17:28:37.038Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Menandai semua notifikasi terbaca",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:37.048Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Token SSE diterbitkan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:37.063Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Admin menyiarkan broadcast",
+      "hasil": "LULUS",
+      "detail": "status=201",
+      "waktu": "2026-10-21T17:28:37.081Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Mahasiswa DITOLAK menyiarkan broadcast",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:37.097Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Admin membaca log email",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:37.109Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Email ke domain luar institusional DITOLAK",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:37.115Z"
+    },
+    {
+      "fase": "FASE P — NOTIFIKASI, BROADCAST & EMAIL INSTITUSIONAL",
+      "langkah": "Email ke domain institusional diproses (mock)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:40.756Z"
+    },
+    {
+      "fase": "FASE Q — LAPORAN, PROGRESS & MONITORING",
+      "langkah": "Laporan progres TA terbaca",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:40.788Z"
+    },
+    {
+      "fase": "FASE Q — LAPORAN, PROGRESS & MONITORING",
+      "langkah": "Laporan beban dosen terbaca",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:40.807Z"
+    },
+    {
+      "fase": "FASE Q — LAPORAN, PROGRESS & MONITORING",
+      "langkah": "Sinkronisasi data Tugas Akhir berjalan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:40.846Z"
+    },
+    {
+      "fase": "FASE Q — LAPORAN, PROGRESS & MONITORING",
+      "langkah": "Audit log keamanan terbaca",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:40.857Z"
+    },
+    {
+      "fase": "FASE Q — LAPORAN, PROGRESS & MONITORING",
+      "langkah": "Audit log mencatat aktivitas simulasi",
+      "hasil": "LULUS",
+      "detail": "entri simulasi ditemukan",
+      "waktu": "2026-10-21T17:28:40.857Z"
+    },
+    {
+      "fase": "FASE R — PENCADANGAN & PEMULIHAN BENCANA (DISASTER RECOVERY)",
+      "langkah": "Daftar cadangan terbaca",
+      "hasil": "LULUS",
+      "detail": "jumlah=104",
+      "waktu": "2026-10-21T17:28:40.884Z"
+    },
+    {
+      "fase": "FASE R — PENCADANGAN & PEMULIHAN BENCANA (DISASTER RECOVERY)",
+      "langkah": "Cadangan on-demand dibuat",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.008Z"
+    },
+    {
+      "fase": "FASE R — PENCADANGAN & PEMULIHAN BENCANA (DISASTER RECOVERY)",
+      "langkah": "Integritas cadangan terverifikasi (PRAGMA integrity_check)",
+      "hasil": "LULUS",
+      "detail": "status=200 hasil=VALID & PRODUCTION READY",
+      "waktu": "2026-10-21T17:28:41.074Z"
+    },
+    {
+      "fase": "FASE R — PENCADANGAN & PEMULIHAN BENCANA (DISASTER RECOVERY)",
+      "langkah": "Path traversal pada endpoint cadangan ditolak",
+      "hasil": "LULUS",
+      "detail": "status=404",
+      "waktu": "2026-10-21T17:28:41.089Z"
+    },
+    {
+      "fase": "FASE S — PERGANTIAN SEMESTER (QUOTA RECLAIM & BRIDGING)",
+      "langkah": "Pagu kuota dosen terbaca untuk rollover",
+      "hasil": "LULUS",
+      "detail": "dosen=Dr. Dra. Hj. Iriani Ismail, M.M.",
+      "waktu": "2026-10-21T17:28:41.106Z"
+    },
+    {
+      "fase": "FASE S — PERGANTIAN SEMESTER (QUOTA RECLAIM & BRIDGING)",
+      "langkah": "Kuota dilepas kembali (quota reclaim) saat mahasiswa lulus",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.123Z"
+    },
+    {
+      "fase": "FASE S — PERGANTIAN SEMESTER (QUOTA RECLAIM & BRIDGING)",
+      "langkah": "Perubahan kuota tersimpan sesuai nilai yang diminta",
+      "hasil": "LULUS",
+      "detail": "10 -> 10 (diminta 10)",
+      "waktu": "2026-10-21T17:28:41.126Z"
+    },
+    {
+      "fase": "FASE S — PERGANTIAN SEMESTER (QUOTA RECLAIM & BRIDGING)",
+      "langkah": "Mahasiswa aktif dapat melanjutkan progres TA (bridging semester)",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.158Z"
+    },
+    {
+      "fase": "FASE S — PERGANTIAN SEMESTER (QUOTA RECLAIM & BRIDGING)",
+      "langkah": "Kalender memuat informasi semester",
+      "hasil": "LULUS",
+      "detail": "jumlah=22",
+      "waktu": "2026-10-21T17:28:41.177Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Tidak ada pelanggaran foreign key di basis data",
+      "hasil": "LULUS",
+      "detail": "pelanggaran=0",
+      "waktu": "2026-10-21T17:28:41.184Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Tidak ada kata sandi/hash yang bocor pada daftar pengguna",
+      "hasil": "LULUS",
+      "detail": "",
+      "waktu": "2026-10-21T17:28:41.196Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Mahasiswa ditolak mengakses endpoint superadmin",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:41.208Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Endpoint superadmin menolak anonim",
+      "hasil": "LULUS",
+      "detail": "status=401",
+      "waktu": "2026-10-21T17:28:41.211Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Mahasiswa ditolak membaca kuota dosen",
+      "hasil": "LULUS",
+      "detail": "status=403",
+      "waktu": "2026-10-21T17:28:41.323Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Token mati setelah logout",
+      "hasil": "LULUS",
+      "detail": "status=401",
+      "waktu": "2026-10-21T17:28:41.440Z"
+    },
+    {
+      "fase": "FASE T — KONSISTENSI DATA, KONSISTENSI AKHIR & KEAMANAN",
+      "langkah": "Health check API sehat",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.455Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Template tahapan S1 tersedia",
+      "hasil": "LULUS",
+      "detail": "jumlah=4",
+      "waktu": "2026-10-21T17:28:41.462Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "rules_json S1 tersedia",
+      "hasil": "LULUS",
+      "detail": "minSKS=120 minToefl=450 skorMin=70",
+      "waktu": "2026-10-21T17:28:41.462Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap akhir S1 (S1-T4) mewajibkan publikasi",
+      "hasil": "LULUS",
+      "detail": "requires_publikasi=1",
+      "waktu": "2026-10-21T17:28:41.462Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Akun mahasiswa uji S1 dibuat",
+      "hasil": "LULUS",
+      "detail": "nim=199937214591414261",
+      "waktu": "2026-10-21T17:28:41.547Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": false,
+      "hasil": "LULUS",
+      "detail": "status=409 code=TA_NOT_INITIALIZED",
+      "waktu": "2026-10-21T17:28:41.806Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Entri Tugas Akhir S1 dibuat",
+      "hasil": "LULUS",
+      "detail": "id=ta-199937214591414261",
+      "waktu": "2026-10-21T17:28:41.826Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Plotting pembimbing S1 tersimpan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.830Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Publikasi S1 dibuat & diverifikasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.856Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S1/S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:41.866Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S1/S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.873Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S1/S1-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.881Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S1/S1-T1 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.887Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S1/S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:41.975Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S1/S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.980Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S1/S1-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.990Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S1/S1-T2 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:41.998Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S1/S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:42.090Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S1/S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.105Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S1/S1-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.122Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S1/S1-T3 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.139Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S1/S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:42.405Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S1/S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.422Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S1/S1-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.439Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S1/S1-T4 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.456Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Seluruh tahapan S1 selesai",
+      "hasil": "LULUS",
+      "detail": "4/4",
+      "waktu": "2026-10-21T17:28:42.471Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Template tahapan S2 tersedia",
+      "hasil": "LULUS",
+      "detail": "jumlah=5",
+      "waktu": "2026-10-21T17:28:42.472Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "rules_json S2 tersedia",
+      "hasil": "LULUS",
+      "detail": "minSKS=36 minToefl=475 skorMin=75",
+      "waktu": "2026-10-21T17:28:42.472Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap akhir S2 (S2-T5) mewajibkan publikasi",
+      "hasil": "LULUS",
+      "detail": "requires_publikasi=1",
+      "waktu": "2026-10-21T17:28:42.473Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Akun mahasiswa uji S2 dibuat",
+      "hasil": "LULUS",
+      "detail": "nim=199937214591414262",
+      "waktu": "2026-10-21T17:28:42.552Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": false,
+      "hasil": "LULUS",
+      "detail": "status=409 code=TA_NOT_INITIALIZED",
+      "waktu": "2026-10-21T17:28:42.907Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Entri Tugas Akhir S2 dibuat",
+      "hasil": "LULUS",
+      "detail": "id=ta-199937214591414262",
+      "waktu": "2026-10-21T17:28:42.915Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Plotting pembimbing S2 tersimpan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.923Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Publikasi S2 dibuat & diverifikasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.938Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S2/S2-T1",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:42.956Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S2/S2-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.971Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S2/S2-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.976Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S2/S2-T1 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:42.988Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S2/S2-T2",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:43.074Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S2/S2-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.088Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S2/S2-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.104Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S2/S2-T2 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.123Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S2/S2-T3",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:43.211Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S2/S2-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.222Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S2/S2-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.228Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S2/S2-T3 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.235Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S2/S2-T4",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:43.293Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S2/S2-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.307Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S2/S2-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.314Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S2/S2-T4 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.323Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S2/S2-T5",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:43.570Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S2/S2-T5",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.585Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S2/S2-T5",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.589Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S2/S2-T5 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.619Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Seluruh tahapan S2 selesai",
+      "hasil": "LULUS",
+      "detail": "5/5",
+      "waktu": "2026-10-21T17:28:43.635Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Template tahapan S3 tersedia",
+      "hasil": "LULUS",
+      "detail": "jumlah=8",
+      "waktu": "2026-10-21T17:28:43.636Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "rules_json S3 tersedia",
+      "hasil": "LULUS",
+      "detail": "minSKS=42 minToefl=500 skorMin=75",
+      "waktu": "2026-10-21T17:28:43.636Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap akhir S3 (S3-T8) mewajibkan publikasi",
+      "hasil": "LULUS",
+      "detail": "requires_publikasi=1",
+      "waktu": "2026-10-21T17:28:43.636Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Akun mahasiswa uji S3 dibuat",
+      "hasil": "LULUS",
+      "detail": "nim=199937214591414263",
+      "waktu": "2026-10-21T17:28:43.710Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": false,
+      "hasil": "LULUS",
+      "detail": "status=409 code=TA_NOT_INITIALIZED",
+      "waktu": "2026-10-21T17:28:43.912Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Entri Tugas Akhir S3 dibuat",
+      "hasil": "LULUS",
+      "detail": "id=ta-199937214591414263",
+      "waktu": "2026-10-21T17:28:43.920Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Plotting pembimbing S3 tersimpan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.926Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Publikasi S3 dibuat & diverifikasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.951Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T1",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:43.969Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:43.985Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.002Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T1 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.019Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T2",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:44.135Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.152Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.169Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T2 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.186Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T3",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:44.269Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.284Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.302Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T3 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.320Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T4",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:44.405Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.418Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T4",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.434Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T4 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.439Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T5",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:44.501Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T5",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.517Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T5",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.534Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T5 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.550Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T6",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:44.652Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T6",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.670Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T6",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.684Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T6 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.703Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T7",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:44.768Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T7",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.772Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T7",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.783Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T7 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:44.801Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan S3/S3-T8",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:45.238Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui S3/S3-T8",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.252Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi S3/S3-T8",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.269Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap S3/S3-T8 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.283Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Seluruh tahapan S3 selesai",
+      "hasil": "LULUS",
+      "detail": "8/8",
+      "waktu": "2026-10-21T17:28:45.299Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Template tahapan D3 tersedia",
+      "hasil": "LULUS",
+      "detail": "jumlah=3",
+      "waktu": "2026-10-21T17:28:45.299Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "rules_json D3 tersedia",
+      "hasil": "LULUS",
+      "detail": "minSKS=90 minToefl=400 skorMin=65",
+      "waktu": "2026-10-21T17:28:45.300Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap akhir D3 (D3-T3) mewajibkan publikasi",
+      "hasil": "LULUS",
+      "detail": "requires_publikasi=1",
+      "waktu": "2026-10-21T17:28:45.300Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Akun mahasiswa uji D3 dibuat",
+      "hasil": "LULUS",
+      "detail": "nim=199937214591414264",
+      "waktu": "2026-10-21T17:28:45.375Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": false,
+      "hasil": "LULUS",
+      "detail": "status=409 code=TA_NOT_INITIALIZED",
+      "waktu": "2026-10-21T17:28:45.576Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Entri Tugas Akhir D3 dibuat",
+      "hasil": "LULUS",
+      "detail": "id=ta-199937214591414264",
+      "waktu": "2026-10-21T17:28:45.596Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Plotting pembimbing D3 tersimpan",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.600Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Publikasi D3 dibuat & diverifikasi",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.625Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan D3/D3-T1",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:45.642Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui D3/D3-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.657Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi D3/D3-T1",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.673Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap D3/D3-T1 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.688Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan D3/D3-T2",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:45.782Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui D3/D3-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.798Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi D3/D3-T2",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.803Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap D3/D3-T2 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:45.815Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Mahasiswa mengajukan D3/D3-T3",
+      "hasil": "LULUS",
+      "detail": "status=200 Pengajuan tahap berhasil. Menunggu persetujuan pembimbing.",
+      "waktu": "2026-10-21T17:28:46.005Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Pembimbing menyetujui D3/D3-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:46.017Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Koordinator memverifikasi D3/D3-T3",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:46.034Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Tahap D3/D3-T3 ditutup",
+      "hasil": "LULUS",
+      "detail": "status=200",
+      "waktu": "2026-10-21T17:28:46.049Z"
+    },
+    {
+      "fase": "FASE U — CAKUPAN JENJANG S1 / S2 / S3 / D3",
+      "langkah": "Seluruh tahapan D3 selesai",
+      "hasil": "LULUS",
+      "detail": "3/3",
+      "waktu": "2026-10-21T17:28:46.065Z"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+/**
+ * ==============================================================================
+ * SISTEM INFORMASI MANAJEMEN TUGAS AKHIR (SIM-TA) FEB UTM
+ * ENTRYPOINT GLOBAL STYLESHEET
+ * 
+ * Arsitektur CSS Terpusat (Single Source of Truth):
+ * 1. tokens.css — Primitif warna, skala tipografi, spasi, radius, & semantik token
+ * 2. shell.css — Struktur AppShell, Topbar, Sidebar navigasi, & PageHeader
+ * 3. components.css — Seluruh komponen UI terstandarisasi (Buttons, Cards, Badges, Tables, Forms)
+ * ==============================================================================
+ */
+
+@import './styles/tokens.css';
+@import './styles/shell.css';
+@import './styles/components.css';
+
+:root {
+  /* ==========================================================================
+     ALIASED TOKENS FOR BACKWARD COMPATIBILITY
+     ========================================================================== */
+  --utm-navy-950: var(--primitive-navy-950);
+  --utm-navy-900: var(--primitive-navy-900);
+  --utm-navy-850: var(--primitive-navy-850);
+  --utm-navy-800: var(--primitive-navy-800);
+  --utm-navy-700: var(--primitive-navy-700);
+  --utm-navy-600: var(--primitive-navy-600);
+
+  --utm-gold-600: var(--primitive-gold-600);
+  --utm-gold-500: var(--primitive-gold-500);
+  --utm-gold-400: var(--primitive-gold-400);
+  --utm-gold-100: var(--primitive-gold-100);
+  --utm-gold-50:  var(--primitive-gold-50);
+
+  /* Surfaces & Neutrals */
+  --bg-app:            var(--color-surface-canvas);
+  --bg-surface:        var(--color-surface-panel);
+  --bg-surface-alt:    var(--color-surface-panel-alt);
+  --bg-surface-active: var(--color-surface-active);
+
+  --border-light:      var(--color-border-subtle);
+  --border-mid:        var(--color-border-default);
+  --border-dark:       var(--color-border-strong);
+
+  --text-primary:      var(--color-text-primary);
+  --text-secondary:    var(--color-text-secondary);
+  --text-muted:        var(--color-text-muted);
+  --text-light:        var(--color-text-light);
+
+  /* Legacy aliases (dipertahankan agar halaman lama tetap valid) */
+  --color-text-main:        var(--color-text-primary);
+  --color-surface-subtle:   var(--color-surface-inset);
+
+  /* Status Colors */
+  --color-success:     var(--primitive-green-700);
+  --bg-success:        var(--primitive-green-50);
+  --border-success:    var(--primitive-green-200);
+
+  --color-warning:     var(--primitive-amber-700);
+  --bg-warning:        var(--primitive-amber-50);
+  --border-warning:    var(--primitive-amber-200);
+
+  --color-danger:      var(--primitive-red-700);
+  --bg-danger:         var(--primitive-red-50);
+  --border-danger:     var(--primitive-red-200);
+
+  --color-info:        var(--primitive-blue-700);
+  --bg-info:           var(--primitive-blue-50);
+  --border-info:       var(--primitive-blue-200);
+
+  /* Sizing & Structure */
+  --sidebar-width:     var(--layout-sidebar-width);
+  --topbar-height:     var(--layout-topbar-height);
+  --font-family:       var(--font-family-sans);
+
+  /* Shadows */
+  --shadow-card:       var(--shadow-panel);
+  --shadow-dropdown:   var(--shadow-dropdown);
+}
+
+/* Global Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-family, var(--font-family-sans));
+  background-color: var(--color-surface-canvas, #f8fafc);
+  color: var(--color-text-primary, #0f172a);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+}

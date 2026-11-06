@@ -1,0 +1,293 @@
+[
+  {
+    "role": "Mahasiswa",
+    "key": "mahasiswa",
+    "login": {
+      "ok": true,
+      "roleShown": "MAHASISWA",
+      "nameShown": "Dinda Ayu Larasati"
+    },
+    "pages": [
+      {
+        "label": "Dashboard",
+        "ok": true
+      },
+      {
+        "label": "Detail Tugas Akhir",
+        "ok": true
+      },
+      {
+        "label": "Tahapan",
+        "ok": true
+      },
+      {
+        "label": "Persyaratan",
+        "ok": true
+      },
+      {
+        "label": "Bimbingan",
+        "ok": true
+      },
+      {
+        "label": "Naskah",
+        "ok": true
+      },
+      {
+        "label": "Ujian",
+        "ok": true
+      },
+      {
+        "label": "Revisi",
+        "ok": true
+      },
+      {
+        "label": "Portofolio",
+        "ok": true
+      },
+      {
+        "label": "Dokumen",
+        "ok": true
+      }
+    ],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    ],
+    "pageErrors": [],
+    "logoutOk": true
+  },
+  {
+    "role": "Dosen Pembimbing",
+    "key": "dosen",
+    "login": {
+      "ok": true,
+      "roleShown": "DOSEN",
+      "nameShown": "Dr. Dra. Hj. Iriani Ismail, M.M."
+    },
+    "pages": [
+      {
+        "label": "Dashboard",
+        "ok": true
+      },
+      {
+        "label": "Mahasiswa Bimbingan 2",
+        "ok": true
+      },
+      {
+        "label": "Bimbingan",
+        "ok": true
+      },
+      {
+        "label": "Naskah Masuk 1",
+        "ok": true
+      },
+      {
+        "label": "Review Naskah",
+        "ok": true
+      },
+      {
+        "label": "Persetujuan 2",
+        "ok": true
+      },
+      {
+        "label": "Pemantauan Revisi",
+        "ok": true
+      },
+      {
+        "label": "Jadwal Ujian 1",
+        "ok": true
+      }
+    ],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    ],
+    "pageErrors": [],
+    "logoutOk": true
+  },
+  {
+    "role": "Koorprodi",
+    "key": "koorprodi",
+    "login": {
+      "ok": true,
+      "roleShown": "KOORPRODI",
+      "nameShown": "Dr. Hj. Siti Aminah, S.E., M.Si."
+    },
+    "pages": [
+      {
+        "label": "Dashboard",
+        "ok": true
+      },
+      {
+        "label": "Daftar Mahasiswa 6",
+        "ok": true
+      },
+      {
+        "label": "Pengajuan Masuk 3",
+        "ok": true
+      },
+      {
+        "label": "Plotting Pembimbing",
+        "ok": true
+      },
+      {
+        "label": "Dewan Penguji",
+        "ok": true
+      },
+      {
+        "label": "Penerbitan Dokumen Kolektif Kolektif",
+        "ok": true
+      },
+      {
+        "label": "Jadwal Ujian & Sidang 4",
+        "ok": true
+      },
+      {
+        "label": "Matriks Persyaratan",
+        "ok": true
+      },
+      {
+        "label": "Pemantauan Revisi",
+        "ok": true
+      },
+      {
+        "label": "Arsip Dokumen Prodi",
+        "ok": true
+      }
+    ],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    ],
+    "pageErrors": [],
+    "logoutOk": true
+  },
+  {
+    "role": "Dewan Penguji",
+    "key": "penguji",
+    "login": {
+      "ok": true,
+      "roleShown": "PENGUJI",
+      "nameShown": "Dr. Faidal, S.E., M.M."
+    },
+    "pages": [
+      {
+        "label": "Dashboard",
+        "ok": true
+      },
+      {
+        "label": "Daftar Ujian 3",
+        "ok": true
+      },
+      {
+        "label": "Naskah Ujian",
+        "ok": true
+      },
+      {
+        "label": "Form Penilaian 1",
+        "ok": true
+      },
+      {
+        "label": "Catatan / Koreksi",
+        "ok": true
+      },
+      {
+        "label": "Verifikasi Revisi 1",
+        "ok": true
+      }
+    ],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)",
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    ],
+    "pageErrors": [],
+    "logoutOk": true
+  },
+  {
+    "role": "Admin Akademik",
+    "key": "admin",
+    "login": {
+      "ok": true,
+      "roleShown": "ADMIN",
+      "nameShown": "Ahmad Fauzi, S.Kom., M.T."
+    },
+    "pages": [
+      {
+        "label": "Dashboard",
+        "ok": true
+      },
+      {
+        "label": "Jadwal Tahapan 13",
+        "ok": true
+      },
+      {
+        "label": "Otomasi Dokumen Auto",
+        "ok": true
+      },
+      {
+        "label": "Verifikasi Berkas 30",
+        "ok": true
+      },
+      {
+        "label": "Penerbitan SK",
+        "ok": true
+      },
+      {
+        "label": "Alokasi Ruang Sidang",
+        "ok": true
+      }
+    ],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    ],
+    "pageErrors": [],
+    "logoutOk": true
+  },
+  {
+    "role": "Super Admin",
+    "key": "superadmin",
+    "login": {
+      "ok": true,
+      "roleShown": "SUPERADMIN",
+      "nameShown": "Ir. Supriyanto, M.Kom."
+    },
+    "pages": [
+      {
+        "label": "Dashboard",
+        "ok": true
+      },
+      {
+        "label": "Master Data Prodi",
+        "ok": true
+      },
+      {
+        "label": "Tahapan & Regulasi",
+        "ok": true
+      },
+      {
+        "label": "Kuota Bimbingan",
+        "ok": true
+      },
+      {
+        "label": "Manajemen Pengguna 64",
+        "ok": true
+      }
+    ],
+    "consoleErrors": [],
+    "pageErrors": [],
+    "logoutOk": true
+  }
+]

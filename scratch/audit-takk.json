@@ -1,0 +1,430 @@
+{
+ "1024": {
+  "overflow": [
+   {
+    "el": "div.header-text-block \"Dashboard TAKK Pengajuan Jalur TAKK — Menunggu Unggah Dokume\"",
+    "scrollW": 416,
+    "clientW": 369,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div.header-title-badge-group \"Dashboard TAKK Pengajuan Jalur TAKK — Menunggu Unggah Dokume\"",
+    "scrollW": 416,
+    "clientW": 369,
+    "overflowX": "visible"
+   },
+   {
+    "el": "section.ui-panel.dashboard-position-panel \"Posisi Akademik Saat Ini Tahap 1 dari 6 pada kurikulum S-1 M\"",
+    "scrollW": 1180,
+    "clientW": 708,
+    "overflowX": "hidden"
+   },
+   {
+    "el": "div.ui-panel-body. \"JUDUL NASKAH TERDAFTAR Tugas Akhir (TAKK) Inovasi Ekosistem \"",
+    "scrollW": 1180,
+    "clientW": 708,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div.grid-2col-responsive \"JUDUL NASKAH TERDAFTAR Tugas Akhir (TAKK) Inovasi Ekosistem \"",
+    "scrollW": 859,
+    "clientW": 672,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"TAHAPAN AKADEMIK AKTIF Tahap 1 / 6 Pengajuan Skema TAKK & Un\"",
+    "scrollW": 439,
+    "clientW": 250,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"Status Tahapan: Pengajuan Jalur TAKK — Menunggu Unggah Dokum\"",
+    "scrollW": 423,
+    "clientW": 218,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"ALUR PERJALANAN TAHAPAN TAKK Berikutnya: Bimbingan Laporan T\"",
+    "scrollW": 1162,
+    "clientW": 672,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"T1 Pengajuan Skema TAKK & Unggah Portofolio T2 Bimbingan Lap\"",
+    "scrollW": 1162,
+    "clientW": 672,
+    "overflowX": "visible"
+   }
+  ],
+  "truncated": [],
+  "smallTargets": [],
+  "tiny": [
+   {
+    "el": "span.topbar-notification-badge \"3\"",
+    "fs": 10
+   },
+   {
+    "el": "span.topbar-user-role \"MAHASISWA\"",
+    "fs": 10
+   },
+   {
+    "el": "span.sidebar-user-label \"MAHASISWA (S1)\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span.sidebar-user-label \"MAHASISWA (S1)\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T1\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T2\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T3\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T4\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T5\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T6\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"Dosen Pembimbing • NIP. 197307152005011001\"",
+    "fs": 10.5
+   },
+   {
+    "el": "div. \"Similarity Index\"",
+    "fs": 10.5
+   },
+   {
+    "el": "span. \"Batas: ≤ 30%\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"AI Detection\"",
+    "fs": 10.5
+   },
+   {
+    "el": "span. \"Batas: ≤ 40%\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"Capaian: Skor 460 (Lolos Batas Minimal)\"",
+    "fs": 10.5
+   },
+   {
+    "el": "div. \"Transkrip: 140 SKS Lulus • IPK 3.52\"",
+    "fs": 10.5
+   }
+  ],
+  "nested": [],
+  "overlaps": [
+   {
+    "el": "div.header-status-slot \"Pengajuan Jalur TAKK — Menunggu Unggah Dokumen Portofolio Ma\"",
+    "childRight": 698,
+    "parentRight": 651
+   },
+   {
+    "el": "aside. \"Simulasi: Mahasiswa\"",
+    "childRight": 1008,
+    "parentRight": 992
+   },
+   {
+    "el": "div.ui-toast-stack \"\"",
+    "childRight": 1000,
+    "parentRight": 992
+   }
+  ],
+  "rects": {},
+  "docScroll": {
+   "scrollW": 1024,
+   "clientW": 1024,
+   "bodyScrollW": 1024
+  }
+ },
+ "1280": {
+  "overflow": [
+   {
+    "el": "section.ui-panel.dashboard-position-panel \"Posisi Akademik Saat Ini Tahap 1 dari 6 pada kurikulum S-1 M\"",
+    "scrollW": 1180,
+    "clientW": 964,
+    "overflowX": "hidden"
+   },
+   {
+    "el": "div.ui-panel-body. \"JUDUL NASKAH TERDAFTAR Tugas Akhir (TAKK) Inovasi Ekosistem \"",
+    "scrollW": 1180,
+    "clientW": 964,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div.grid-2col-responsive \"JUDUL NASKAH TERDAFTAR Tugas Akhir (TAKK) Inovasi Ekosistem \"",
+    "scrollW": 1017,
+    "clientW": 928,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"TAHAPAN AKADEMIK AKTIF Tahap 1 / 6 Pengajuan Skema TAKK & Un\"",
+    "scrollW": 439,
+    "clientW": 349,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"Status Tahapan: Pengajuan Jalur TAKK — Menunggu Unggah Dokum\"",
+    "scrollW": 423,
+    "clientW": 317,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"ALUR PERJALANAN TAHAPAN TAKK Berikutnya: Bimbingan Laporan T\"",
+    "scrollW": 1162,
+    "clientW": 928,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"T1 Pengajuan Skema TAKK & Unggah Portofolio T2 Bimbingan Lap\"",
+    "scrollW": 1162,
+    "clientW": 928,
+    "overflowX": "visible"
+   }
+  ],
+  "truncated": [],
+  "smallTargets": [],
+  "tiny": [
+   {
+    "el": "span.topbar-notification-badge \"3\"",
+    "fs": 10
+   },
+   {
+    "el": "span.topbar-user-role \"MAHASISWA\"",
+    "fs": 10
+   },
+   {
+    "el": "span.sidebar-user-label \"MAHASISWA (S1)\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span.sidebar-user-label \"MAHASISWA (S1)\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T1\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T2\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T3\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T4\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T5\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T6\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"Dosen Pembimbing • NIP. 197307152005011001\"",
+    "fs": 10.5
+   },
+   {
+    "el": "div. \"Similarity Index\"",
+    "fs": 10.5
+   },
+   {
+    "el": "span. \"Batas: ≤ 30%\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"AI Detection\"",
+    "fs": 10.5
+   },
+   {
+    "el": "span. \"Batas: ≤ 40%\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"Capaian: Skor 460 (Lolos Batas Minimal)\"",
+    "fs": 10.5
+   },
+   {
+    "el": "div. \"Transkrip: 140 SKS Lulus • IPK 3.52\"",
+    "fs": 10.5
+   }
+  ],
+  "nested": [],
+  "overlaps": [
+   {
+    "el": "aside. \"Simulasi: Mahasiswa\"",
+    "childRight": 1264,
+    "parentRight": 1248
+   },
+   {
+    "el": "div.ui-toast-stack \"\"",
+    "childRight": 1256,
+    "parentRight": 1248
+   }
+  ],
+  "rects": {},
+  "docScroll": {
+   "scrollW": 1280,
+   "clientW": 1280,
+   "bodyScrollW": 1280
+  }
+ },
+ "1440": {
+  "overflow": [
+   {
+    "el": "section.ui-panel.dashboard-position-panel \"Posisi Akademik Saat Ini Tahap 1 dari 6 pada kurikulum S-1 M\"",
+    "scrollW": 1180,
+    "clientW": 1124,
+    "overflowX": "hidden"
+   },
+   {
+    "el": "div.ui-panel-body. \"JUDUL NASKAH TERDAFTAR Tugas Akhir (TAKK) Inovasi Ekosistem \"",
+    "scrollW": 1180,
+    "clientW": 1124,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div.grid-2col-responsive \"JUDUL NASKAH TERDAFTAR Tugas Akhir (TAKK) Inovasi Ekosistem \"",
+    "scrollW": 1115,
+    "clientW": 1088,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"TAHAPAN AKADEMIK AKTIF Tahap 1 / 6 Pengajuan Skema TAKK & Un\"",
+    "scrollW": 439,
+    "clientW": 410,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"Status Tahapan: Pengajuan Jalur TAKK — Menunggu Unggah Dokum\"",
+    "scrollW": 423,
+    "clientW": 378,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"ALUR PERJALANAN TAHAPAN TAKK Berikutnya: Bimbingan Laporan T\"",
+    "scrollW": 1162,
+    "clientW": 1088,
+    "overflowX": "visible"
+   },
+   {
+    "el": "div. \"T1 Pengajuan Skema TAKK & Unggah Portofolio T2 Bimbingan Lap\"",
+    "scrollW": 1162,
+    "clientW": 1088,
+    "overflowX": "visible"
+   }
+  ],
+  "truncated": [],
+  "smallTargets": [],
+  "tiny": [
+   {
+    "el": "span.topbar-notification-badge \"3\"",
+    "fs": 10
+   },
+   {
+    "el": "span.topbar-user-role \"MAHASISWA\"",
+    "fs": 10
+   },
+   {
+    "el": "span.sidebar-user-label \"MAHASISWA (S1)\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span.sidebar-user-label \"MAHASISWA (S1)\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T1\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T2\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T3\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T4\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T5\"",
+    "fs": 9.5
+   },
+   {
+    "el": "span. \"T6\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"Dosen Pembimbing • NIP. 197307152005011001\"",
+    "fs": 10.5
+   },
+   {
+    "el": "div. \"Similarity Index\"",
+    "fs": 10.5
+   },
+   {
+    "el": "span. \"Batas: ≤ 30%\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"AI Detection\"",
+    "fs": 10.5
+   },
+   {
+    "el": "span. \"Batas: ≤ 40%\"",
+    "fs": 9.5
+   },
+   {
+    "el": "div. \"Capaian: Skor 460 (Lolos Batas Minimal)\"",
+    "fs": 10.5
+   },
+   {
+    "el": "div. \"Transkrip: 140 SKS Lulus • IPK 3.52\"",
+    "fs": 10.5
+   }
+  ],
+  "nested": [],
+  "overlaps": [
+   {
+    "el": "aside. \"Simulasi: Mahasiswa\"",
+    "childRight": 1424,
+    "parentRight": 1408
+   },
+   {
+    "el": "div.ui-toast-stack \"\"",
+    "childRight": 1416,
+    "parentRight": 1408
+   }
+  ],
+  "rects": {},
+  "docScroll": {
+   "scrollW": 1440,
+   "clientW": 1440,
+   "bodyScrollW": 1440
+  }
+ }
+}

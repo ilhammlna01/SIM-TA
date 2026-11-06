@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedoman Penggunaan SIM-TA FEB UTM</title>
+<style>
+  :root { --ink:#0B192C; --muted:#4A5568; --line:#cbd5e1; --accent:#B8860B; }
+  * { box-sizing: border-box; }
+  body { margin:0; color:var(--ink); background:#fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 13px; line-height: 1.6; }
+  .sheet { max-width: 1000px; margin: 0 auto; padding: 28px 34px 60px; }
+  h1 { font-size: 24px; border-bottom: 3px solid var(--accent); padding-bottom: 8px; margin-top: 34px; }
+  h2 { font-size: 19px; margin-top: 30px; border-bottom: 1px solid var(--line); padding-bottom: 5px; page-break-after: avoid; }
+  h3 { font-size: 16px; margin-top: 22px; page-break-after: avoid; }
+  h4 { font-size: 14px; margin-top: 18px; page-break-after: avoid; }
+  p, li { color: #1f2937; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 18px; page-break-inside: auto; }
+  th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; font-size: 12px; }
+  th { background: #f1f5f9; font-weight: 700; }
+  tr { page-break-inside: avoid; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 12px; }
+  pre.code { background:#0f172a; color:#e2e8f0; padding:12px 14px; border-radius:6px; overflow:auto; font-size:12px; }
+  blockquote { margin: 12px 0; padding: 10px 14px; background:#fffbeb; border-left: 4px solid var(--accent); color:#4b3a08; }
+  img { display:block; max-width:100%; height:auto; margin: 10px auto 4px; border:1px solid var(--line); border-radius:6px;
+        page-break-inside: avoid; }
+  hr { border:none; border-top:1px solid var(--line); margin: 26px 0; }
+  a { color:#1d4ed8; text-decoration:none; }
+  .mermaid-wrap { border:1px solid var(--line); border-radius:6px; padding:12px; margin:14px 0; background:#fafafa; page-break-inside: avoid; }
+  .mermaid { margin:0; white-space: pre-wrap; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; }
+  .mermaid svg { max-width: 100%; height: auto; display:block; margin: 0 auto; }
+  @media print {
+    body { font-size: 11.5px; }
+    .sheet { max-width: none; padding: 0; }
+    h1 { page-break-before: always; }
+    h1:first-of-type { page-break-before: avoid; }
+    img { page-break-inside: avoid; page-break-after: avoid; }
+    table { page-break-inside: auto; }
+    @page { size: A4; margin: 16mm 14mm; }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+<div class="sheet">
+<h1 id="pedoman-penggunaan-sim-ta-feb-utm">PEDOMAN PENGGUNAAN SIM-TA FEB UTM</h1>
+<p><strong>Sistem Manajemen Tugas Akhir, Tesis, dan Disertasi</strong></p>
+<p><strong>Fakultas Ekonomi dan Bisnis — Universitas Trunojoyo Madura</strong></p>
+<hr>
+<table>
+<thead><tr><th>Keterangan</th><th>Isi</th></tr></thead>
+<tbody>
+<tr><td>Nama Sistem</td><td>SIM-TA FEB UTM (Sistem Informasi Manajemen Tugas Akhir)</td></tr>
+<tr><td>Unit Pengelola</td><td>Jurusan Manajemen, Fakultas Ekonomi dan Bisnis, Universitas Trunojoyo Madura</td></tr>
+<tr><td>Cakupan Jenjang</td><td>D3 Entrepreneurship, S1 Manajemen, S2 Magister Manajemen, S3 Doktor Ilmu Manajemen</td></tr>
+<tr><td>Versi Dokumen</td><td>1.0</td></tr>
+<tr><td>Tanggal Terbit</td><td>13 Oktober 2026</td></tr>
+<tr><td>Dasar Hukum</td><td>Buku Pedoman Tugas Akhir Jurusan Manajemen FEB UTM 2026</td></tr>
+<tr><td>Penyusun</td><td>Tim Penyusun Pedoman Penggunaan SIM-TA FEB UTM</td></tr>
+<tr><td>Alamat Aplikasi</td><td>http://localhost:5173 (lingkungan pengembangan lokal)</td></tr>
+<tr><td>Alamat API</td><td>http://localhost:5001</td></tr>
+</tbody></table>
+<blockquote>Dokumen ini disusun berdasarkan antarmuka aplikasi SIM-TA FEB UTM yang sedang berjalan. Seluruh tangkapan layar diambil langsung dari aplikasi menggunakan akun demo resmi.</blockquote>
+<hr>
+<h2 id="2-daftar-isi">2. Daftar Isi</h2>
+<ul>
+<li><a href="#pedoman-penggunaan-sim-ta-feb-utm">1. Halaman Judul</a></li>
+<li><a href="#2-daftar-isi">2. Daftar Isi</a></li>
+<li><a href="#3-tentang-sistem-dan-tujuan">3. Tentang Sistem dan Tujuan</a></li>
+<li><a href="#4-persyaratan-akses">4. Persyaratan Akses</a></li>
+<li><a href="#5-cara-login-dan-akun-demo">5. Cara Login dan Akun Demo</a></li>
+<li><a href="#6-peran-dan-hak-akses">6. Peran dan Hak Akses</a></li>
+<li><a href="#7-panduan-per-peran">7. Panduan per Peran</a></li>
+<li><a href="#71-mahasiswa">7.1 Mahasiswa</a></li>
+<li><a href="#72-dosen-pembimbing">7.2 Dosen Pembimbing</a></li>
+<li><a href="#73-dewan-penguji">7.3 Dewan Penguji</a></li>
+<li><a href="#74-koorprodi">7.4 Koorprodi</a></li>
+<li><a href="#75-admin-akademik">7.5 Admin Akademik</a></li>
+<li><a href="#76-superadmin">7.6 Superadmin</a></li>
+<li><a href="#8-alur-proses-utama-end-to-end">8. Alur Proses Utama End-to-End</a></li>
+<li><a href="#9-standar-operasional-prosedur-sop">9. Standar Operasional Prosedur (SOP)</a></li>
+<li><a href="#91-sop-bimbingan">9.1 SOP Bimbingan</a></li>
+<li><a href="#92-sop-unggah-naskah-uji-turnitin-dan-bebas-plagiasi">9.2 SOP Unggah Naskah, Uji Turnitin, dan Bebas Plagiasi</a></li>
+<li><a href="#93-sop-verifikasi-berkas-dan-pendaftaran-ujian">9.3 SOP Verifikasi Berkas dan Pendaftaran Ujian</a></li>
+<li><a href="#94-sop-plotting-pembimbing-dan-penetapan-dewan-penguji">9.4 SOP Plotting Pembimbing dan Penetapan Dewan Penguji</a></li>
+<li><a href="#95-sop-penjadwalan-dan-pelaksanaan-ujiansidang">9.5 SOP Penjadwalan dan Pelaksanaan Ujian/Sidang</a></li>
+<li><a href="#96-sop-penilaian-dan-pengesahan-nilai">9.6 SOP Penilaian dan Pengesahan Nilai</a></li>
+<li><a href="#97-sop-revisi-pasca-ujian">9.7 SOP Revisi Pasca Ujian</a></li>
+<li><a href="#98-sop-penerbitan-dokumen-sk-dan-berita-acara">9.8 SOP Penerbitan Dokumen, SK, dan Berita Acara</a></li>
+<li><a href="#99-sop-publikasi-ilmiah-dan-skema-takk">9.9 SOP Publikasi Ilmiah dan Skema TAKK</a></li>
+<li><a href="#910-aturan-kelayakan-akademik-per-jenjang">9.10 Aturan Kelayakan Akademik per Jenjang</a></li>
+<li><a href="#911-sop-administrasi-dan-linimasa-tahapan-per-jenjang">9.11 SOP Administrasi dan Linimasa Tahapan per Jenjang</a></li>
+<li><a href="#912-matriks-ringkas-sop-per-peran">9.12 Matriks Ringkas SOP per Peran</a></li>
+<li><a href="#10-fitur-lain">10. Fitur Lain</a></li>
+<li><a href="#11-troubleshooting-dan-faq">11. Troubleshooting dan FAQ</a></li>
+<li><a href="#12-glosarium">12. Glosarium</a></li>
+</ul>
+<h3 id="daftar-gambar">Daftar Gambar</h3>
+<table>
+<thead><tr><th>Gambar</th><th>Berkas</th><th>Keterangan</th></tr></thead>
+<tbody>
+<tr><td>Gambar 1</td><td>01-login.png</td><td>Halaman login SIM-TA</td></tr>
+<tr><td>Gambar 2</td><td>02-login-akun-demo.png</td><td>Cara login dan Akses Cepat Pengujian / Akun Demo</td></tr>
+<tr><td>Gambar 3</td><td>03-mahasiswa-dashboard.png</td><td>Dashboard Mahasiswa</td></tr>
+<tr><td>Gambar 4</td><td>04-mahasiswa-detail-tugas-akhir.png</td><td>Detail Tugas Akhir Mahasiswa</td></tr>
+<tr><td>Gambar 5</td><td>05-mahasiswa-tahapan.png</td><td>Tahapan Mahasiswa</td></tr>
+<tr><td>Gambar 6</td><td>06-mahasiswa-persyaratan.png</td><td>Persyaratan Mahasiswa</td></tr>
+<tr><td>Gambar 7</td><td>07-mahasiswa-bimbingan.png</td><td>Bimbingan Mahasiswa</td></tr>
+<tr><td>Gambar 8</td><td>08-mahasiswa-naskah.png</td><td>Naskah Mahasiswa</td></tr>
+<tr><td>Gambar 9</td><td>09-mahasiswa-ujian.png</td><td>Ujian Mahasiswa</td></tr>
+<tr><td>Gambar 10</td><td>10-mahasiswa-revisi.png</td><td>Revisi Mahasiswa</td></tr>
+<tr><td>Gambar 11</td><td>11-mahasiswa-publikasi.png</td><td>Publikasi Mahasiswa</td></tr>
+<tr><td>Gambar 12</td><td>12-mahasiswa-dokumen.png</td><td>Dokumen Mahasiswa</td></tr>
+<tr><td>Gambar 13</td><td>13-dosen-dashboard.png</td><td>Dashboard Dosen Pembimbing</td></tr>
+<tr><td>Gambar 14</td><td>14-dosen-mahasiswa-bimbingan.png</td><td>Mahasiswa Bimbingan</td></tr>
+<tr><td>Gambar 15</td><td>15-dosen-bimbingan.png</td><td>Bimbingan Dosen</td></tr>
+<tr><td>Gambar 16</td><td>16-dosen-naskah-masuk.png</td><td>Naskah Masuk</td></tr>
+<tr><td>Gambar 17</td><td>17-dosen-review-naskah.png</td><td>Review Naskah</td></tr>
+<tr><td>Gambar 18</td><td>18-dosen-persetujuan.png</td><td>Persetujuan Dosen</td></tr>
+<tr><td>Gambar 19</td><td>19-dosen-pemantauan-revisi.png</td><td>Pemantauan Revisi Dosen</td></tr>
+<tr><td>Gambar 20</td><td>20-dosen-jadwal-ujian.png</td><td>Jadwal Ujian Dosen</td></tr>
+<tr><td>Gambar 21</td><td>21-penguji-dashboard.png</td><td>Dashboard Dewan Penguji</td></tr>
+<tr><td>Gambar 22</td><td>22-penguji-daftar-ujian.png</td><td>Daftar Ujian Penguji</td></tr>
+<tr><td>Gambar 23</td><td>23-penguji-naskah-ujian.png</td><td>Naskah Ujian</td></tr>
+<tr><td>Gambar 24</td><td>24-penguji-form-penilaian.png</td><td>Form Penilaian</td></tr>
+<tr><td>Gambar 25</td><td>25-penguji-catatan-koreksi.png</td><td>Catatan / Koreksi</td></tr>
+<tr><td>Gambar 26</td><td>26-penguji-verifikasi-revisi.png</td><td>Verifikasi Revisi</td></tr>
+<tr><td>Gambar 27</td><td>27-koorprodi-dashboard.png</td><td>Dashboard Koorprodi</td></tr>
+<tr><td>Gambar 28</td><td>28-koorprodi-daftar-mahasiswa.png</td><td>Daftar Mahasiswa</td></tr>
+<tr><td>Gambar 29</td><td>29-koorprodi-pengajuan-masuk.png</td><td>Pengajuan Masuk</td></tr>
+<tr><td>Gambar 30</td><td>30-koorprodi-plotting-pembimbing.png</td><td>Plotting Pembimbing</td></tr>
+<tr><td>Gambar 31</td><td>31-koorprodi-dewan-penguji.png</td><td>Dewan Penguji (Koorprodi)</td></tr>
+<tr><td>Gambar 32</td><td>32-koorprodi-penerbitan-dokumen-kolektif.png</td><td>Penerbitan Dokumen Kolektif</td></tr>
+<tr><td>Gambar 33</td><td>33-koorprodi-jadwal-ujian-sidang.png</td><td>Jadwal Ujian dan Sidang</td></tr>
+<tr><td>Gambar 34</td><td>34-koorprodi-matriks-persyaratan.png</td><td>Matriks Persyaratan</td></tr>
+<tr><td>Gambar 35</td><td>35-koorprodi-pemantauan-revisi.png</td><td>Pemantauan Revisi Koorprodi</td></tr>
+<tr><td>Gambar 36</td><td>36-koorprodi-arsip-dokumen-prodi.png</td><td>Arsip Dokumen Prodi</td></tr>
+<tr><td>Gambar 37</td><td>37-admin-dashboard.png</td><td>Dashboard Admin Akademik</td></tr>
+<tr><td>Gambar 38</td><td>38-admin-jadwal-tahapan.png</td><td>Jadwal Tahapan</td></tr>
+<tr><td>Gambar 39</td><td>39-admin-otomasi-dokumen.png</td><td>Otomasi Dokumen</td></tr>
+<tr><td>Gambar 40</td><td>40-admin-verifikasi-berkas.png</td><td>Verifikasi Berkas</td></tr>
+<tr><td>Gambar 41</td><td>41-admin-penerbitan-sk.png</td><td>Penerbitan SK</td></tr>
+<tr><td>Gambar 42</td><td>42-admin-alokasi-ruang-sidang.png</td><td>Alokasi Ruang Sidang</td></tr>
+<tr><td>Gambar 43</td><td>43-superadmin-dashboard.png</td><td>Dashboard Superadmin</td></tr>
+<tr><td>Gambar 44</td><td>44-superadmin-master-data-prodi.png</td><td>Master Data Prodi</td></tr>
+<tr><td>Gambar 45</td><td>45-superadmin-tahapan-regulasi.png</td><td>Tahapan dan Regulasi</td></tr>
+<tr><td>Gambar 46</td><td>46-superadmin-kuota-bimbingan.png</td><td>Kuota Bimbingan</td></tr>
+<tr><td>Gambar 47</td><td>47-superadmin-manajemen-pengguna.png</td><td>Manajemen Pengguna</td></tr>
+<tr><td>Gambar 48</td><td>48-notifikasi.png</td><td>Panel Notifikasi dan Action Item</td></tr>
+<tr><td>Gambar 49</td><td>49-ganti-kata-sandi.png</td><td>Modal Pembaruan Kata Sandi Akun</td></tr>
+<tr><td>Gambar 50</td><td>50-menu-mobile-drawer.png</td><td>Menu drawer pada tampilan mobile</td></tr>
+</tbody></table>
+<hr>
+<h2 id="3-tentang-sistem-dan-tujuan">3. Tentang Sistem dan Tujuan</h2>
+<p>SIM-TA FEB UTM adalah sistem informasi terpadu yang mengelola seluruh siklus Tugas Akhir, Tesis, dan Disertasi di Jurusan Manajemen Fakultas Ekonomi dan Bisnis Universitas Trunojoyo Madura, mulai dari pengajuan topik dan plotting pembimbing, penyusunan proposal, pencatatan bimbingan, pengunggahan naskah, verifikasi kelengkapan persyaratan, pendaftaran ujian, penetapan dewan penguji, penjadwalan dan alokasi ruang sidang, penilaian serta berita acara, pemantauan revisi, hingga publikasi dan pengesahan dokumen; sistem ini bertujuan menyatukan seluruh proses tersebut dalam satu pangkalan data yang tertelusur, transparan, dan sesuai Buku Pedoman Tugas Akhir Jurusan Manajemen FEB UTM 2026 sehingga setiap pemangku kepentingan (mahasiswa, dosen pembimbing, dewan penguji, koorprodi, admin akademik, dan superadmin) memperoleh hak akses yang tepat sesuai perannya.</p>
+<hr>
+<h2 id="4-persyaratan-akses">4. Persyaratan Akses</h2>
+<table>
+<thead><tr><th>Komponen</th><th>Ketentuan</th></tr></thead>
+<tbody>
+<tr><td>Peramban (browser)</td><td>Google Chrome, Microsoft Edge, Mozilla Firefox, atau Safari versi terbaru (mendukung JavaScript modern)</td></tr>
+<tr><td>Resolusi layar</td><td>Minimal 1366 x 768 piksel; optimal 1440 x 900 piksel</td></tr>
+<tr><td>Jaringan</td><td>Terhubung ke jaringan kampus atau internet stabil (aplikasi memanggil API pada port 5001)</td></tr>
+<tr><td>Alamat Frontend</td><td>http://localhost:5173</td></tr>
+<tr><td>Alamat Backend API</td><td>http://localhost:5001</td></tr>
+<tr><td>Akun</td><td>Nomor Induk (NIM/NIP) atau email institusi, beserta kata sandi akun</td></tr>
+<tr><td>Perangkat</td><td>Komputer/laptop, tablet, atau telepon pintar (tersedia tampilan mobile dengan menu drawer)</td></tr>
+</tbody></table>
+<p>Halaman pertama yang ditampilkan saat membuka alamat aplikasi adalah halaman login institusional, seperti pada Gambar 1.</p>
+<p><img src="img/01-login.png" alt="Gambar 1. Halaman login SIM-TA FEB UTM menampilkan kop Universitas Trunojoyo Madura dan formulir masuk."></p>
+<blockquote><strong>Catatan.</strong> Pada lingkungan pengembangan, sistem menampilkan indikator status server (&quot;T.A. 2026/2027 Ganjil • Server Aktif&quot;) di bagian kanan atas halaman login.</blockquote>
+<hr>
+<h2 id="5-cara-login-dan-akun-demo">5. Cara Login dan Akun Demo</h2>
+<p>Lakukan langkah berikut untuk masuk ke aplikasi:</p>
+<ol>
+<li>Buka peramban dan akses http://localhost:5173. Halaman login akan tampil seperti pada Gambar 1.</li>
+<li>Isi kolom <strong>Nomor Induk (NIM / NIP) atau Email Institusi</strong> dengan NIM atau NIP Anda.</li>
+<li>Isi kolom <strong>Kata Sandi (Password Akun)</strong> dengan kata sandi akun Anda.</li>
+<li>(Opsional) Biarkan <strong>Ingat sesi saya di perangkat ini</strong> tercentang bila perangkat bersifat pribadi.</li>
+<li>Klik tombol <strong>Masuk ke Portal SIM-TA</strong>.</li>
+<li>Bila kredensial benar, sistem menampilkan pesan keberhasilan dan mengarahkan Anda ke portal sesuai peran.</li>
+</ol>
+<p>Penjelasan setiap elemen formulir dan panel <strong>Akses Cepat Pengujian / Akun Demo</strong> ditunjukkan pada Gambar 2.</p>
+<p><img src="img/02-login-akun-demo.png" alt="Gambar 2. Penjelasan kolom login dan panel Akses Cepat Pengujian / Akun Demo."></p>
+<h3 id="akun-demo-untuk-pengujian">Akun Demo untuk Pengujian</h3>
+<p>Aplikasi menyediakan panel <strong>Akses Cepat Pengujian / Akun Demo</strong> di bawah formulir login. Klik salah satu tombol untuk mengisi NIM/NIP secara otomatis, kemudian klik <strong>Masuk ke Portal SIM-TA</strong>. Kata sandi default seluruh akun demo adalah <strong>FEB-UTM-2026</strong>.</p>
+<table>
+<thead><tr><th>Peran</th><th>Nomor Induk (NIM/NIP)</th><th>Keterangan pada Panel Demo</th></tr></thead>
+<tbody>
+<tr><td>Mahasiswa S1</td><td>210211100142</td><td>Dinda Ayu (S1 • TAKT) — Skripsi Reguler</td></tr>
+<tr><td>Mahasiswa S1</td><td>210211100219</td><td>Moh. Fikri (S1 • TAKK) — Portofolio Bisnis</td></tr>
+<tr><td>Mahasiswa S2</td><td>230221600018</td><td>Rahmat H. (S2 • Tesis)</td></tr>
+<tr><td>Mahasiswa D3</td><td>230201100055</td><td>Siti Nur (D3 • Laporan TA)</td></tr>
+<tr><td>Mahasiswa S3</td><td>220231600004</td><td>Bambang S. (S3 • Disertasi)</td></tr>
+<tr><td>Dosen Pembimbing</td><td>196201081987032001</td><td>Dr. Dra. Hj. Iriani Ismail</td></tr>
+<tr><td>Dewan Penguji</td><td>197703032003121002</td><td>Dr. Faidal, S.E., M.M.</td></tr>
+<tr><td>Koorprodi</td><td>197802142003122001</td><td>Dr. Hj. Siti Aminah</td></tr>
+<tr><td>Admin Akademik</td><td>198104122008121002</td><td>Ahmad Fauzi, S.Kom.</td></tr>
+<tr><td>Superadmin</td><td>197405102000031001</td><td>Ir. Supriyanto, M.Kom.</td></tr>
+</tbody></table>
+<blockquote><strong>Peringatan.</strong> Akun demo hanya untuk keperluan pengujian dan pelatihan. Jangan menggunakan data pribadi nyata di luar akun demo pada lingkungan demonstrasi.</blockquote>
+<h3 id="lupa-kata-sandi">Lupa Kata Sandi</h3>
+<ol>
+<li>Klik tautan <strong>Lupa kata sandi?</strong> pada halaman login.</li>
+<li>Isi Nomor Induk atau email institusi Anda pada modal yang muncul.</li>
+<li>Sistem mengirimkan tautan pemulihan ke alamat email institusi terdaftar.</li>
+</ol>
+<hr>
+<h2 id="6-peran-dan-hak-akses">6. Peran dan Hak Akses</h2>
+<p>Aplikasi mengenali enam peran dengan menu utama sebagai berikut (label menu sesuai antarmuka).</p>
+<table>
+<thead><tr><th>Peran</th><th>Menu Utama</th></tr></thead>
+<tbody>
+<tr><td>Mahasiswa</td><td>Dashboard, Detail Tugas Akhir, Tahapan, Persyaratan, Bimbingan, Naskah, Ujian, Revisi, Publikasi, Dokumen</td></tr>
+<tr><td>Dosen Pembimbing</td><td>Dashboard, Mahasiswa Bimbingan, Bimbingan, Naskah Masuk, Review Naskah, Persetujuan, Pemantauan Revisi, Jadwal Ujian</td></tr>
+<tr><td>Dewan Penguji</td><td>Dashboard, Daftar Ujian, Naskah Ujian, Form Penilaian, Catatan / Koreksi, Verifikasi Revisi</td></tr>
+<tr><td>Koorprodi</td><td>Dashboard, Daftar Mahasiswa, Pengajuan Masuk, Plotting Pembimbing, Dewan Penguji, Penerbitan Dokumen Kolektif, Jadwal Ujian &amp; Sidang, Matriks Persyaratan, Pemantauan Revisi, Arsip Dokumen Prodi</td></tr>
+<tr><td>Admin Akademik</td><td>Dashboard, Jadwal Tahapan, Otomasi Dokumen, Verifikasi Berkas, Penerbitan SK, Alokasi Ruang Sidang</td></tr>
+<tr><td>Superadmin</td><td>Dashboard, Master Data Prodi, Tahapan &amp; Regulasi, Kuota Bimbingan, Manajemen Pengguna</td></tr>
+</tbody></table>
+<blockquote><strong>Catatan.</strong> Perpindahan peran kerja aktif dilakukan melalui menu profil di kanan atas, dan hanya tersedia bagi akun yang memiliki penugasan lebih dari satu peran (umumnya dosen/tenaga kependidikan). Akun mahasiswa terkunci pada peran mahasiswa.</blockquote>
+<hr>
+<h2 id="7-panduan-per-peran">7. Panduan per Peran</h2>
+<p>Setiap bab peran memuat ringkasan tugas, langkah kerja, tabel kolom/tombol penting, serta catatan dan peringatan.</p>
+<h3 id="71-mahasiswa">7.1 Mahasiswa</h3>
+<p><strong>a. Ringkasan tugas.</strong> Mahasiswa mengelola seluruh kelengkapan tugas akhirnya: melihat ringkasan progres, melengkapi berkas persyaratan, mencatat bimbingan, mengunggah naskah, mendaftar ujian, menindaklanjuti revisi, mencatat publikasi, dan mengunduh dokumen resmi.</p>
+<p><strong>b. Langkah kerja.</strong></p>
+<ol>
+<li>Masuk dengan akun mahasiswa. Sistem menampilkan ringkasan posisi akademik, judul terdaftar, dan agenda sidang seperti pada Gambar 3.</li>
+</ol>
+<p><img src="img/03-mahasiswa-dashboard.png" alt="Gambar 3. Dashboard Mahasiswa menampilkan posisi tahapan, judul terdaftar, dan agenda sidang."></p>
+<ol>
+<li>Klik menu <strong>Detail Tugas Akhir</strong> untuk memeriksa identitas karya ilmiah dan skema tugas akhir (Gambar 4). Gunakan tombol <strong>Cetak Lembar Identitas</strong> untuk mengunduh lembar identitas, atau <strong>Ajukan Perubahan Judul</strong> untuk mengajukan perubahan judul.</li>
+</ol>
+<p><img src="img/04-mahasiswa-detail-tugas-akhir.png" alt="Gambar 4. Detail Tugas Akhir menampilkan spesifikasi dan identitas karya ilmiah."></p>
+<ol>
+<li>Klik menu <strong>Tahapan</strong> untuk melihat alur perjalanan akademik dan posisi tahap aktif (Gambar 5). Klik <strong>Lihat Persyaratan Tahap Ini</strong> atau <strong>Buka Rincian &amp; Jadwal Ujian</strong> untuk menelusuri kelengkapan tahap berjalan.</li>
+</ol>
+<p><img src="img/05-mahasiswa-tahapan.png" alt="Gambar 5. Halaman Tahapan menampilkan alur perjalanan tahapan dan status tahap aktif."></p>
+<ol>
+<li>Klik menu <strong>Persyaratan</strong> untuk melengkapi berkas (Gambar 6). Klik <strong>Unggah Berkas Persyaratan</strong>, pilih <strong>Jenis Persyaratan</strong> yang sesuai pada formulir, unggah berkas, lalu klik <strong>Unggah</strong>. Berkas akan masuk ke antrean verifikasi Admin Akademik.</li>
+</ol>
+<p><img src="img/06-mahasiswa-persyaratan.png" alt="Gambar 6. Checklist Persyaratan menampilkan status kelayakan dan daftar dokumen persyaratan resmi."></p>
+<ol>
+<li>Klik menu <strong>Bimbingan</strong> untuk melihat logbook bimbingan (Gambar 7). Klik <strong>Catat Sesi Bimbingan</strong> untuk mencatat sesi baru, atau <strong>Cetak Rekap Bimbingan</strong> untuk mengunduh rekap.</li>
+</ol>
+<p><img src="img/07-mahasiswa-bimbingan.png" alt="Gambar 7. Logbook Bimbingan menampilkan riwayat sesi konsultasi dan status verifikasi dosen."></p>
+<ol>
+<li>Klik menu <strong>Naskah</strong> untuk mengelola naskah (Gambar 8). Gunakan tab <strong>Dossier Naskah Aktif</strong>, <strong>Uji Plagiasi Turnitin</strong>, dan <strong>Riwayat Versi Draf</strong>, serta tombol <strong>Unggah Versi Baru</strong> dan <strong>Unduh Naskah Terkini</strong>.</li>
+</ol>
+<p><img src="img/08-mahasiswa-naskah.png" alt="Gambar 8. Manajemen Naskah menampilkan dossier naskah, hasil Turnitin, dan riwayat versi."></p>
+<ol>
+<li>Klik menu <strong>Ujian</strong> untuk melihat jadwal dan susunan dewan penguji (Gambar 9). Klik <strong>Pendaftaran Ujian</strong> untuk mendaftar, atau <strong>Unduh Jadwal &amp; Dokumen</strong> untuk mengunduh berkas ujian.</li>
+</ol>
+<p><img src="img/09-mahasiswa-ujian.png" alt="Gambar 9. Halaman Ujian menampilkan jadwal, ruang, dan susunan dewan penguji."></p>
+<ol>
+<li>Klik menu <strong>Revisi</strong> untuk menindaklanjuti catatan dewan penguji (Gambar 10). Klik <strong>Tindak Lanjuti</strong> pada setiap butir, lalu <strong>Cetak Matriks Pengesahan</strong> setelah seluruh butir selesai.</li>
+</ol>
+<p><img src="img/10-mahasiswa-revisi.png" alt="Gambar 10. Matriks Revisi Pasca Ujian menampilkan catatan koreksi dan tindak lanjut mahasiswa."></p>
+<ol>
+<li>Klik menu <strong>Publikasi</strong> untuk mencatat luaran ilmiah (Gambar 11). Klik <strong>Daftarkan Publikasi Baru</strong> bila artikel telah terbit.</li>
+</ol>
+<p><img src="img/11-mahasiswa-publikasi.png" alt="Gambar 11. Halaman Publikasi menampilkan ketentuan publikasi dan status luaran ilmiah."></p>
+<ol>
+<li>Klik menu <strong>Dokumen</strong> untuk mengakses arsip dokumen resmi (Gambar 12). Gunakan filter kategori (<strong>Semua</strong>, <strong>Naskah</strong>, <strong>Bukti Plagiasi</strong>, <strong>Publikasi</strong>, <strong>Berita Acara</strong>, <strong>Persyaratan</strong>) dan tombol <strong>Cetak Lembar Pengesahan</strong>, <strong>Cetak Kartu Bimbingan</strong>, atau <strong>Unggah Naskah / Berkas</strong>.</li>
+</ol>
+<p><img src="img/12-mahasiswa-dokumen.png" alt="Gambar 12. Pusat Dokumen dan Arsip menampilkan dokumen resmi beserta status pengesahan."></p>
+<p><strong>c. Kolom dan tombol penting.</strong></p>
+<table>
+<thead><tr><th>Halaman</th><th>Kolom</th><th>Tombol Utama</th></tr></thead>
+<tbody>
+<tr><td>Dashboard</td><td>Posisi Akademik Saat Ini, Judul Naskah Terdaftar, Tahapan Akademik Aktif</td><td>Detail Tugas Akhir, Lanjutkan Tahap Ini</td></tr>
+<tr><td>Bimbingan</td><td>Sesi, Tanggal, Moda, Dosen Pembimbing, Materi Pembahasan Substantif, Bukti &amp; Berkas, Verifikasi, Aksi</td><td>Catat Sesi Bimbingan, Cetak Rekap Bimbingan</td></tr>
+<tr><td>Revisi</td><td>Bagian / Bab, Catatan Koreksi Penguji, Tindak Lanjut Mahasiswa, Status, Aksi</td><td>Tindak Lanjuti, Cetak Matriks Pengesahan</td></tr>
+<tr><td>Dokumen</td><td>Nama Dokumen Resmi, Kategori, Tgl Pengesahan, Status Pengesahan, Aksi</td><td>Cetak Lembar Pengesahan, Unggah Naskah / Berkas</td></tr>
+</tbody></table>
+<p><strong>d. Catatan dan peringatan.</strong></p>
+<ul>
+<li>Persyaratan kelayakan S1 (TAKT) mengacu Buku Pedoman 2026 Bab IV: lulus minimal 120 SKS, IPK minimal 2.00, TOEFL minimal 450, serta Turnitin Similarity maksimal 30% dan AI maksimal 40%.</li>
+<li>Batas waktu penyelesaian revisi maksimal 3 bulan sejak tanggal ujian; keterlambatan melebihi batas waktu mewajibkan ujian ulang.</li>
+<li>Pada jalur Skripsi Reguler (TAKT), publikasi artikel ilmiah bersifat opsional/anjuran diseminasi.</li>
+</ul>
+<h3 id="72-dosen-pembimbing">7.2 Dosen Pembimbing</h3>
+<p><strong>a. Ringkasan tugas.</strong> Dosen pembimbing/promotor memantau mahasiswa bimbingan, mencatat dan mengesahkan bimbingan, menelaah naskah, memberi persetujuan maju ujian, memantau revisi, serta mengikuti jadwal ujian.</p>
+<p><strong>b. Langkah kerja.</strong></p>
+<ol>
+<li>Masuk dengan akun dosen. Dashboard menampilkan ringkasan mahasiswa bimbingan, naskah yang perlu review, antrean persetujuan, dan jadwal ujian terdekat seperti pada Gambar 13.</li>
+</ol>
+<p><img src="img/13-dosen-dashboard.png" alt="Gambar 13. Dashboard Dosen Pembimbing menampilkan ringkasan bimbingan, naskah, persetujuan, dan jadwal ujian."></p>
+<ol>
+<li>Klik menu <strong>Mahasiswa Bimbingan</strong> untuk melihat direktori mahasiswa (Gambar 14). Gunakan filter jenjang (<strong>Semua Jenjang</strong>, <strong>S3</strong>, <strong>S2</strong>, <strong>S1</strong>, <strong>D3</strong>) dan tombol <strong>Detail</strong> atau <strong>Catat Konsultasi Baru</strong>.</li>
+</ol>
+<p><img src="img/14-dosen-mahasiswa-bimbingan.png" alt="Gambar 14. Daftar Mahasiswa Bimbingan menampilkan peran penugasan, tahapan, dan logbook bimbingan."></p>
+<ol>
+<li>Klik menu <strong>Bimbingan</strong> untuk mengelola logbook (Gambar 15). Klik <strong>Catat Sesi Bimbingan Baru</strong> untuk menambah catatan dan <strong>Sahkan</strong> untuk mengesahkan bukti scan lembar kendali.</li>
+</ol>
+<p><img src="img/15-dosen-bimbingan.png" alt="Gambar 15. Administrasi Logbook Bimbingan menampilkan riwayat sesi dan pengesahan bukti scan."></p>
+<ol>
+<li>Klik menu <strong>Naskah Masuk</strong> untuk memeriksa draf naskah (Gambar 16). Klik <strong>Review</strong> untuk menelaah atau <strong>Buka Lembar Persetujuan (Approval)</strong> untuk langsung membuka lembar persetujuan.</li>
+</ol>
+<p><img src="img/16-dosen-naskah-masuk.png" alt="Gambar 16. Daftar Naskah Masuk menampilkan status telaah serta hasil Turnitin dan AI Detection."></p>
+<ol>
+<li>Pada halaman <strong>Review Naskah</strong> (Gambar 17), gunakan mode <strong>PDF</strong> atau <strong>Teks Bab</strong>, klik <strong>Tambah Catatan Telaah</strong> untuk memberi catatan, lalu <strong>Lanjut ke Persetujuan (Approval)</strong>.</li>
+</ol>
+<p><img src="img/17-dosen-review-naskah.png" alt="Gambar 17. Review Naskah menampilkan telaah naskah dengan mode PDF/Teks Bab dan catatan telaah."></p>
+<ol>
+<li>Klik menu <strong>Persetujuan</strong> untuk memutuskan permohonan maju ujian (Gambar 18). Gunakan tombol <strong>Setujui Maju Ujian</strong>, <strong>Kembalikan untuk Perbaikan</strong>, atau <strong>Tolak Permohonan</strong>.</li>
+</ol>
+<p><img src="img/18-dosen-persetujuan.png" alt="Gambar 18. Antrean Persetujuan menampilkan permohonan maju ujian beserta verifikasi kelengkapan syarat."></p>
+<ol>
+<li>Klik menu <strong>Pemantauan Revisi</strong> untuk memantau respon perbaikan mahasiswa (Gambar 19), lengkap dengan kolom <strong>Batas Waktu</strong> dan <strong>Status Revisi</strong>.</li>
+</ol>
+<p><img src="img/19-dosen-pemantauan-revisi.png" alt="Gambar 19. Pemantauan Catatan Revisi menampilkan catatan dewan penguji, tindak lanjut, dan batas waktu."></p>
+<ol>
+<li>Klik menu <strong>Jadwal Ujian</strong> untuk melihat agenda sidang (Gambar 20). Klik <strong>Lihat Sidang</strong> untuk membuka rincian.</li>
+</ol>
+<p><img src="img/20-dosen-jadwal-ujian.png" alt="Gambar 20. Agenda Sidang dan Ujian menampilkan jadwal ujian mahasiswa bimbingan."></p>
+<p><strong>c. Kolom dan tombol penting.</strong></p>
+<table>
+<thead><tr><th>Halaman</th><th>Kolom</th><th>Tombol Utama</th></tr></thead>
+<tbody>
+<tr><td>Mahasiswa Bimbingan</td><td>NIM, Nama Mahasiswa &amp; Judul, Jenjang &amp; Bentuk, Peran Penugasan, Tahapan Akademik, Logbook Bimbingan, Aksi</td><td>Catat Konsultasi Baru, Detail</td></tr>
+<tr><td>Bimbingan</td><td>Tanggal, Moda, Mahasiswa Bimbingan, Materi Pembahasan Substantif, Bukti Fisik (Scan), Status &amp; Aksi, Detail</td><td>Catat Sesi Bimbingan Baru, Sahkan</td></tr>
+<tr><td>Naskah Masuk</td><td>NIM, Mahasiswa &amp; Judul Naskah, Jenjang &amp; Peran, Turnitin &amp; AI Detection, Status Telaah, Aksi</td><td>Review, Buka Lembar Persetujuan (Approval)</td></tr>
+<tr><td>Persetujuan</td><td>Uraian Permohonan, Verifikasi Kelengkapan Syarat</td><td>Setujui Maju Ujian, Kembalikan untuk Perbaikan, Tolak Permohonan</td></tr>
+<tr><td>Pemantauan Revisi</td><td>Mahasiswa &amp; Ujian, Catatan Dewan Penguji, Tindak Lanjut &amp; Halaman Revisi Mahasiswa, Batas Waktu, Status Revisi, Detail</td><td>—</td></tr>
+<tr><td>Jadwal Ujian</td><td>Hari, Tanggal &amp; Waktu, Jenis Ujian &amp; Jenjang, Mahasiswa Bimbingan, Status Sidang, Rincian</td><td>Lihat Sidang</td></tr>
+</tbody></table>
+<p><strong>d. Catatan dan peringatan.</strong></p>
+<ul>
+<li>Setiap sesi bimbingan wajib memiliki bukti scan lembar kendali bertanda tangan agar dapat disahkan.</li>
+<li>Persetujuan maju ujian hanya dapat diberikan bila seluruh syarat kelengkapan (naskah, Turnitin, logbook bimbingan) terpenuhi.</li>
+</ul>
+<h3 id="73-dewan-penguji">7.3 Dewan Penguji</h3>
+<p><strong>a. Ringkasan tugas.</strong> Dewan penguji menelaah naskah ujian, mengisi rubrik penilaian dan mengesahkan nilai, mencatat koreksi, serta memverifikasi revisi naskah pasca ujian.</p>
+<p><strong>b. Langkah kerja.</strong></p>
+<ol>
+<li>Masuk dengan akun penguji. Dashboard menampilkan agenda sidang yang perlu dinilai, approval revisi, dan filter jenjang seperti pada Gambar 21.</li>
+</ol>
+<p><img src="img/21-penguji-dashboard.png" alt="Gambar 21. Dashboard Dewan Penguji menampilkan agenda sidang, penilaian, dan approval revisi."></p>
+<ol>
+<li>Klik menu <strong>Daftar Ujian</strong> untuk melihat seluruh agenda yang ditugaskan (Gambar 22). Gunakan filter jenjang dan status (<strong>Semua Status</strong>, <strong>Perlu Dinilai</strong>, <strong>Selesai Dinilai</strong>).</li>
+</ol>
+<p><img src="img/22-penguji-daftar-ujian.png" alt="Gambar 22. Daftar Ujian menampilkan agenda sidang yang ditugaskan beserta status penilaian."></p>
+<ol>
+<li>Klik <strong>Baca Naskah PDF</strong> atau menu <strong>Naskah Ujian</strong> untuk menelaah naskah (Gambar 23). Gunakan panel <strong>Pembaca Naskah Digital</strong>, <strong>Verifikasi Turnitin &amp; AI</strong>, <strong>Rekap Catatan Koreksi</strong>, dan <strong>Informasi Dewan &amp; Sidang</strong>.</li>
+</ol>
+<p><img src="img/23-penguji-naskah-ujian.png" alt="Gambar 23. Naskah Ujian menampilkan pembaca naskah digital, verifikasi Turnitin, dan catatan koreksi."></p>
+<ol>
+<li>Klik menu <strong>Form Penilaian</strong> untuk mengisi rubrik (Gambar 24). Isi setiap aspek penilaian, lalu klik <strong>Simpan &amp; Sahkan Nilai</strong> atau <strong>Cetak Berita Acara Digital (PDF)</strong>.</li>
+</ol>
+<p><img src="img/24-penguji-form-penilaian.png" alt="Gambar 24. Form Penilaian menampilkan rubrik penilaian berbobot dan tombol pengesahan nilai."></p>
+<ol>
+<li>Klik menu <strong>Catatan / Koreksi</strong> untuk mendokumentasikan catatan evaluasi (Gambar 25). Klik <strong>Tambah Catatan Koreksi</strong> untuk menambah butir, lalu <strong>Verifikasi</strong> atau <strong>Lihat Draf</strong>.</li>
+</ol>
+<p><img src="img/25-penguji-catatan-koreksi.png" alt="Gambar 25. Catatan / Koreksi menampilkan arahan koreksi dan status tindak lanjut."></p>
+<ol>
+<li>Klik menu <strong>Verifikasi Revisi</strong> untuk memeriksa tindak lanjut perbaikan (Gambar 26). Gunakan tombol <strong>Setujui (Acc)</strong> atau <strong>Minta Perbaikan Ulang</strong>.</li>
+</ol>
+<p><img src="img/26-penguji-verifikasi-revisi.png" alt="Gambar 26. Verifikasi Revisi menampilkan tanggapan mahasiswa dan keputusan penguji."></p>
+<p><strong>c. Kolom dan tombol penting.</strong></p>
+<table>
+<thead><tr><th>Halaman</th><th>Kolom</th><th>Tombol Utama</th></tr></thead>
+<tbody>
+<tr><td>Form Penilaian</td><td>Rentang Skor, Huruf, Bobot, Predikat</td><td>Simpan &amp; Sahkan Nilai, Cetak Berita Acara Digital (PDF)</td></tr>
+<tr><td>Catatan / Koreksi</td><td>Mahasiswa &amp; Ujian, Bagian &amp; Halaman, Arahan Koreksi &amp; Saran Perbaikan Penguji, Status Tindak Lanjut, Aksi</td><td>Tambah Catatan Koreksi, Verifikasi</td></tr>
+<tr><td>Verifikasi Revisi</td><td>Mahasiswa &amp; Sidang, Catatan Penguji &amp; Lokasi, Tanggapan &amp; Berkas Revisi Mahasiswa, Status Persetujuan, Keputusan Penguji</td><td>Setujui (Acc), Minta Perbaikan Ulang</td></tr>
+</tbody></table>
+<p><strong>d. Catatan dan peringatan.</strong></p>
+<ul>
+<li>Mahasiswa dinyatakan lulus dengan nilai sekurang-kurangnya C (NA ≥ 56); selisih nilai antar penguji tidak boleh lebih dari 10 poin.</li>
+<li>Mahasiswa yang lulus dengan revisi wajib menyelesaikan perbaikan maksimal 3 bulan setelah tanggal ujian untuk jenjang D3/S1/S2 dan Ujian Kelayakan S3 (atau 6 bulan untuk Ujian Tertutup S3). Kelulusan dapat dinyatakan gugur bila melewati tenggang waktu tersebut.</li>
+</ul>
+<h3 id="74-koorprodi">7.4 Koorprodi</h3>
+<p><strong>a. Ringkasan tugas.</strong> Koorprodi memverifikasi pengajuan ujian, melakukan plotting pembimbing, menetapkan dewan penguji, mengelola jadwal sidang dan berita acara, memantau kepatuhan persyaratan serta batas revisi, menerbitkan dokumen kolektif, dan mengarsipkan dokumen prodi.</p>
+<p><strong>b. Langkah kerja.</strong></p>
+<ol>
+<li>Masuk dengan akun koorprodi. Dashboard menampilkan ringkasan pengajuan masuk, sidang, monitoring revisi, dan akses cepat seperti pada Gambar 27.</li>
+</ol>
+<p><img src="img/27-koorprodi-dashboard.png" alt="Gambar 27. Dashboard Koorprodi menampilkan ringkasan pengajuan, sidang, dan monitoring revisi."></p>
+<ol>
+<li>Klik menu <strong>Daftar Mahasiswa</strong> untuk melihat pangkalan data mahasiswa (Gambar 28). Klik <strong>Ekspor Data (XLSX)</strong> untuk mengunduh rekap atau <strong>Detail</strong> untuk membuka profil mahasiswa.</li>
+</ol>
+<p><img src="img/28-koorprodi-daftar-mahasiswa.png" alt="Gambar 28. Daftar Mahasiswa menampilkan status administratif dan tahapan akademik."></p>
+<ol>
+<li>Klik menu <strong>Pengajuan Masuk</strong> untuk memverifikasi permohonan ujian (Gambar 29). Periksa panel <strong>Verifikasi Kelayakan Syarat Administratif</strong>, lalu klik <strong>Sahkan &amp; Alokasikan Penguji</strong> atau <strong>Tolak Pengajuan</strong>.</li>
+</ol>
+<p><img src="img/29-koorprodi-pengajuan-masuk.png" alt="Gambar 29. Pengajuan Masuk menampilkan verifikasi kelayakan syarat administratif pengajuan ujian."></p>
+<ol>
+<li>Klik menu <strong>Plotting Pembimbing</strong> untuk mengalokasikan pembimbing (Gambar 30). Klik <strong>Alokasikan Pembimbing Baru</strong> atau <strong>Plotting</strong> pada baris dosen, dengan memperhatikan batas kuota S1 (maks 6), S2 (maks 4), dan S3 (maks 3).</li>
+</ol>
+<p><img src="img/30-koorprodi-plotting-pembimbing.png" alt="Gambar 30. Plotting Pembimbing menampilkan beban kuota dosen per jenjang dan status SK Dekan."></p>
+<ol>
+<li>Klik menu <strong>Dewan Penguji</strong> untuk menetapkan komposisi penguji (Gambar 31). Klik <strong>Tetapkan Tim Penguji Baru</strong>.</li>
+</ol>
+<p><img src="img/31-koorprodi-dewan-penguji.png" alt="Gambar 31. Penetapan Dewan Penguji menampilkan komposisi tim penguji per jenjang."></p>
+<ol>
+<li>Klik menu <strong>Penerbitan Dokumen Kolektif</strong> untuk menerbitkan dokumen sidang massal (Gambar 32). Pilih gelombang sidang dan jenis ujian, centang berkas mahasiswa, klik <strong>Input PIN Otorisasi Dekan</strong>, lalu <strong>Proses Penerbitan</strong> atau <strong>Unduh Master ZIP</strong>.</li>
+</ol>
+<p><img src="img/32-koorprodi-penerbitan-dokumen-kolektif.png" alt="Gambar 32. Penerbitan Dokumen Kolektif menampilkan batch generator SK Dekan, Berita Acara ber-QR, dan Surat Tugas."></p>
+<ol>
+<li>Klik menu <strong>Jadwal Ujian &amp; Sidang</strong> untuk mengelola jadwal dan berita acara (Gambar 33). Klik <strong>Jadwalkan Sidang Baru</strong> atau <strong>Rincian &amp; BA</strong> pada baris agenda.</li>
+</ol>
+<p><img src="img/33-koorprodi-jadwal-ujian-sidang.png" alt="Gambar 33. Jadwal Ujian dan Sidang menampilkan jadwal, dewan penguji, dan status berita acara."></p>
+<ol>
+<li>Klik menu <strong>Matriks Persyaratan</strong> untuk memantau kepatuhan prasyarat akademik (Gambar 34), meliputi SKS, IPK, TOEFL, Turnitin, dan kelayakan ujian.</li>
+</ol>
+<p><img src="img/34-koorprodi-matriks-persyaratan.png" alt="Gambar 34. Matriks Persyaratan menampilkan kepatuhan SKS, IPK, TOEFL, dan Turnitin per mahasiswa."></p>
+<ol>
+<li>Klik menu <strong>Pemantauan Revisi</strong> untuk mengawasi tenggat revisi (Gambar 35). Gunakan kolom <strong>SLA Batas Waktu (30 Hari)</strong> dan tombol <strong>Matriks</strong>.</li>
+</ol>
+<p><img src="img/35-koorprodi-pemantauan-revisi.png" alt="Gambar 35. Pemantauan Batas Revisi menampilkan SLA batas waktu dan status pengesahan revisi."></p>
+<ol>
+<li>Klik menu <strong>Arsip Dokumen Prodi</strong> untuk mengakses pangkalan dokumen resmi (Gambar 36). Gunakan filter <strong>Semua Dokumen</strong>, <strong>Surat Keputusan Dekan</strong>, dan <strong>Berita Acara Sidang</strong>, serta tombol <strong>Arsipkan Dokumen Baru</strong>.</li>
+</ol>
+<p><img src="img/36-koorprodi-arsip-dokumen-prodi.png" alt="Gambar 36. Arsip Dokumen Prodi menampilkan SK Dekan dan Berita Acara Sidang beserta status otorisasi."></p>
+<p><strong>c. Kolom dan tombol penting.</strong></p>
+<table>
+<thead><tr><th>Halaman</th><th>Kolom</th><th>Tombol Utama</th></tr></thead>
+<tbody>
+<tr><td>Daftar Mahasiswa</td><td>NIM, Nama Mahasiswa &amp; Akademik, Program Studi &amp; Jenjang, Judul Tugas Akhir &amp; Bentuk, Tahapan Akademik Saat Ini, Status Administratif, Aksi</td><td>Ekspor Data (XLSX), Detail</td></tr>
+<tr><td>Pengajuan Masuk</td><td>Judul Karya Ilmiah, Verifikasi Kelayakan Syarat Administratif</td><td>Sahkan &amp; Alokasikan Penguji, Tolak Pengajuan</td></tr>
+<tr><td>Plotting Pembimbing</td><td>Nama Dosen &amp; Keahlian, Beban Sarjana S1 (Max 6), Beban Magister S2 (Max 4), Beban Doktor S3 (Max 3), Status SK Dekan, Aksi</td><td>Alokasikan Pembimbing Baru, Plotting</td></tr>
+<tr><td>Penerbitan Dokumen Kolektif</td><td>No. Register BA, Mahasiswa &amp; Jenjang, Judul Tugas Akhir &amp; Prasyarat, Dewan Penguji, Status Berkas, Aksi</td><td>Input PIN Otorisasi Dekan, Proses Penerbitan, Unduh Master ZIP</td></tr>
+<tr><td>Jadwal Ujian &amp; Sidang</td><td>Jadwal &amp; Ruang Sidang, Jenis Ujian &amp; Jenjang, Mahasiswa &amp; Judul Penelitian, Dewan Penguji, Status Berita Acara, Aksi</td><td>Jadwalkan Sidang Baru, Rincian &amp; BA</td></tr>
+<tr><td>Matriks Persyaratan</td><td>NIM &amp; Jenjang, Nama Mahasiswa &amp; Tugas Akhir, SKS &amp; IPK, Skor TOEFL UTM, Uji Turnitin &amp; AI, Kelayakan Ujian</td><td>—</td></tr>
+<tr><td>Pemantauan Revisi</td><td>Mahasiswa &amp; Ujian, Catatan Dewan Penguji, Tindak Lanjut &amp; Matriks Perbaikan, SLA Batas Waktu (30 Hari), Status Pengesahan, Aksi</td><td>Matriks</td></tr>
+<tr><td>Arsip Dokumen Prodi</td><td>Nomor / Kode Surat, Nama Dokumen Resmi &amp; Deskripsi, Kategori Dokumen, Status Otorisasi, Aksi</td><td>Arsipkan Dokumen Baru</td></tr>
+</tbody></table>
+<p><strong>d. Catatan dan peringatan.</strong></p>
+<ul>
+<li>Sidang Sarjana (S1) berdurasi 90 menit dengan 3 dewan penguji; Sidang Tesis (S2) berdurasi 120 menit dengan 4 dewan penguji; Ujian Tertutup Disertasi (S3) melibatkan 7 penguji dengan nilai kelulusan minimal 75.00 (B+).</li>
+<li>SK Dekan tidak diterbitkan per mahasiswa, melainkan 1 SK Dekan Induk Kolektif per gelombang yang melampirkan matriks seluruh mahasiswa terdaftar.</li>
+<li>Halaman <strong>Pemantauan Revisi</strong> memakai indikator <strong>SLA Batas Waktu (30 Hari)</strong> sebagai peringatan dini, sedangkan ketentuan resmi Buku Pedoman 2026 Bab X menetapkan batas maksimal 3 bulan (6 bulan untuk Ujian Tertutup S3).</li>
+</ul>
+<h3 id="75-admin-akademik">7.5 Admin Akademik</h3>
+<p><strong>a. Ringkasan tugas.</strong> Admin Akademik mengelola jadwal dan linimasa tahapan, menerbitkan dokumen otomatis dan SK, memverifikasi berkas pendaftaran ujian, serta mengalokasikan ruang sidang.</p>
+<p><strong>b. Langkah kerja.</strong></p>
+<ol>
+<li>Masuk dengan akun admin. Dashboard menampilkan ringkasan jadwal tahapan dan berkas yang perlu diperiksa seperti pada Gambar 37.</li>
+</ol>
+<p><img src="img/37-admin-dashboard.png" alt="Gambar 37. Dashboard Admin Akademik menampilkan ringkasan jadwal tahapan dan verifikasi berkas."></p>
+<ol>
+<li>Klik menu <strong>Jadwal Tahapan</strong> untuk mengatur periode tahapan (Gambar 38). Klik <strong>Buat Jadwal Tahapan</strong> untuk menambah periode, atau <strong>Buka Periode</strong>, <strong>Tutup Periode</strong>, <strong>Edit</strong>, <strong>Siarkan Pengumuman</strong>, dan <strong>Broadcast Pengumuman</strong> pada periode yang ada.</li>
+</ol>
+<p><img src="img/38-admin-jadwal-tahapan.png" alt="Gambar 38. Jadwal Tahapan menampilkan linimasa periode tahapan per jenjang."></p>
+<ol>
+<li>Klik menu <strong>Otomasi Dokumen</strong> untuk menerbitkan dokumen secara otomatis (Gambar 39). Gunakan tab <strong>1-Click Exam Package Generator</strong>, <strong>Generator Dokumen Mandiri</strong>, <strong>Arsip Dokumen Resmi Terbit</strong>, dan <strong>Format &amp; Nomor Urut Dinas</strong>.</li>
+</ol>
+<p><img src="img/39-admin-otomasi-dokumen.png" alt="Gambar 39. Otomasi Dokumen menampilkan generator paket ujian dan arsip dokumen terbit ber-QR."></p>
+<ol>
+<li>Klik menu <strong>Verifikasi Berkas</strong> untuk memeriksa kelengkapan berkas (Gambar 40). Klik <strong>Periksa Berkas</strong> pada baris mahasiswa untuk meninjau kelengkapan dokumen dan status verifikasi.</li>
+</ol>
+<p><img src="img/40-admin-verifikasi-berkas.png" alt="Gambar 40. Verifikasi Berkas menampilkan kelengkapan dokumen dan status verifikasi pendaftaran ujian."></p>
+<ol>
+<li>Klik menu <strong>Penerbitan SK</strong> untuk menerbitkan Surat Keputusan (Gambar 41). Klik <strong>Buat SK Baru</strong> untuk menerbitkan SK, atau <strong>Lihat SK</strong> dan <strong>PDF</strong> untuk membuka arsip.</li>
+</ol>
+<p><img src="img/41-admin-penerbitan-sk.png" alt="Gambar 41. Penerbitan SK menampilkan daftar SK Dekan beserta susunan dosen yang ditetapkan."></p>
+<ol>
+<li>Klik menu <strong>Alokasi Ruang Sidang</strong> untuk menata ruang ujian (Gambar 42). Klik <strong>Plotting Ruang Ujian</strong> untuk menetapkan ruang dan waktu, dengan deteksi pencegahan bentrok jadwal otomatis.</li>
+</ol>
+<p><img src="img/42-admin-alokasi-ruang-sidang.png" alt="Gambar 42. Alokasi Ruang Sidang menampilkan daftar ruangan dan jadwal penggunaan."></p>
+<p><strong>c. Kolom dan tombol penting.</strong></p>
+<table>
+<thead><tr><th>Halaman</th><th>Kolom</th><th>Tombol Utama</th></tr></thead>
+<tbody>
+<tr><td>Jadwal Tahapan</td><td>Tahap, Jenjang, Periode, Status</td><td>Buat Jadwal Tahapan, Buka Periode, Tutup Periode, Broadcast Pengumuman</td></tr>
+<tr><td>Verifikasi Berkas</td><td>Mahasiswa &amp; NIM, Jenjang &amp; Prodi, Tahap / Ujian, Kelengkapan Dokumen, Status Verifikasi, Aksi</td><td>Periksa Berkas</td></tr>
+<tr><td>Penerbitan SK</td><td>Nomor SK Resmi, Jenis Dokumen, Mahasiswa &amp; Jenjang, Susunan Dosen Ditetapkan, Tanggal Terbit, Aksi</td><td>Buat SK Baru, Lihat SK, PDF</td></tr>
+<tr><td>Alokasi Ruang Sidang</td><td>Waktu &amp; Tanggal, Ruangan Terpilih, Mahasiswa &amp; Jenjang, Jenis Ujian, Ketua Penguji, Aksi</td><td>Plotting Ruang Ujian</td></tr>
+</tbody></table>
+<p><strong>d. Catatan dan peringatan.</strong></p>
+<ul>
+<li>Penerbitan nomor surat menggunakan penomoran urut anti-bentrok otomatis; verifikasi dokumen dilakukan melalui QR Code terintegrasi.</li>
+<li>Sistem mendeteksi bentrok jadwal ruang ujian secara otomatis saat plotting.</li>
+</ul>
+<h3 id="76-superadmin">7.6 Superadmin</h3>
+<p><strong>a. Ringkasan tugas.</strong> Superadmin mengelola konfigurasi master program studi, alur tahapan dan regulasi per jenjang, kuota bimbingan dosen, serta manajemen akun pengguna.</p>
+<p><strong>b. Langkah kerja.</strong></p>
+<ol>
+<li>Masuk dengan akun superadmin. Dashboard menampilkan ringkasan konfigurasi jenjang, master prodi, tahapan, kuota, dan akun seperti pada Gambar 43.</li>
+</ol>
+<p><img src="img/43-superadmin-dashboard.png" alt="Gambar 43. Portal Super Administrator menampilkan ringkasan konfigurasi sistem."></p>
+<ol>
+<li>Klik menu <strong>Master Data Prodi</strong> untuk mengelola program studi (Gambar 44). Klik <strong>Tambah Program Studi</strong> untuk menambah prodi, atau <strong>Edit</strong> pada baris prodi.</li>
+</ol>
+<p><img src="img/44-superadmin-master-data-prodi.png" alt="Gambar 44. Master Data Prodi menampilkan konfigurasi program studi multi-jenjang."></p>
+<ol>
+<li>Klik menu <strong>Tahapan &amp; Regulasi</strong> untuk menetapkan siklus dan aturan kelulusan (Gambar 45). Pilih jenjang (D3, S1, S2, S3), atur parameter aturan kelayakan, lalu klik <strong>Simpan Konfigurasi</strong> atau <strong>Simpan Perubahan Regulasi</strong>.</li>
+</ol>
+<p><img src="img/45-superadmin-tahapan-regulasi.png" alt="Gambar 45. Tahapan dan Regulasi menampilkan siklus alur serta parameter aturan kelayakan per jenjang."></p>
+<ol>
+<li>Klik menu <strong>Kuota Bimbingan</strong> untuk mendistribusikan beban bimbingan (Gambar 46). Klik <strong>Atur Kuota</strong> pada baris dosen.</li>
+</ol>
+<p><img src="img/46-superadmin-kuota-bimbingan.png" alt="Gambar 46. Kuota Bimbingan menampilkan beban pembimbing utama dan pendamping per dosen."></p>
+<ol>
+<li>Klik menu <strong>Manajemen Pengguna</strong> untuk mengelola akun (Gambar 47). Gunakan filter <strong>Semua Peran (Role)</strong> dan <strong>Semua Status</strong>, serta tombol <strong>Tambah Akun Pengguna</strong>, <strong>Import dari Excel</strong>, <strong>Unduh Template Excel</strong>, dan <strong>Reset</strong>.</li>
+</ol>
+<p><img src="img/47-superadmin-manajemen-pengguna.png" alt="Gambar 47. Manajemen Pengguna menampilkan akun multi-role beserta status dan aktivitas terakhir."></p>
+<p><strong>c. Kolom dan tombol penting.</strong></p>
+<table>
+<thead><tr><th>Halaman</th><th>Kolom</th><th>Tombol Utama</th></tr></thead>
+<tbody>
+<tr><td>Master Data Prodi</td><td>Kode Prodi, Nama Prodi, Jenjang, Akreditasi, Status</td><td>Tambah Program Studi, Edit</td></tr>
+<tr><td>Tahapan &amp; Regulasi</td><td>Parameter Aturan Kelayakan (Minimal Sesi Bimbingan, Beban SKS, Batas TOEFL, Maksimal Turnitin, Nilai Akhir Kelulusan, Kewajiban Publikasi)</td><td>Simpan Konfigurasi, Simpan Perubahan Regulasi</td></tr>
+<tr><td>Kuota Bimbingan</td><td>Dosen &amp; Jabatan, Program Studi, Beban Pembimbing Utama, Beban Pendamping, Status Beban, Aksi</td><td>Atur Kuota</td></tr>
+<tr><td>Manajemen Pengguna</td><td>Nama &amp; Nomor Induk, Peran &amp; Hak Akses, Program Studi / Unit, Status Akun, Aktivitas Terakhir, Aksi</td><td>Tambah Akun Pengguna, Import dari Excel, Reset</td></tr>
+</tbody></table>
+<p><strong>d. Catatan dan peringatan.</strong></p>
+<ul>
+<li>Perubahan konfigurasi tahapan dan regulasi berlaku lintas jenjang; pastikan parameter (SKS, TOEFL, Turnitin, nilai kelulusan) sesuai Buku Pedoman 2026 sebelum menyimpan.</li>
+<li>Kata sandi default akun baru yang dibuat administrator adalah <strong>FEB-UTM-2026</strong>; minta pengguna menggantinya melalui menu Ganti Kata Sandi.</li>
+</ul>
+<hr>
+<h2 id="8-alur-proses-utama-end-to-end">8. Alur Proses Utama End-to-End</h2>
+<p>Alur berikut menggambarkan proses dari pendaftaran ujian oleh mahasiswa hingga revisi dan publikasi.</p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[Mahasiswa: Pendaftaran Ujian] --&gt; B[Koorprodi: Verifikasi Pengajuan &amp; Plotting Pembimbing]
+    B --&gt; C[Dosen Pembimbing: Review Naskah &amp; ACC Naskah]
+    C --&gt; D[Admin Akademik: Alokasi Ruang Sidang]
+    D --&gt; E[Koorprodi: Jadwal Sidang &amp; Berita Acara]
+    E --&gt; F[Dewan Penguji: Form Penilaian &amp; Berita Acara]
+    F --&gt; G[Mahasiswa: Revisi Pasca Ujian]
+    G --&gt; H[Dewan Penguji: Verifikasi Revisi]
+    H --&gt; I[Mahasiswa: Publikasi &amp; Dokumen Pengesahan]</pre></div>
+<p><strong>Penjelasan tiap titik.</strong></p>
+<ol>
+<li><strong>Mahasiswa mendaftar ujian.</strong> Mahasiswa melengkapi berkas pada menu <strong>Persyaratan</strong> dan mengajukan ujian pada menu <strong>Ujian</strong> melalui tombol <strong>Pendaftaran Ujian</strong>, seperti pada Gambar 9.</li>
+<li><strong>Koorprodi memverifikasi pengajuan dan melakukan plotting.</strong> Koorprodi memeriksa <strong>Pengajuan Masuk</strong> dan menetapkan pembimbing pada <strong>Plotting Pembimbing</strong>, seperti pada Gambar 29 dan Gambar 30.</li>
+<li><strong>Dosen pembimbing menyetujui naskah.</strong> Dosen menelaah pada <strong>Review Naskah</strong> dan memberi keputusan pada <strong>Persetujuan</strong> melalui tombol <strong>Setujui Maju Ujian</strong>, seperti pada Gambar 17 dan Gambar 18.</li>
+<li><strong>Admin Akademik mengalokasikan ruang.</strong> Admin menetapkan ruang dan waktu pada <strong>Alokasi Ruang Sidang</strong>, seperti pada Gambar 42.</li>
+<li><strong>Koorprodi menetapkan jadwal sidang dan berita acara.</strong> Koorprodi mengelola <strong>Jadwal Ujian &amp; Sidang</strong> serta menerbitkan berita acara, seperti pada Gambar 33, dan dapat menerbitkan dokumen kolektif seperti pada Gambar 32.</li>
+<li><strong>Dewan penguji menilai dan mengesahkan berita acara.</strong> Penguji mengisi <strong>Form Penilaian</strong> dan mengesahkan nilai serta mencetak <strong>Cetak Berita Acara Digital (PDF)</strong>, seperti pada Gambar 24.</li>
+<li><strong>Mahasiswa menindaklanjuti revisi.</strong> Mahasiswa memperbaiki naskah sesuai catatan pada menu <strong>Revisi</strong>, seperti pada Gambar 10.</li>
+<li><strong>Dewan penguji memverifikasi revisi.</strong> Penguji menyetujui perbaikan pada <strong>Verifikasi Revisi</strong> melalui tombol <strong>Setujui (Acc)</strong>, seperti pada Gambar 26.</li>
+<li><strong>Publikasi dan pengesahan dokumen.</strong> Mahasiswa mencatat luaran pada menu <strong>Publikasi</strong> dan mengunduh dokumen resmi pada menu <strong>Dokumen</strong>, seperti pada Gambar 11 dan Gambar 12.</li>
+</ol>
+<hr>
+<h2 id="9-standar-operasional-prosedur-sop">9. Standar Operasional Prosedur (SOP)</h2>
+<p>Bab ini merangkum Standar Operasional Prosedur (SOP) yang berlaku di SIM-TA FEB UTM. Seluruh ketentuan di bawah ini bersumber dari data dan aturan yang tersimpan serta ditampilkan di dalam aplikasi (antara lain panel <strong>Catatan SOP</strong> pada menu <strong>Jadwal Tahapan</strong>, <strong>Parameter Aturan Kelayakan</strong> pada menu <strong>Tahapan &amp; Regulasi</strong>, serta banner <strong>Ketentuan</strong> pada halaman ujian, penilaian, dan revisi), yang mengacu pada Buku Pedoman Tugas Akhir Jurusan Manajemen FEB UTM 2026.</p>
+<h3 id="91-sop-bimbingan">9.1 SOP Bimbingan</h3>
+<p><strong>Tujuan.</strong> Menjamin setiap sesi konsultasi tercatat, terverifikasi, dan terdokumentasi sebelum mahasiswa diizinkan maju ujian.</p>
+<p><strong>Diagram alur SOP Bimbingan.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Mahasiswa catat sesi di menu Bimbingan&quot;] --&gt; B[&quot;Unggah bukti scan lembar kendali&quot;]
+    B --&gt; C{&quot;Jumlah sesi memenuhi target dan bukti lengkap?&quot;}
+    C --&gt;|Belum| A
+    C --&gt;|Sudah| D[&quot;Dosen verifikasi bukti pada menu Bimbingan&quot;]
+    D --&gt; E[&quot;Dosen klik Sahkan&quot;]
+    E --&gt; F{&quot;Syarat jenjang terpenuhi?&quot;}
+    F --&gt;|Belum| A
+    F --&gt;|Sudah| G[&quot;Dosen beri keputusan di menu Persetujuan&quot;]
+    G --&gt; H[&quot;Mahasiswa diizinkan maju ujian&quot;]</pre></div>
+<table>
+<thead><tr><th>No</th><th>Ketentuan SOP</th><th>Rujukan</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Proses bimbingan wajib tercatat dalam Buku Kendali Konsultasi digital (SIM-TA) minimal <strong>6 sesi</strong>.</td><td>Ketentuan Penugasan Bimbingan (Surat Tugas)</td></tr>
+<tr><td>2</td><td>Setiap sesi wajib memiliki bukti scan lembar kendali bertanda tangan dosen agar dapat disahkan.</td><td>Halaman <strong>Bimbingan</strong> (Mahasiswa/Dosen)</td></tr>
+<tr><td>3</td><td>Dosen Pembimbing bertanggung jawab penuh atas substansi metodologis, orisinalitas, dan tata tulis.</td><td>Ketentuan Penugasan Bimbingan</td></tr>
+<tr><td>4</td><td>Persetujuan seminar/sidang diberikan secara objektif setelah naskah memenuhi standar mutu penulisan karya ilmiah FEB UTM.</td><td>Halaman <strong>Persetujuan</strong> (Dosen)</td></tr>
+<tr><td>5</td><td>Target minimal sesi bimbingan mengikuti aturan jenjang (S1: minimal 8 kali bimbingan terekam di sistem; S2: minimal 10 kali).</td><td>Catatan SOP <strong>Jadwal Tahapan</strong></td></tr>
+</tbody></table>
+<p><strong>Langkah SOP (Mahasiswa).</strong> Catat sesi pada menu <strong>Bimbingan</strong> → unggah bukti scan → tunggu pengesahan dosen. <strong>Langkah SOP (Dosen).</strong> Verifikasi bukti pada menu <strong>Bimbingan</strong> → klik <strong>Sahkan</strong> → berikan keputusan pada menu <strong>Persetujuan</strong> setelah syarat terpenuhi (Gambar 15 dan Gambar 18).</p>
+<h3 id="92-sop-unggah-naskah-uji-turnitin-dan-bebas-plagiasi">9.2 SOP Unggah Naskah, Uji Turnitin, dan Bebas Plagiasi</h3>
+<p><strong>Tujuan.</strong> Memastikan naskah bebas plagiasi sebelum didaftarkan pada ujian.</p>
+<p><strong>Diagram alur SOP Unggah Naskah dan Uji Plagiasi.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Mahasiswa buka menu Naskah&quot;] --&gt; B[&quot;Klik Unggah Versi Baru&quot;]
+    B --&gt; C[&quot;Klik Uji Plagiasi Turnitin&quot;]
+    C --&gt; D{&quot;Similarity dan deteksi AI di bawah ambang jenjang?&quot;}
+    D --&gt;|Tidak| E[&quot;Perbaiki naskah&quot;]
+    E --&gt; B
+    D --&gt;|Ya| F[&quot;Status Lolos dan Bebas Plagiasi&quot;]
+    F --&gt; G[&quot;Surat Keterangan ditandatangani Pembimbing dan disahkan Koorprodi&quot;]
+    G --&gt; H[&quot;Naskah siap pendaftaran ujian&quot;]</pre></div>
+<table>
+<thead><tr><th>No</th><th>Ketentuan SOP</th><th>Rujukan</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Dasar hukum pemeriksaan plagiasi: <strong>Peraturan Rektor Universitas Trunojoyo Madura Nomor 46 Tahun 2025</strong>.</td><td>Halaman <strong>Naskah</strong> (Kotak Dasar Hukum / SOP)</td></tr>
+<tr><td>2</td><td>Ambang Similarity Turnitin: <strong>D3/S1 maksimal 30%</strong> dan <strong>S2/S3 maksimal 20%</strong>.</td><td>Parameter Aturan Kelayakan</td></tr>
+<tr><td>3</td><td>Ambang deteksi AI: <strong>D3/S1 maksimal 40%</strong> dan <strong>S2/S3 maksimal 30%</strong>.</td><td>Parameter Aturan Kelayakan</td></tr>
+<tr><td>4</td><td>Perhitungan kemiripan <strong>tidak mencakup</strong> daftar pustaka, kutipan langsung bertanda petik, dan lampiran data kuesioner.</td><td>Peraturan Rektor UTM No. 46 Tahun 2025</td></tr>
+<tr><td>5</td><td>Surat Keterangan Pemeriksaan Plagiasi ditandatangani Dosen Pembimbing/Promotor dan disahkan Koorprodi.</td><td>Buku Pedoman 2026 (Lampiran 10)</td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Buka menu <strong>Naskah</strong> → klik <strong>Unggah Versi Baru</strong> → klik <strong>Uji Plagiasi Turnitin</strong> → periksa hasil pada tab <strong>Uji Plagiasi Turnitin</strong> → pastikan status <strong>Lolos</strong> sebelum pendaftaran ujian (Gambar 8).</p>
+<h3 id="93-sop-verifikasi-berkas-dan-pendaftaran-ujian">9.3 SOP Verifikasi Berkas dan Pendaftaran Ujian</h3>
+<p><strong>Tujuan.</strong> Memastikan kelayakan administratif mahasiswa sebelum ujian.</p>
+<p><strong>Diagram alur SOP Verifikasi Berkas dan Pendaftaran Ujian.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Mahasiswa unggah berkas di menu Persyaratan&quot;] --&gt; B[&quot;Admin buka menu Verifikasi Berkas&quot;]
+    B --&gt; C[&quot;Klik Periksa Berkas&quot;]
+    C --&gt; D{&quot;Kelengkapan dokumen dan syarat terpenuhi?&quot;}
+    D --&gt;|Tidak| E[&quot;Ditolak dan dikembalikan untuk perbaikan&quot;]
+    E --&gt; A
+    D --&gt;|Ya| F[&quot;Status Terverifikasi&quot;]
+    F --&gt; G[&quot;Notifikasi dikirim ke mahasiswa&quot;]
+    G --&gt; H[&quot;Koorprodi verifikasi di menu Pengajuan Masuk&quot;]
+    H --&gt; I[&quot;Sahkan dan alokasikan penguji&quot;]</pre></div>
+<table>
+<thead><tr><th>No</th><th>Ketentuan SOP</th><th>Rujukan</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Pendaftaran berkas verifikasi dibuka setiap hari kerja pukul <strong>08:00 – 15:00 WIB</strong>.</td><td>Catatan SOP <strong>Jadwal Tahapan</strong></td></tr>
+<tr><td>2</td><td>Mahasiswa wajib membawa lembar konsultasi tercetak saat verifikasi ujian.</td><td>Catatan SOP <strong>Jadwal Tahapan</strong></td></tr>
+<tr><td>3</td><td>Verifikasi mencakup kelengkapan dokumen, syarat SKS, sertifikat TOEFL, uji bebas plagiasi Turnitin, dan luaran publikasi per jenjang.</td><td>Halaman <strong>Verifikasi Berkas</strong> (Admin)</td></tr>
+<tr><td>4</td><td>Berkas yang disetujui sistem mengirimkan notifikasi ke mahasiswa; berkas yang ditolak dikembalikan untuk diperbaiki.</td><td>Halaman <strong>Verifikasi Berkas</strong></td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Mahasiswa mengunggah berkas pada menu <strong>Persyaratan</strong> → Admin Akademik memeriksa pada menu <strong>Verifikasi Berkas</strong> melalui tombol <strong>Periksa Berkas</strong> → Koorprodi memverifikasi pengajuan pada menu <strong>Pengajuan Masuk</strong> (Gambar 6, Gambar 40, dan Gambar 29).</p>
+<h3 id="94-sop-plotting-pembimbing-dan-penetapan-dewan-penguji">9.4 SOP Plotting Pembimbing dan Penetapan Dewan Penguji</h3>
+<p><strong>Tujuan.</strong> Menetapkan pembimbing dan komposisi penguji sesuai kuota dan ketentuan pedoman.</p>
+<p><strong>Diagram alur SOP Plotting dan Penetapan Penguji.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Koorprodi buka menu Plotting Pembimbing&quot;] --&gt; B{&quot;Kuota dosen masih tersedia?&quot;}
+    B --&gt;|Penuh| C[&quot;Pilih dosen lain&quot;]
+    C --&gt; B
+    B --&gt;|Tersedia| D[&quot;Alokasikan Pembimbing Baru&quot;]
+    D --&gt; E[&quot;SK Pembimbing diterbitkan setelah plotting disetujui&quot;]
+    E --&gt; F[&quot;Koorprodi buka menu Dewan Penguji&quot;]
+    F --&gt; G[&quot;Tetapkan Tim Penguji Baru sesuai komposisi&quot;]
+    G --&gt; H[&quot;Admin Akademik menerbitkan SK Dekan&quot;]</pre></div>
+<table>
+<thead><tr><th>No</th><th>Ketentuan SOP</th><th>Rujukan</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Batas kuota bimbingan: <strong>S1 maksimal 6</strong>, <strong>S2 maksimal 4</strong>, <strong>S3 maksimal 3</strong> mahasiswa per dosen.</td><td>Halaman <strong>Plotting Pembimbing</strong></td></tr>
+<tr><td>2</td><td>SK Pembimbing Utama diterbitkan setelah plotting Koorprodi disetujui.</td><td>Catatan SOP <strong>Jadwal Tahapan</strong></td></tr>
+<tr><td>3</td><td>Penerbitan SK Pembimbing Tesis (S2) oleh Dekan FEB UTM.</td><td>Catatan SOP <strong>Jadwal Tahapan</strong></td></tr>
+<tr><td>4</td><td>Komposisi dewan penguji mengikuti ketentuan per jenis ujian (lihat tabel di bawah).</td><td>Buku Pedoman 2026 (Hal 68–71)</td></tr>
+</tbody></table>
+<p><strong>Komposisi Dewan Penguji Resmi.</strong></p>
+<table>
+<thead><tr><th>Jenis Ujian</th><th>Komposisi</th></tr></thead>
+<tbody>
+<tr><td>D3/S1 Seminar Proposal</td><td>Ketua Penguji (Dosen Pembimbing), Anggota Penguji I (Penguji Utama non-pembimbing), Anggota Penguji II (non-pembimbing)</td></tr>
+<tr><td>D3/S1 Sidang</td><td>Ketua Penguji (Dosen Pembimbing), Anggota Penguji I, Anggota Penguji II</td></tr>
+<tr><td>S2 Ujian Proposal</td><td>Ketua Penguji (Pembimbing II), Anggota Penguji I (Pembimbing I), Anggota Penguji II &amp; III (non-pembimbing, keahlian relevan)</td></tr>
+<tr><td>S2 Sidang Tesis</td><td>Pembimbing I, Pembimbing II (Pemimpin Sidang), Penguji I, Penguji II</td></tr>
+<tr><td>S3 Ujian Kualifikasi</td><td>Pemimpin Sidang (Promotor), Anggota Penguji (Kopromotor), Anggota Penguji (1 penguji ahli)</td></tr>
+<tr><td>S3 Ujian Proposal</td><td>Ketua Penguji (Promotor/Koorprodi), Anggota Penguji I (Kopromotor), Anggota Penguji II &amp; III (keahlian sebidang)</td></tr>
+<tr><td>S3 Ujian Kelayakan (Desk Review)</td><td>Penilai I (DPA), Penilai II (DPA), Penilai III (Pembimbing/Promotor)</td></tr>
+<tr><td>S3 Ujian Tertutup</td><td>Pemimpin Sidang, Promotor, Kopromotor, 3 Penguji Internal UTM, 1 Penguji Eksternal luar UTM</td></tr>
+<tr><td>S3 Ujian Terbuka</td><td>Ketua Sidang/Penguji, Sekretaris Sidang/Penguji, dan 5 Anggota Penguji (termasuk penguji eksternal)</td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Koorprodi menetapkan pembimbing pada menu <strong>Plotting Pembimbing</strong> (Gambar 30) dan penguji pada menu <strong>Dewan Penguji</strong> (Gambar 31), lalu Admin Akademik menerbitkan SK (Gambar 41).</p>
+<h3 id="95-sop-penjadwalan-dan-pelaksanaan-ujiansidang">9.5 SOP Penjadwalan dan Pelaksanaan Ujian/Sidang</h3>
+<p><strong>Tujuan.</strong> Menyelenggarakan ujian sesuai durasi, jumlah penguji, dan ambang kelulusan yang ditetapkan.</p>
+<p><strong>Diagram alur SOP Penjadwalan dan Pelaksanaan Ujian.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Koorprodi buka menu Jadwal Ujian dan Sidang&quot;] --&gt; B[&quot;Klik Jadwalkan Sidang Baru&quot;]
+    B --&gt; C[&quot;Admin buka menu Alokasi Ruang Sidang&quot;]
+    C --&gt; D{&quot;Ruang dan waktu bentrok?&quot;}
+    D --&gt;|Ya| E[&quot;Pilih ruang atau waktu lain&quot;]
+    E --&gt; C
+    D --&gt;|Tidak| F[&quot;Plotting Ruang Ujian tersimpan&quot;]
+    F --&gt; G[&quot;Mahasiswa dan penguji melihat jadwal di menu Ujian&quot;]
+    G --&gt; H[&quot;Pelaksanaan ujian sesuai durasi dan jumlah penguji&quot;]
+    H --&gt; I[&quot;Berita Acara diterbitkan&quot;]</pre></div>
+<table>
+<thead><tr><th>Jenis Ujian</th><th>Durasi</th><th>Jumlah Penguji</th><th>Ambang Kelulusan</th></tr></thead>
+<tbody>
+<tr><td>Sidang Sarjana (S1)</td><td>90 menit</td><td>3 dewan penguji</td><td>Minimal C (NA ≥ 56)</td></tr>
+<tr><td>Sidang Tesis (S2)</td><td>120 menit</td><td>4 dewan penguji</td><td>Minimal B (NA ≥ 70)</td></tr>
+<tr><td>Ujian Tertutup Disertasi (S3)</td><td>120 – 150 menit</td><td>7 penguji (termasuk 1 penguji eksternal luar UTM)</td><td>Minimal 75.00 (B+)</td></tr>
+<tr><td>Ujian Terbuka (S3)</td><td>Sesuai jadwal senat</td><td>7 penguji</td><td>NA ≥ 70</td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Koorprodi menjadwalkan pada menu <strong>Jadwal Ujian &amp; Sidang</strong> melalui tombol <strong>Jadwalkan Sidang Baru</strong> (Gambar 33) → Admin Akademik menetapkan ruang pada menu <strong>Alokasi Ruang Sidang</strong> dengan deteksi bentrok otomatis (Gambar 42) → mahasiswa melihat jadwal pada menu <strong>Ujian</strong> (Gambar 9).</p>
+<blockquote><strong>Ketentuan tambahan.</strong> Pendaftaran sidang skripsi ditutup <strong>5 hari kerja</strong> sebelum tanggal ujian periode berjalan. Sidang Tesis (S2) berdurasi 120 menit dengan 4 dewan penguji; Ujian Tertutup Disertasi (S3) melibatkan 7 penguji dengan nilai kelulusan minimal 75.00 (B+).</blockquote>
+<h3 id="96-sop-penilaian-dan-pengesahan-nilai">9.6 SOP Penilaian dan Pengesahan Nilai</h3>
+<p><strong>Tujuan.</strong> Menjaga objektivitas dan konsistensi penilaian ujian.</p>
+<p><strong>Diagram alur SOP Penilaian dan Pengesahan Nilai.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Penguji buka menu Form Penilaian&quot;] --&gt; B[&quot;Isi rubrik penilaian berbobot&quot;]
+    B --&gt; C[&quot;Klik Simpan dan Sahkan Nilai&quot;]
+    C --&gt; D{&quot;Nilai Akhir memenuhi ambang kelulusan?&quot;}
+    D --&gt;|Tidak| E[&quot;Tidak Lulus dan wajib ujian ulang&quot;]
+    D --&gt;|Ya| F[&quot;Mahasiswa dinyatakan Lulus&quot;]
+    F --&gt; G[&quot;Cetak Berita Acara Digital&quot;]
+    G --&gt; H[&quot;Sistem mencatat nilai dan mengirim notifikasi&quot;]</pre></div>
+<p><strong>Rubrik penilaian (D3/S1).</strong> Rentang 0–100 dengan bobot: Tata Tulis dan Format Ilmiah 20%, Metodologi Penelitian 30%, Substansi dan Kedalaman Pembahasan 35%, serta Kemampuan Menyampaikan dan Mempertahankan Hasil 15%. Mahasiswa dinyatakan lulus dengan nilai sekurang-kurangnya <strong>C (NA ≥ 56)</strong>, dan selisih nilai antar penguji tidak boleh lebih dari <strong>10 poin</strong>.</p>
+<p><strong>Konversi nilai huruf UTM.</strong></p>
+<table>
+<thead><tr><th>Rentang Skor</th><th>Huruf</th><th>Bobot</th><th>Predikat</th></tr></thead>
+<tbody>
+<tr><td>≥ 80</td><td>A</td><td>4.00</td><td>Sangat Baik (Lulus)</td></tr>
+<tr><td>≥ 75</td><td>B+</td><td>3.50</td><td>Lebih dari Baik (Lulus)</td></tr>
+<tr><td>≥ 70</td><td>B</td><td>3.00</td><td>Baik (Lulus)</td></tr>
+<tr><td>≥ 65</td><td>C+</td><td>2.50</td><td>Lebih dari Cukup (Lulus D3/S1)</td></tr>
+<tr><td>≥ 56</td><td>C</td><td>2.00</td><td>Cukup (Batas Minimal Kelulusan D3/S1)</td></tr>
+<tr><td>≥ 45</td><td>D</td><td>1.00</td><td>Kurang (Tidak Lulus – Ujian Ulang)</td></tr>
+<tr><td>&lt; 45</td><td>E</td><td>0.00</td><td>Gagal (Tidak Lulus)</td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Dewan Penguji mengisi rubrik pada menu <strong>Form Penilaian</strong> (Gambar 24) → klik <strong>Simpan &amp; Sahkan Nilai</strong> → cetak <strong>Cetak Berita Acara Digital (PDF)</strong>. Sistem mencatat nilai dan mengirimkan notifikasi penilaian selesai.</p>
+<h3 id="97-sop-revisi-pasca-ujian">9.7 SOP Revisi Pasca Ujian</h3>
+<p><strong>Tujuan.</strong> Memastikan perbaikan naskah selesai dalam tenggat dan disahkan penguji.</p>
+<p><strong>Diagram alur SOP Revisi Pasca Ujian.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Mahasiswa terima catatan dewan penguji&quot;] --&gt; B[&quot;Tindak lanjut di menu Revisi&quot;]
+    B --&gt; C[&quot;Dosen pantau di menu Pemantauan Revisi&quot;]
+    C --&gt; D{&quot;Penguji menyetujui perbaikan di menu Verifikasi Revisi?&quot;}
+    D --&gt;|Minta Perbaikan Ulang| B
+    D --&gt;|Setujui Acc| E[&quot;Butir revisi disahkan&quot;]
+    E --&gt; F{&quot;Seluruh butir selesai sebelum tenggat?&quot;}
+    F --&gt;|Tidak| G[&quot;Kelulusan batal atau gugur&quot;]
+    F --&gt;|Ya| H[&quot;Cetak Matriks Pengesahan&quot;]</pre></div>
+<table>
+<thead><tr><th>No</th><th>Ketentuan SOP</th><th>Rujukan</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Batas waktu penyelesaian revisi maksimal <strong>3 bulan</strong> setelah tanggal ujian untuk jenjang D3/S1/S2 dan Ujian Kelayakan S3.</td><td>Buku Pedoman 2026 Bab X</td></tr>
+<tr><td>2</td><td>Ujian Tertutup S3 memiliki batas maksimal <strong>6 bulan</strong>.</td><td>Buku Pedoman 2026 Bab X</td></tr>
+<tr><td>3</td><td>Kelulusan dinyatakan <strong>batal/gugur</strong> jika melewati tenggang waktu tersebut.</td><td>Halaman <strong>Verifikasi Revisi</strong></td></tr>
+<tr><td>4</td><td>Halaman <strong>Pemantauan Revisi</strong> (Koorprodi) menampilkan indikator peringatan dini <strong>SLA Batas Waktu (30 Hari)</strong>.</td><td>Halaman <strong>Pemantauan Revisi</strong></td></tr>
+<tr><td>5</td><td>Setiap butir revisi harus disahkan penguji melalui keputusan <strong>Setujui (Acc)</strong> atau <strong>Minta Perbaikan Ulang</strong>.</td><td>Halaman <strong>Verifikasi Revisi</strong></td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Mahasiswa menindaklanjuti pada menu <strong>Revisi</strong> (Gambar 10) → Dosen memantau pada menu <strong>Pemantauan Revisi</strong> (Gambar 19) → Dewan Penguji memverifikasi pada menu <strong>Verifikasi Revisi</strong> (Gambar 26) → Koorprodi mengawasi pada menu <strong>Pemantauan Revisi</strong> (Gambar 35).</p>
+<h3 id="98-sop-penerbitan-dokumen-sk-dan-berita-acara">9.8 SOP Penerbitan Dokumen, SK, dan Berita Acara</h3>
+<p><strong>Tujuan.</strong> Menerbitkan dokumen resmi secara sah, bernomor urut, dan dapat diverifikasi.</p>
+<p><strong>Diagram alur SOP Penerbitan Dokumen.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Koorprodi buka Penerbitan Dokumen Kolektif&quot;] --&gt; B[&quot;Pilih gelombang sidang dan jenis ujian&quot;]
+    B --&gt; C[&quot;Centang berkas mahasiswa&quot;]
+    C --&gt; D[&quot;Input PIN Otorisasi Dekan&quot;]
+    D --&gt; E[&quot;Proses Penerbitan batch&quot;]
+    E --&gt; F[&quot;SK Dekan Induk Kolektif&quot;]
+    E --&gt; G[&quot;Berita Acara Ujian ber-QR Code&quot;]
+    E --&gt; H[&quot;Surat Tugas Kolektif Dewan Penguji&quot;]
+    F --&gt; I[&quot;Arsip dokumen dan verifikasi via QR Code&quot;]
+    G --&gt; I
+    H --&gt; I</pre></div>
+<table>
+<thead><tr><th>No</th><th>Ketentuan SOP</th><th>Rujukan</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>SK Dekan diterbitkan sebagai <strong>1 SK Dekan Induk Kolektif per gelombang</strong> yang melampirkan matriks seluruh mahasiswa dan susunan dewan penguji.</td><td>Halaman <strong>Penerbitan Dokumen Kolektif</strong></td></tr>
+<tr><td>2</td><td>Berita Acara Ujian digenerate otomatis secara massal dengan nomor register urut unik dan <strong>QR Code</strong> sah.</td><td>Halaman <strong>Penerbitan Dokumen Kolektif</strong></td></tr>
+<tr><td>3</td><td>Penerbitan memerlukan <strong>PIN Otorisasi Dekan</strong> (e-signature HMAC-SHA256).</td><td>Halaman <strong>Penerbitan Dokumen Kolektif</strong></td></tr>
+<tr><td>4</td><td>Penomoran surat menggunakan sistem urut anti-bentrok otomatis dengan verifikasi QR Code terintegrasi.</td><td>Halaman <strong>Otomasi Dokumen</strong></td></tr>
+<tr><td>5</td><td>Dokumen diarsipkan pada <strong>Arsip Dokumen Prodi</strong> dan <strong>Otomasi Dokumen</strong> serta dapat diverifikasi melalui pemindaian QR.</td><td>Halaman Arsip &amp; Otomasi</td></tr>
+</tbody></table>
+<p><strong>Langkah SOP.</strong> Koorprodi memproses batch pada menu <strong>Penerbitan Dokumen Kolektif</strong> (Gambar 32); Admin Akademik menerbitkan dokumen satuan pada menu <strong>Otomasi Dokumen</strong> dan <strong>Penerbitan SK</strong> (Gambar 39 dan Gambar 41); dokumen tersimpan di menu <strong>Arsip Dokumen Prodi</strong> (Gambar 36).</p>
+<h3 id="99-sop-publikasi-ilmiah-dan-skema-takk">9.9 SOP Publikasi Ilmiah dan Skema TAKK</h3>
+<p><strong>Tujuan.</strong> Mengatur kewajiban/opsi publikasi dan jalur tugas akhir alternatif.</p>
+<p><strong>Diagram alur SOP Publikasi dan Skema TAKK.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Mahasiswa daftarkan luaran di menu Publikasi&quot;] --&gt; B{&quot;Mengajukan jalur TAKK?&quot;}
+    B --&gt;|Tidak| C[&quot;Publikasi opsional atau mengikuti syarat jenjang&quot;]
+    B --&gt;|Ya| D{&quot;Skema TAKK yang dipilih&quot;}
+    D --&gt;|Skema 1 Konversi Langsung| E[&quot;Publikasi SINTA 2, Scopus Q4, WoS, atau juara bereputasi&quot;]
+    E --&gt; F[&quot;SK Dekan, tanpa ujian Tugas Akhir&quot;]
+    D --&gt;|Skema 2 Portofolio| G[&quot;Akumulasi poin capaian&quot;]
+    G --&gt; H{&quot;NA minimal 70 dan kewajiban publikasi terpenuhi?&quot;}
+    H --&gt;|Belum| G
+    H --&gt;|Sudah| I[&quot;Dikonversi menjadi Tugas Akhir dengan Nilai A&quot;]
+    C --&gt; J[&quot;Verifikasi kelayakan oleh Koorprodi&quot;]
+    F --&gt; J
+    I --&gt; J</pre></div>
+<ul>
+<li><strong>Publikasi.</strong> Pada jalur Skripsi Reguler (TAKT), publikasi bersifat opsional/anjuran diseminasi. Pada jenjang S2 dan S3, publikasi menjadi bagian syarat kelulusan (mis. S2: LoA artikel Sinta 2/Prosiding Internasional; S3: LoA/Accepted jurnal bereputasi minimal Q4 Scopus/WoS).</li>
+<li><strong>Skema TAKK.</strong> Tugas Akhir Kontributif-Kreatif dengan dua skema:</li>
+<li><strong>Skema 1 — Konversi Langsung.</strong> Publikasi artikel pada jurnal SINTA 2/prosiding internasional bereputasi/Scopus minimal Q4/WoS sebagai penulis pertama, <strong>atau</strong> juara lomba bereputasi nasional/internasional. Penetapan melalui SK Dekan; mahasiswa <strong>tidak diwajibkan</strong> mengikuti ujian Tugas Akhir/Skripsi maupun publikasi tambahan, cukup diseminasi yang diatur Koorprodi.</li>
+<li><strong>Skema 2 — Konversi Tidak Langsung (Portofolio).</strong> Akumulasi capaian dalam bentuk poin; dinyatakan LAYAK bila Nilai Akhir (NA) minimal <strong>70</strong>, dengan kewajiban publikasi bertingkat (NA ≥ 70: SINTA 5; NA ≥ 80: SINTA 6; NA ≥ 90: jurnal nasional non-SINTA). Bila terpenuhi, capaian dikonversi menjadi Tugas Akhir dengan <strong>Nilai A</strong>.</li>
+</ul>
+<p><strong>Langkah SOP.</strong> Mahasiswa mendaftarkan luaran pada menu <strong>Publikasi</strong> (Gambar 11); verifikasi kelayakan dilakukan Koorprodi melalui menu <strong>Pengajuan Masuk</strong> dan <strong>Matriks Persyaratan</strong> (Gambar 29 dan Gambar 34).</p>
+<h3 id="910-aturan-kelayakan-akademik-per-jenjang">9.10 Aturan Kelayakan Akademik per Jenjang</h3>
+<p>Aturan berikut ditampilkan pada menu <strong>Tahapan &amp; Regulasi</strong> (Superadmin) dan menjadi acuan verifikasi kelayakan (Gambar 45).</p>
+<p><strong>Diagram alur verifikasi kelayakan akademik.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Koorprodi periksa kelayakan mahasiswa&quot;] --&gt; B{&quot;Beban SKS dan IPK memenuhi?&quot;}
+    B --&gt;|Tidak| X[&quot;Tidak Layak&quot;]
+    B --&gt;|Ya| C{&quot;TOEFL memenuhi ambang jenjang?&quot;}
+    C --&gt;|Tidak| X
+    C --&gt;|Ya| D{&quot;Turnitin Similarity dan deteksi AI di bawah ambang?&quot;}
+    D --&gt;|Tidak| X
+    D --&gt;|Ya| E{&quot;Syarat publikasi terpenuhi?&quot;}
+    E --&gt;|Tidak| X
+    E --&gt;|Ya| F[&quot;Layak mengikuti ujian&quot;]</pre></div>
+<table>
+<thead><tr><th>Parameter</th><th>D3</th><th>S1</th><th>S2</th><th>S3</th></tr></thead>
+<tbody>
+<tr><td>Beban SKS minimal</td><td>Lulus seluruh mata kuliah yang ditentukan</td><td>Lulus seluruh mata kuliah (D/D+ maks 2 MK, tanpa E)</td><td>Minimal 36 SKS</td><td>Lulus seluruh mata kuliah (maks 1 nilai B+)</td></tr>
+<tr><td>IPK minimal</td><td>2.00</td><td>2.00</td><td>3.00</td><td>3.00</td></tr>
+<tr><td>TOEFL minimal</td><td>400</td><td>450</td><td>475</td><td>500</td></tr>
+<tr><td>Turnitin Similarity maksimal</td><td>30%</td><td>30%</td><td>20%</td><td>20%</td></tr>
+<tr><td>Deteksi AI maksimal</td><td>40%</td><td>40%</td><td>30%</td><td>30%</td></tr>
+<tr><td>Nilai kelulusan minimal</td><td>C</td><td>C</td><td>B</td><td>NA ≥ 70</td></tr>
+<tr><td>Batas waktu revisi</td><td>3 bulan</td><td>3 bulan</td><td>3 bulan</td><td>6 bulan (Ujian Tertutup)</td></tr>
+<tr><td>Alokasi waktu ujian</td><td>90 menit</td><td>90 menit</td><td>90 – 120 menit</td><td>120 – 150 menit</td></tr>
+<tr><td>Jumlah penguji</td><td>3</td><td>3</td><td>4</td><td>7</td></tr>
+</tbody></table>
+<h3 id="911-sop-administrasi-dan-linimasa-tahapan-per-jenjang">9.11 SOP Administrasi dan Linimasa Tahapan per Jenjang</h3>
+<p>Tabel berikut merangkum SOP administrasi per tahap yang dikelola Admin Akademik pada menu <strong>Jadwal Tahapan</strong> (kolom <strong>Catatan SOP</strong> dan <strong>Persyaratan</strong>), seperti tampak pada Gambar 38.</p>
+<p><strong>Diagram alur SOP administrasi dan linimasa tahapan.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart TD
+    A[&quot;Admin buka menu Jadwal Tahapan&quot;] --&gt; B[&quot;Buat Jadwal Tahapan per jenjang&quot;]
+    B --&gt; C[&quot;Buka Periode tahapan&quot;]
+    C --&gt; D[&quot;Mahasiswa unggah berkas sesuai Persyaratan&quot;]
+    D --&gt; E[&quot;Admin siarkan pengumuman atau broadcast&quot;]
+    E --&gt; F{&quot;Tenggat waktu tercapai?&quot;}
+    F --&gt;|Belum| D
+    F --&gt;|Ya| G[&quot;Tutup Periode&quot;]
+    G --&gt; H[&quot;Lanjut ke tahap berikutnya&quot;]</pre></div>
+<p><strong>D3 — D-III Entrepreneurship</strong></p>
+<table>
+<thead><tr><th>Kode</th><th>Tahap</th><th>Persyaratan</th><th>Catatan SOP</th><th>Penanggung Jawab</th></tr></thead>
+<tbody>
+<tr><td>D3-T1</td><td>Pengajuan Ide &amp; Topik Proyek Bisnis</td><td>Lulus ≥ 90 SKS, Form Usulan Bisnis disetujui Dosen Pembina</td><td>Persetujuan kelayakan ide usaha oleh Koorprodi.</td><td>Subbag Akademik D3</td></tr>
+<tr><td>D3-T2</td><td>Pendampingan &amp; Inkubasi Usaha Lapangan</td><td>Minimal 6 kali asistensi inkubator bisnis, logbook omzet &amp; pemasaran</td><td>Wajib mengunggah lembar logbook berkala setiap dua pekan.</td><td>Subbag Akademik D3</td></tr>
+<tr><td>D3-T3</td><td>Ujian Sidang Tugas Akhir &amp; Gelar Produk</td><td>Laporan portofolio final, TOEFL ≥ 400, sampel produk usaha</td><td>Gelar produk usaha dilaksanakan di lobi Gedung RKB bersama dewan penguji.</td><td>Subbag Akademik D3</td></tr>
+</tbody></table>
+<p><strong>S1 — S-1 Manajemen</strong></p>
+<table>
+<thead><tr><th>Kode</th><th>Tahap</th><th>Persyaratan</th><th>Catatan SOP</th><th>Penanggung Jawab</th></tr></thead>
+<tbody>
+<tr><td>S1-T1</td><td>Pengajuan Topik &amp; Plotting Pembimbing</td><td>KRS Aktif, Lulus ≥ 120 SKS, IPK ≥ 2.75, mengajukan 2 usulan topik</td><td>SK Pembimbing Utama diterbitkan setelah plotting Koorprodi disetujui.</td><td>Subbag Akademik FEB UTM</td></tr>
+<tr><td>S1-T2</td><td>Seminar Proposal (Sempro)</td><td>Proposal Bab I–III disetujui Dosen Pembimbing, Bebas Tanggungan SPP</td><td>Pendaftaran berkas verifikasi dibuka setiap hari kerja pukul 08:00 – 15:00 WIB.</td><td>Subbag Akademik FEB UTM</td></tr>
+<tr><td>S1-T3</td><td>Penelitian &amp; Bimbingan Berkala</td><td>Minimal 8 kali bimbingan terekam di sistem, Turnitin naskah ≤ 25%</td><td>Mahasiswa wajib membawa lembar konsultasi tercetak saat verifikasi ujian.</td><td>Subbag Akademik FEB UTM</td></tr>
+<tr><td>S1-T4</td><td>Sidang Ujian Skripsi / TAKK Final</td><td>Lulus seluruh mata kuliah (≥ 144 SKS), TOEFL ≥ 450, Turnitin ≤ 25%, Draft Artikel Publikasi</td><td>Pendaftaran sidang skripsi ditutup 5 hari kerja sebelum tanggal ujian periode berjalan.</td><td>Subbag Akademik FEB UTM</td></tr>
+</tbody></table>
+<p><strong>S2 — S-2 Magister Manajemen</strong></p>
+<table>
+<thead><tr><th>Kode</th><th>Tahap</th><th>Persyaratan</th><th>Catatan SOP</th><th>Penanggung Jawab</th></tr></thead>
+<tbody>
+<tr><td>S2-T1</td><td>Penetapan Pembimbing &amp; Ujian Proposal Tesis</td><td>Lulus Teori Dasar (≥ 24 SKS), Draft Usulan Tesis disetujui Calon Pembimbing</td><td>Penerbitan SK Pembimbing Tesis oleh Dekan FEB UTM.</td><td>Subbag Pascasarjana FEB UTM</td></tr>
+<tr><td>S2-T2</td><td>Penelitian Lapangan &amp; Penulisan Tesis</td><td>Minimal 10 kali bimbingan terdata di SIM-TA, pengumpulan data empiris</td><td>Monitoring berkala progres bab IV dan bab V bersama pembimbing.</td><td>Subbag Pascasarjana FEB UTM</td></tr>
+<tr><td>S2-T3</td><td>Seminar Hasil Tesis (Semhas)</td><td>Naskah Bab I–V lengkap, Turnitin ≤ 25%, TOEFL ≥ 475, bukti submit artikel Sinta 2</td><td>Ujian dihadiri tim 3 penguji dan pembimbing tesis.</td><td>Subbag Pascasarjana FEB UTM</td></tr>
+<tr><td>S2-T4</td><td>Ujian Tesis (Sidang Tertutup Magister)</td><td>Revisi Semhas tuntas, LoA Artikel Jurnal Sinta 2 / Prosiding Internasional, Lunas SPP</td><td>Batas akhir pengumpulan naskah jilid lux 2 pekan setelah ujian dinyatakan lulus.</td><td>Subbag Pascasarjana FEB UTM</td></tr>
+</tbody></table>
+<p><strong>S3 — S-3 Doktor Ilmu Manajemen</strong></p>
+<table>
+<thead><tr><th>Kode</th><th>Tahap</th><th>Persyaratan</th><th>Catatan SOP</th><th>Penanggung Jawab</th></tr></thead>
+<tbody>
+<tr><td>S3-T2</td><td>Ujian Kualifikasi Doktoral</td><td>Lulus mata kuliah keahlian (≥ 18 SKS), penguasaan teori fundamental manajemen</td><td>Penerbitan Surat Keterangan Lulus Kualifikasi oleh Ketua Program Studi S3.</td><td>Sekretariat Pascasarjana S3</td></tr>
+<tr><td>S3-T4</td><td>Ujian Kelayakan (Desk Review Naskah Disertasi)</td><td>Draft Disertasi lengkap disetujui Promotor &amp; Kopromotor, nilai desk review min 70</td><td>Review buta (blind review) oleh 3 penilai independen dari universitas mitra.</td><td>Sekretariat Pascasarjana S3</td></tr>
+<tr><td>S3-T6</td><td>Ujian Tertutup Disertasi (Sidang Tertutup)</td><td>Nilai kelayakan ≥ 70, Turnitin ≤ 20%, TOEFL ≥ 500, LoA Scopus Q1/Q2, 7 eksemplar naskah</td><td>Sidang formal dipimpin Dekan FEB UTM didampingi Promotor dan 5 dewan penguji.</td><td>Sekretariat Pascasarjana S3</td></tr>
+<tr><td>S3-T7</td><td>Ujian Terbuka / Promosi Doktoral</td><td>Revisi Ujian Tertutup disetujui seluruh penguji, Surat Rekomendasi Promosi dari Promotor</td><td>Rapat senat terbuka pengukuhan gelar Doktor Ilmu Manajemen.</td><td>Sekretariat Pascasarjana S3</td></tr>
+</tbody></table>
+<h3 id="912-matriks-ringkas-sop-per-peran">9.12 Matriks Ringkas SOP per Peran</h3>
+<p><strong>Diagram alur keterlibatan peran dalam SOP.</strong></p>
+<div class="mermaid-wrap"><pre class="mermaid">flowchart LR
+    M[&quot;Mahasiswa&quot;] --&gt; D[&quot;Dosen Pembimbing&quot;]
+    D --&gt; K[&quot;Koorprodi&quot;]
+    K --&gt; AD[&quot;Admin Akademik&quot;]
+    AD --&gt; P[&quot;Dewan Penguji&quot;]
+    P --&gt; M
+    SA[&quot;Superadmin&quot;] -.-&gt;|&quot;Konfigurasi aturan dan pengguna&quot;| M
+    SA -.-&gt; D
+    SA -.-&gt; K
+    SA -.-&gt; AD
+    SA -.-&gt; P</pre></div>
+<table>
+<thead><tr><th>Aktivitas SOP</th><th>Mahasiswa</th><th>Dosen</th><th>Penguji</th><th>Koorprodi</th><th>Admin</th><th>Superadmin</th></tr></thead>
+<tbody>
+<tr><td>Bimbingan &amp; pengesahan logbook</td><td>Catat sesi</td><td>Sahkan</td><td>—</td><td>Pantau</td><td>—</td><td>—</td></tr>
+<tr><td>Unggah &amp; uji naskah (Turnitin/AI)</td><td>Unggah &amp; uji</td><td>Telaah</td><td>Telaah</td><td>Pantau</td><td>—</td><td>Atur ambang</td></tr>
+<tr><td>Verifikasi berkas &amp; pendaftaran ujian</td><td>Ajukan</td><td>Setujui</td><td>—</td><td>Verifikasi</td><td>Periksa berkas</td><td>—</td></tr>
+<tr><td>Plotting pembimbing &amp; penetapan penguji</td><td>—</td><td>—</td><td>—</td><td>Tetapkan</td><td>Terbitkan SK</td><td>Atur kuota</td></tr>
+<tr><td>Penjadwalan &amp; ruang sidang</td><td>Lihat jadwal</td><td>Lihat jadwal</td><td>Lihat jadwal</td><td>Jadwalkan</td><td>Alokasi ruang</td><td>—</td></tr>
+<tr><td>Penilaian &amp; berita acara</td><td>Lihat hasil</td><td>—</td><td>Nilai &amp; sahkan</td><td>Kelola BA</td><td>Terbitkan dokumen</td><td>—</td></tr>
+<tr><td>Revisi pasca ujian</td><td>Tindak lanjut</td><td>Pantau</td><td>Verifikasi</td><td>Awasi SLA</td><td>—</td><td>—</td></tr>
+<tr><td>Publikasi &amp; pengesahan dokumen</td><td>Daftarkan &amp; unduh</td><td>—</td><td>—</td><td>Arsipkan</td><td>Terbitkan</td><td>—</td></tr>
+<tr><td>Konfigurasi aturan &amp; pengguna</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Kelola</td></tr>
+</tbody></table>
+<hr>
+<h2 id="10-fitur-lain">10. Fitur Lain</h2>
+<h3 id="101-notifikasi-real-time">10.1 Notifikasi Real-Time</h3>
+<p>Ikon lonceng pada bilah atas membuka panel <strong>Notifikasi &amp; Action Item</strong> dengan tab <strong>Semua</strong>, <strong>Belum Dibaca</strong>, dan <strong>Action Item</strong>, seperti pada Gambar 48.</p>
+<ol>
+<li>Klik ikon lonceng di kanan atas.</li>
+<li>Pilih tab yang diinginkan untuk menyaring notifikasi.</li>
+<li>Klik sebuah notifikasi untuk menandainya sebagai dibaca, atau <strong>Tandai semua dibaca</strong> untuk menandai seluruhnya.</li>
+<li>Klik <strong>Log Email SLA</strong> untuk melihat riwayat pengiriman email sistem.</li>
+</ol>
+<p><img src="img/48-notifikasi.png" alt="Gambar 48. Panel Notifikasi dan Action Item menampilkan daftar notifikasi beserta tab penyaring."></p>
+<h3 id="102-unduh-dokumen-dan-verifikasi-qr">10.2 Unduh Dokumen dan Verifikasi QR</h3>
+<ul>
+<li>Unduh dokumen resmi melalui tombol <strong>Unduh</strong> pada daftar dokumen (mis. <strong>Unduh Naskah Terkini</strong>, <strong>Cetak Lembar Pengesahan</strong>, <strong>Cetak Berita Acara Digital (PDF)</strong>, atau <strong>Unduh Master ZIP</strong> pada Penerbitan Dokumen Kolektif).</li>
+<li>Berita Acara dan SK yang diterbitkan dilengkapi QR Code terintegrasi. Verifikasi keabsahan dokumen dilakukan dengan memindai QR Code; tautan verifikasi dapat pula dibuka langsung dengan menambahkan parameter <code>?code=</code> pada alamat aplikasi.</li>
+</ul>
+<h3 id="103-ganti-kata-sandi">10.3 Ganti Kata Sandi</h3>
+<ol>
+<li>Klik nama/avatar pada kanan atas untuk membuka menu profil.</li>
+<li>Klik <strong>Ganti Kata Sandi</strong>.</li>
+<li>Isi <strong>Kata Sandi Saat Ini</strong>, <strong>Kata Sandi Baru (Min. 6 Karakter)</strong>, dan <strong>Ulangi Kata Sandi Baru</strong>, seperti pada Gambar 49.</li>
+<li>Klik <strong>Simpan Kata Sandi</strong>.</li>
+</ol>
+<p><img src="img/49-ganti-kata-sandi.png" alt="Gambar 49. Modal Pembaruan Kata Sandi Akun menampilkan formulir ganti kata sandi mandiri."></p>
+<blockquote><strong>Catatan.</strong> Pada menu profil juga tersedia pilihan peran kerja aktif (bagi dosen multi-peran), tombol <strong>Pedoman &amp; SOP TA 2026</strong>, dan <strong>Keluar (Logout)</strong>.</blockquote>
+<h3 id="104-tampilan-mobile">10.4 Tampilan Mobile</h3>
+<p>Pada layar kecil, navigasi utama dipindahkan ke menu drawer. Klik ikon menu (tiga garis) pada bilah atas untuk membukanya, seperti pada Gambar 50.</p>
+<p><img src="img/50-menu-mobile-drawer.png" alt="Gambar 50. Menu drawer pada tampilan mobile menampilkan navigasi dan profil pengguna."></p>
+<hr>
+<h2 id="11-troubleshooting-dan-faq">11. Troubleshooting dan FAQ</h2>
+<table>
+<thead><tr><th>Gejala</th><th>Kemungkinan Penyebab</th><th>Penanganan</th></tr></thead>
+<tbody>
+<tr><td>Gagal login dengan pesan &quot;Kredensial tidak valid&quot;</td><td>NIM/NIP atau kata sandi salah, atau akun belum terdaftar</td><td>Periksa kembali Nomor Induk dan kata sandi. Gunakan panel <strong>Akses Cepat Pengujian / Akun Demo</strong> untuk akun demo.</td></tr>
+<tr><td>Pesan &quot;Terlalu banyak percobaan login&quot;</td><td>Rate limiter login aktif (maksimal 10 percobaan per 15 menit)</td><td>Tunggu beberapa saat sebelum mencoba kembali.</td></tr>
+<tr><td>Halaman menampilkan &quot;Autentikasi Gagal — Failed to fetch&quot;</td><td>Backend API pada port 5001 tidak berjalan</td><td>Jalankan <code>npm run fullstack</code> atau <code>npm start</code> sehingga API aktif pada http://localhost:5001.</td></tr>
+<tr><td>Data tidak muncul atau tampilan kosong</td><td>Backend offline sehingga aplikasi memakai cache lokal, atau sesi kedaluwarsa</td><td>Pastikan API aktif, muat ulang halaman, lalu login kembali.</td></tr>
+<tr><td>Muncul pesan &quot;Memuat Modul Akademik&quot; berkepanjangan</td><td>Modul halaman sedang diunduh atau koneksi lambat</td><td>Tunggu hingga modul selesai dimuat; muat ulang halaman bila perlu.</td></tr>
+<tr><td>Tidak dapat berpindah peran</td><td>Akun tidak memiliki penugasan multi-peran</td><td>Perpindahan peran hanya tersedia bagi akun dengan lebih dari satu penugasan peran (mis. dosen).</td></tr>
+<tr><td>Dokumen tidak dapat diunduh</td><td>Sesi/token tidak valid atau berkas belum tersedia</td><td>Login kembali, lalu unduh ulang dari halaman <strong>Dokumen</strong> atau <strong>Arsip Dokumen Prodi</strong>.</td></tr>
+<tr><td>Tampilan tidak rapi pada layar kecil</td><td>Resolusi di bawah rekomendasi</td><td>Gunakan tampilan mobile dengan menu drawer atau perbesar jendela peramban.</td></tr>
+</tbody></table>
+<hr>
+<h2 id="12-glosarium">12. Glosarium</h2>
+<table>
+<thead><tr><th>Istilah</th><th>Penjelasan</th></tr></thead>
+<tbody>
+<tr><td>TAKT</td><td>Tugas Akhir Karya Tulis (Skripsi Reguler) — jalur tugas akhir berbasis naskah skripsi.</td></tr>
+<tr><td>TAKK</td><td>Tugas Akhir Karya Kompetensi (Portofolio Bisnis) — jalur tugas akhir berbasis portofolio/karya kompetensi.</td></tr>
+<tr><td>Tesis</td><td>Karya ilmiah akhir program magister (S2).</td></tr>
+<tr><td>Disertasi</td><td>Karya ilmiah akhir program doktor (S3).</td></tr>
+<tr><td>SK Dekan</td><td>Surat Keputusan Dekan FEB UTM, antara lain untuk penetapan dosen pembimbing dan dewan penguji.</td></tr>
+<tr><td>SK Dekan Induk Kolektif</td><td>Satu SK Dekan per gelombang yang melampirkan matriks seluruh mahasiswa terdaftar beserta susunan dewan penguji.</td></tr>
+<tr><td>Berita Acara</td><td>Dokumen resmi hasil pelaksanaan ujian/sidang, dilengkapi QR Code untuk verifikasi keabsahan.</td></tr>
+<tr><td>Turnitin</td><td>Layanan pemeriksaan kemiripan naskah (Similarity) dan deteksi konten AI.</td></tr>
+<tr><td>SLA</td><td>Service Level Agreement — batas waktu layanan; pada pemantauan revisi ditampilkan sebagai SLA batas waktu.</td></tr>
+<tr><td>Sempro</td><td>Seminar Proposal — ujian proposal sebelum penelitian/sidang akhir.</td></tr>
+<tr><td>Semhas</td><td>Seminar Hasil — pemaparan temuan penelitian (khusus jenjang magister/doktor).</td></tr>
+<tr><td>Ujian Kelayakan</td><td>Ujian kelayakan naskah (desk review) pada jenjang doktor.</td></tr>
+<tr><td>Ujian Tertutup</td><td>Sidang tertutup disertasi pada jenjang doktor.</td></tr>
+<tr><td>Ujian Terbuka</td><td>Sidang senat terbuka untuk promosi gelar doktor.</td></tr>
+<tr><td>Koorprodi</td><td>Koordinator Program Studi yang mengelola proses tugas akhir pada program studinya.</td></tr>
+<tr><td>Kuota Bimbingan</td><td>Batas jumlah mahasiswa bimbingan per dosen: S1 maksimal 6, S2 maksimal 4, S3 maksimal 3.</td></tr>
+<tr><td>Plotting</td><td>Penetapan/alokasi dosen pembimbing bagi mahasiswa.</td></tr>
+<tr><td>NIM/NIP</td><td>Nomor Induk Mahasiswa / Nomor Induk Pegawai, digunakan sebagai identitas login.</td></tr>
+<tr><td>JWT</td><td>JSON Web Token — token sesi terverifikasi yang diterbitkan sistem saat login.</td></tr>
+<tr><td>QR Code Verifikasi</td><td>Kode dua dimensi pada dokumen resmi untuk memeriksa keabsahan dokumen.</td></tr>
+<tr><td>SOP</td><td>Standar Operasional Prosedur — ketentuan baku pelaksanaan tahapan tugas akhir.</td></tr>
+<tr><td>DPA</td><td>Dewan Pertimbangan Akademik yang menilai Ujian Kelayakan disertasi.</td></tr>
+<tr><td>LoA</td><td>Letter of Acceptance — surat penerimaan artikel pada jurnal/prosiding.</td></tr>
+<tr><td>Desk Review</td><td>Penelaahan naskah berbasis dokumen (tanpa sidang) pada Ujian Kelayakan S3.</td></tr>
+<tr><td>Blind Review</td><td>Penelaahan buta oleh penilai independen tanpa identitas penulis.</td></tr>
+<tr><td>Buku Kendali Konsultasi</td><td>Kartu/log bimbingan digital yang mencatat sesi konsultasi mahasiswa dengan dosen.</td></tr>
+<tr><td>Portofolio (TAKK)</td><td>Akumulasi capaian akademik mahasiswa yang dikonversi menjadi nilai tugas akhir.</td></tr>
+</tbody></table>
+<hr>
+<p><em>Pedoman ini disusun berdasarkan antarmuka SIM-TA FEB UTM versi 1.0 dan Buku Pedoman Tugas Akhir Jurusan Manajemen FEB UTM 2026. Tangkapan layar dihasilkan secara otomatis melalui <code>scripts/capture-guide.mjs</code>.</em></p>
+</div>
+<script>
+  if (window.mermaid) {
+    try { mermaid.initialize({ startOnLoad: true, theme: 'neutral', flowchart: { htmlLabels: true } }); } catch (e) {}
+  }
+</script>
+</body>
+</html>

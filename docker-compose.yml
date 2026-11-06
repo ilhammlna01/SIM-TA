@@ -1,0 +1,31 @@
+services:
+  sim-ta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sim-ta-feb-utm
+    restart: always
+    ports:
+      - "5001:5001"
+    environment:
+      - NODE_ENV=production
+      - PORT=5001
+      # WAJIB: setel domain resmi kampus (bukan '*'). Boleh beberapa domain dipisah koma.
+      - CORS_ORIGIN=${CORS_ORIGIN:-https://sim-ta.feb.utm.ac.id}
+      # Jumlah hop reverse proxy di depan aplikasi (1 bila di belakang nginx/LB, 0 bila langsung).
+      - TRUST_PROXY_HOPS=${TRUST_PROXY_HOPS:-1}
+      # WAJIB: setel JWT_SECRET di berkas .env (minimal 32 karakter) sebelum menjalankan.
+      - JWT_SECRET=${JWT_SECRET}
+      # URL publik untuk tautan verifikasi QR Code dokumen resmi.
+      # WAJIB disetel ke domain resmi (bukan localhost) agar QR pada PDF resmi
+      # dapat dipindai dan diverifikasi dari perangkat luar.
+      - APP_PUBLIC_URL=${APP_PUBLIC_URL:?APP_PUBLIC_URL wajib disetel (contoh: https://sim-ta.feb.utm.ac.id)}
+      # Allowlist domain email penerima.
+      - EMAIL_ALLOWED_DOMAINS=${EMAIL_ALLOWED_DOMAINS:-trunojoyo.ac.id}
+    volumes:
+      # Persistent volume agar database & berkas upload mahasiswa tidak hilang saat container restart
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+      # Audit 21 Oktober 2026: volume cadangan (disaster recovery) WAJIB dimount.
+      # Tanpa ini, seluruh snapshot harian hilang setiap kali container di-recreate.
+      - ./backups:/app/backups

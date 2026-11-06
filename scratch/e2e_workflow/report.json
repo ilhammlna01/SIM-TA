@@ -1,0 +1,178 @@
+[
+  {
+    "key": "mahasiswa",
+    "actions": [
+      {
+        "nav": "Bimbingan",
+        "button": "Catat Sesi Bimbingan",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Naskah",
+        "button": "Unggah Versi Baru",
+        "opened": true,
+        "toasts": [
+          "Naskah berhasil diunggah!"
+        ],
+        "note": ""
+      },
+      {
+        "nav": "Persyaratan",
+        "button": "Unggah Berkas Persyaratan",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Portofolio",
+        "button": "Unggah Portofolio Baru",
+        "opened": true,
+        "toasts": [
+          "Portofolio \"Uji Otomatis E2E\" (+50 Poin) berhasil diunggah! Poin dan kelayakan TAKK diperbarui otomatis."
+        ],
+        "note": ""
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "key": "dosen",
+    "actions": [
+      {
+        "nav": "Persetujuan",
+        "button": "Setujui Maju Ujian",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Bimbingan",
+        "button": "Catat Sesi Bimbingan Baru",
+        "opened": false,
+        "toasts": [],
+        "note": "Tombol aksi tidak ditemukan/terlihat"
+      },
+      {
+        "nav": "Review Naskah",
+        "button": "Tambah Catatan Telaah",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "key": "koorprodi",
+    "actions": [
+      {
+        "nav": "Pengajuan Masuk",
+        "button": "Sahkan & Alokasikan Penguji",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Plotting Pembimbing",
+        "button": "Alokasikan Pembimbing Baru",
+        "opened": true,
+        "toasts": [
+          "Penetapan pembimbing berhasil disimpan dan diajukan ke dalam draf SK Dekan FEB UTM."
+        ],
+        "note": ""
+      },
+      {
+        "nav": "Penerbitan Dokumen Kolektif",
+        "button": "Proses Penerbitan",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "key": "penguji",
+    "actions": [
+      {
+        "nav": "Dashboard",
+        "button": "Input Nilai Sidang",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Catatan / Koreksi",
+        "button": "Tambah Catatan Koreksi",
+        "opened": true,
+        "toasts": [
+          "Catatan koreksi resmi berhasil ditambahkan ke lembar ujian mahasiswa."
+        ],
+        "note": ""
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "key": "admin",
+    "actions": [
+      {
+        "nav": "Verifikasi Berkas",
+        "button": "Periksa Berkas",
+        "opened": true,
+        "toasts": [
+          "Berkas persyaratan ujian (Dinda Ayu Larasati) telah diverifikasi sah oleh Subbag Akademik."
+        ],
+        "note": ""
+      },
+      {
+        "nav": "Penerbitan SK",
+        "button": "Buat SK Baru",
+        "opened": true,
+        "toasts": [
+          "Surat Keputusan Dekan FEB UTM 173/UN46.1.4/PK.01.03/2026 telah terbit: Penetapan Pembimbing/Penguji."
+        ],
+        "note": ""
+      },
+      {
+        "nav": "Alokasi Ruang Sidang",
+        "button": "Plotting Ruang Ujian",
+        "opened": true,
+        "toasts": [
+          "Surat Keputusan Dekan FEB UTM 173/UN46.1.4/PK.01.03/2026 telah terbit: Penetapan Pembimbing/Penguji."
+        ],
+        "note": ""
+      }
+    ],
+    "pageErrors": []
+  },
+  {
+    "key": "superadmin",
+    "actions": [
+      {
+        "nav": "Manajemen Pengguna",
+        "button": "Tambah Akun Pengguna",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Master Data Prodi",
+        "button": "Tambah Program Studi",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      },
+      {
+        "nav": "Tahapan & Regulasi",
+        "button": "Simpan Perubahan Regulasi S1",
+        "opened": true,
+        "toasts": [],
+        "note": "Tidak ada toast hasil (mungkin aksi langsung / tanpa umpan balik)"
+      }
+    ],
+    "pageErrors": []
+  }
+]

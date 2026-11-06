@@ -1,0 +1,532 @@
+/**
+ * Data Autentik & State Awal: Modul Admin Akademik FEB UTM
+ * Mengelola:
+ * 1. Verifikasi berkas pendaftaran ujian mahasiswa multi-jenjang (D3, S1, S2, S3)
+ * 2. Penerbitan nomor SK ujian dan SK bimbingan resmi institusi
+ * 3. Pengaturan alokasi ruangan ujian (luring & virtual) dengan deteksi bentrok jadwal
+ */
+
+export const ADMIN_PROFILE_DEFAULT = {
+  id: 'admin-fauzi',
+  nip: '198104122008121002',
+  nama: 'Ahmad Fauzi, S.Kom., M.T.',
+  jabatan: 'Kepala Subbagian Administrasi Akademik FEB UTM',
+  pangkat: 'Penata Tk. I / III d',
+  email: 'ahmad.fauzi@trunojoyo.ac.id',
+  kantor: 'Gedung R.K.B. Lantai 1 / Subbag Tata Usaha FEB UTM'
+};
+
+// Data Pendaftaran Ujian yang Masuk & Status Verifikasi Berkas Administratif
+export const INITIAL_VERIFIKASI_BERKAS = [
+  {
+    id: 'berkas-s3-01',
+    mhsId: 'mhs-s3',
+    nim: '220231600004',
+    namaMahasiswa: 'Bambang Suryo Utomo, S.E., M.M.',
+    jenjang: 'S3',
+    programStudi: 'S-3 Ilmu Manajemen',
+    jenisUjian: 'Ujian Tertutup Disertasi',
+    tanggalDaftar: '05 Oktober 2026',
+    statusVerifikasi: 'Menunggu Verifikasi',
+    pembimbingUtama: 'Prof. Dr. Pribanus Wantara, Drs., M.M.',
+    kopromotor: 'Dr. Dra. Hj. Iriani Ismail, M.M.',
+    judul: 'Model Determinan Dynamic Capabilities Terhadap Ketahanan Usaha Berkelanjutan Berbasis Kearifan Lokal Madura: Peran Mediasi Orientasi Inovasi Digital',
+    berkasList: [
+      { id: 'b-1', nama: 'Formulir Pendaftaran Ujian Tertutup Disertasi', file: 'Form_Daftar_Ujian_Tertutup_Bambang.pdf', status: 'Lengkap', catatan: '' },
+      { id: 'b-2', nama: 'Bukti Persetujuan Promotor & Kopromotor', file: 'Lembar_Persetujuan_Promotor.pdf', status: 'Lengkap', catatan: 'Telah ditandatangani basah & digital' },
+      { id: 'b-3', nama: 'Berita Acara & Nilai Ujian Kelayakan (Desk Review >= 70)', file: 'BA_Kelayakan_Desk_Review.pdf', status: 'Lengkap', catatan: 'Nilai Akhir 75.67' },
+      { id: 'b-4', nama: 'Sertifikat TOEFL Skor >= 500 (Pusat Bahasa UTM)', file: 'Sertifikat_TOEFL_525.pdf', status: 'Lengkap', catatan: 'Skor 525 (Memenuhi Syarat)' },
+      { id: 'b-5', nama: 'Surat Keterangan Bebas Plagiasi Turnitin (<= 20%)', file: 'SK_Turnitin_16_Persen.pdf', status: 'Lengkap', catatan: 'Similarity 16%, AI 18%' },
+      { id: 'b-6', nama: 'Bukti Publikasi / LoA Jurnal Internasional Bereputasi (Scopus Q1/Q2)', file: 'LoA_Elsevier_Scopus_Q1.pdf', status: 'Lengkap', catatan: 'Journal of Open Innovation (Elsevier Scopus Q1)' },
+      { id: 'b-7', nama: 'Surat Bebas Tanggungan Perpustakaan & Keuangan (SPP Lunas)', file: 'Bebas_Tanggungan_FEB_UTM.pdf', status: 'Lengkap', catatan: 'Bebas tunggakan semester Ganjil 2026/2027' },
+      { id: 'b-8', nama: 'Naskah Disertasi Siap Uji (7 Eksemplar)', file: 'Draft_Disertasi_Final_Ujian_Tertutup.pdf', status: 'Lengkap', catatan: 'Telah diverifikasi format pedoman disertasi' }
+    ],
+    catatanAdmin: ''
+  },
+  {
+    id: 'berkas-s1-01',
+    mhsId: 'mhs-s1-1',
+    nim: '210211100142',
+    namaMahasiswa: 'Dinda Ayu Larasati',
+    jenjang: 'S1',
+    programStudi: 'S-1 Manajemen',
+    jenisUjian: 'Seminar Proposal Skripsi',
+    tanggalDaftar: '03 Oktober 2026',
+    statusVerifikasi: 'Terverifikasi Lolos',
+    pembimbingUtama: 'Dra. Hj. S. Anugrahini Irawati, M.M.',
+    kopromotor: '-',
+    judul: 'Pengaruh Live Commerce Interactive Features dan Emotional Value Terhadap Keputusan Pembelian Spontan Produk Batik Madura di TikTok Shop',
+    berkasList: [
+      { id: 'b1-1', nama: 'KRS Semester Berjalan (Lulus >= 120 SKS)', file: 'KRS_Dinda_Ganjil_2026.pdf', status: 'Lengkap', catatan: 'Total 138 SKS tempuh' },
+      { id: 'b1-2', nama: 'Lembar Persetujuan Seminar Proposal dari Pembimbing', file: 'ACC_Sempro_Pembimbing.pdf', status: 'Lengkap', catatan: 'Disetujui 29 September 2026' },
+      { id: 'b1-3', nama: 'Sertifikat TOEFL Skor >= 450 (Pusat Bahasa UTM)', file: 'TOEFL_Dinda_480.pdf', status: 'Lengkap', catatan: 'Skor 480' },
+      { id: 'b1-4', nama: 'Bukti Cek Turnitin (<= 30%)', file: 'Turnitin_19_Persen.pdf', status: 'Lengkap', catatan: 'Similarity 19%' },
+      { id: 'b1-5', nama: 'Kartu Bimbingan Minimal 8 Kali Tatap Muka', file: 'Logbook_Bimbingan_8x.pdf', status: 'Lengkap', catatan: '8 sesi tervalidasi' },
+      { id: 'b1-6', nama: 'Naskah Proposal Skripsi Rangkap 3', file: 'Proposal_Skripsi_Dinda_vFinal.pdf', status: 'Lengkap', catatan: '' }
+    ],
+    catatanAdmin: 'Berkas lengkap dan memenuhi seluruh persyaratan akademik pedoman TA 2026. Direkomendasikan segera dialokasikan jadwal & ruangan.'
+  },
+  {
+    id: 'berkas-s1-takk',
+    mhsId: 'mhs-s1-takk',
+    nim: '210211100219',
+    namaMahasiswa: 'Moh. Fikri Haikal',
+    jenjang: 'S1',
+    programStudi: 'S-1 Manajemen',
+    jenisUjian: 'Ujian Sidang Komprehensif (TAKK)',
+    tanggalDaftar: '04 Oktober 2026',
+    statusVerifikasi: 'Menunggu Verifikasi',
+    pembimbingUtama: 'Dr. Dra. Hj. Iriani Ismail, M.M.',
+    kopromotor: '-',
+    judul: 'Analisis Kelayakan Bisnis dan Strategi Pemasaran Digital Berbasis Ekosistem UMKM Sentra Olahan Salak Bangkalan',
+    berkasList: [
+      { id: 'bt-1', nama: 'KRS Semester Berjalan (Lulus >= 120 SKS)', file: 'KRS_Fikri_Ganjil_2026.pdf', status: 'Lengkap', catatan: 'Total 124 SKS tempuh' },
+      { id: 'bt-2', nama: 'Sertifikat TOEFL Skor >= 450 (Pusat Bahasa UTM)', file: 'TOEFL_Fikri_460.pdf', status: 'Lengkap', catatan: 'Skor 460' },
+      { id: 'bt-3', nama: 'Bukti Cek Turnitin (<= 30%)', file: 'Turnitin_TAKK_Fikri.pdf', status: 'Lengkap', catatan: 'Similarity 22%' },
+      { id: 'bt-4', nama: 'Kartu Bimbingan Skema Khusus (>= 8 Sesi)', file: 'Logbook_TAKK_8x.pdf', status: 'Lengkap', catatan: '8 sesi tervalidasi' },
+      { id: 'bt-5', nama: 'Laporan Kasus Bisnis Komprehensif / Portofolio Terapan', file: 'Laporan_Komprehensif_Fikri.pdf', status: 'Menunggu Verifikasi', catatan: 'Naskah final portofolio bisnis' },
+      { id: 'bt-6', nama: 'Lembar Persetujuan Pembimbing Skema TAKK', file: 'ACC_Ujian_TAKK_Pembimbing.pdf', status: 'Lengkap', catatan: 'ACC Pembimbing Utama' }
+    ],
+    catatanAdmin: 'Menunggu verifikasi laporan portofolio terapan skema TAKK oleh staf akademik.'
+  },
+  {
+    id: 'berkas-s2-01',
+    mhsId: 'mhs-s2-1',
+    nim: '220221100089',
+    namaMahasiswa: 'Rahmat Hidayat, S.E.',
+    jenjang: 'S2',
+    programStudi: 'S-2 Magister Manajemen',
+    jenisUjian: 'Ujian Tesis (Sidang Akhir)',
+    tanggalDaftar: '01 Oktober 2026',
+    statusVerifikasi: 'Perlu Perbaikan',
+    pembimbingUtama: 'Prof. Dr. Pribanus Wantara, Drs., M.M.',
+    kopromotor: 'Dr. Faidal, S.E., M.M.',
+    judul: 'Strategi Transformasi Digital Rantai Pasok Garam Rakyat Madura Berbasis Model Pentahelix Guna Meningkatkan Daya Saing Industri',
+    berkasList: [
+      { id: 'b2-1', nama: 'Formulir Pendaftaran Ujian Tesis', file: 'Form_Daftar_Tesis.pdf', status: 'Lengkap', catatan: '' },
+      { id: 'b2-2', nama: 'Berita Acara Seminar Hasil Tesis', file: 'BA_Semhas_Tesis.pdf', status: 'Lengkap', catatan: 'Lulus dengan revisi' },
+      { id: 'b2-3', nama: 'Sertifikat TOEFL Skor >= 475', file: 'TOEFL_Rahmat_485.pdf', status: 'Lengkap', catatan: 'Skor 485' },
+      { id: 'b2-4', nama: 'Hasil Uji Turnitin Naskah Tesis (<= 25%)', file: 'Turnitin_Tesis_Rahmat.pdf', status: 'Perlu Perbaikan', catatan: 'Similarity 27% (Melebihi ambang batas maksimal S2 yaitu 25%)' },
+      { id: 'b2-5', nama: 'Bukti Submit / LoA Artikel Jurnal Nasional Sinta 2', file: 'LoA_Jurnal_Sinta_2.pdf', status: 'Lengkap', catatan: 'Jurnal Manajemen Terapan' },
+      { id: 'b2-6', nama: 'Naskah Tesis Lengkap Rangkap 4', file: 'Draft_Tesis_Rahmat_v3.pdf', status: 'Lengkap', catatan: '' }
+    ],
+    catatanAdmin: 'Hasil Turnitin masih 27%, wajib diturunkan hingga maksimal 25% sesuai pedoman S2 sebelum berkas disetujui untuk penjadwalan ujian.'
+  },
+  {
+    id: 'berkas-d3-01',
+    mhsId: 'mhs-d3-1',
+    nim: '230201100021',
+    namaMahasiswa: 'Siti Nurhaliza',
+    jenjang: 'D3',
+    programStudi: 'D-3 Entrepreneurship',
+    jenisUjian: 'Ujian Sidang Tugas Akhir Bisnis',
+    tanggalDaftar: '04 Oktober 2026',
+    statusVerifikasi: 'Menunggu Verifikasi',
+    pembimbingUtama: 'Dr. Dra. Hj. Iriani Ismail, M.M.',
+    kopromotor: '-',
+    judul: 'Laporan Perancangan dan Implementasi Business Plan Usaha Kuliner Tradisional Bebek Sinjay Modern dengan Skema Kemitraan Waralaba',
+    berkasList: [
+      { id: 'bd-1', nama: 'KRS SKS Lulus Magang Industri & Teori (>= 100 SKS)', file: 'Transkrip_D3_Siti.pdf', status: 'Lengkap', catatan: '106 SKS' },
+      { id: 'bd-2', nama: 'Laporan Portofolio & Kelayakan Usaha Bisnis', file: 'Portofolio_Bisnis_Bebek.pdf', status: 'Lengkap', catatan: 'Laporan finansial & omzet disertakan' },
+      { id: 'bd-3', nama: 'Surat Persetujuan Ujian dari Pembimbing Usaha', file: 'ACC_Ujian_D3_Pembimbing.pdf', status: 'Lengkap', catatan: '' },
+      { id: 'bd-4', nama: 'Bebas Tanggungan Biaya Praktikum & Laboratorium', file: 'Bebas_Lab_FEB.pdf', status: 'Lengkap', catatan: '' }
+    ],
+    catatanAdmin: ''
+  }
+];
+
+// Master Dokumen Surat Keputusan (SK) Resmi Institusi
+export const INITIAL_SK_DOKUMEN = [
+  {
+    id: 'sk-001',
+    nomorSK: '142/UN46.1.4/PK.01.03/2026',
+    jenisSK: 'SK Pembimbing / Promotor',
+    jenjang: 'S3',
+    programStudi: 'S-3 Ilmu Manajemen',
+    mahasiswaNIM: '220231600004',
+    mahasiswaNama: 'Bambang Suryo Utomo, S.E., M.M.',
+    judulTA: 'Model Determinan Dynamic Capabilities Terhadap Ketahanan Usaha Berkelanjutan Berbasis Kearifan Lokal Madura',
+    dosenTerkait: [
+      { peran: 'Promotor Utama', nama: 'Prof. Dr. Pribanus Wantara, Drs., M.M.', nip: '196306231989031002' },
+      { peran: 'Kopromotor', nama: 'Dr. Dra. Hj. Iriani Ismail, M.M.', nip: '196201081987032001' }
+    ],
+    tanggalTerbit: '15 September 2026',
+    penandatangan: 'Prof. Dr. Slamet Riyadi, S.E., M.Si. (Dekan FEB UTM)',
+    status: 'Diterbitkan',
+    filePdf: 'SK_Promotor_Bambang_Suryo_142_2026.pdf'
+  },
+  {
+    id: 'sk-002',
+    nomorSK: '156/UN46.1.4/PK.01.03/2026',
+    jenisSK: 'SK Dewan Penguji Ujian',
+    jenjang: 'S1',
+    programStudi: 'S-1 Manajemen',
+    mahasiswaNIM: '210211100142',
+    mahasiswaNama: 'Dinda Ayu Larasati',
+    judulTA: 'Pengaruh Live Commerce Interactive Features dan Emotional Value Terhadap Keputusan Pembelian Spontan Produk Batik Madura',
+    dosenTerkait: [
+      { peran: 'Ketua Penguji', nama: 'Dr. Faidal, S.E., M.M.', nip: '197703032003121002' },
+      { peran: 'Sekretaris / Pembimbing', nama: 'Dra. Hj. S. Anugrahini Irawati, M.M.', nip: '196203031988032001' },
+      { peran: 'Anggota Penguji', nama: 'Aprilina Susandini, S.E., M.SM.', nip: '198704162015042005' }
+    ],
+    tanggalTerbit: '01 Oktober 2026',
+    penandatangan: 'Dr. Moh. Zainuddin, S.E., M.E. (Wakil Dekan I Bidang Akademik)',
+    status: 'Diterbitkan',
+    filePdf: 'SK_Penguji_Sempro_Dinda_Ayu_156_2026.pdf'
+  },
+  {
+    id: 'sk-003',
+    nomorSK: '160/UN46.1.4/PK.01.03/2026',
+    jenisSK: 'SK Pembimbing / Promotor',
+    jenjang: 'S1',
+    programStudi: 'S-1 Manajemen',
+    mahasiswaNIM: '210211100098',
+    mahasiswaNama: 'Achmad Farhan Maulana',
+    judulTA: 'Analisis Valuasi Saham Sektor Energi Terbarukan Menggunakan Pendekatan Discounted Cash Flow di Bursa Efek Indonesia',
+    dosenTerkait: [
+      { peran: 'Pembimbing Utama', nama: 'Dr. Faidal, S.E., M.M.', nip: '197703032003121002' }
+    ],
+    tanggalTerbit: '03 Oktober 2026',
+    penandatangan: 'Prof. Dr. Slamet Riyadi, S.E., M.Si. (Dekan FEB UTM)',
+    status: 'Diterbitkan',
+    filePdf: 'SK_Pembimbing_Farhan_160_2026.pdf'
+  }
+];
+
+// Master Daftar Ruangan Ujian Resmi FEB UTM
+export const MASTER_RUANGAN = [
+  { id: 'ruang-1', kode: 'RS-FEB-201', nama: 'R. Sidang Dekanat FEB (Lt. 2 RKB)', kapasitas: 20, tipe: 'Luring', fasilitas: 'Smart TV, Proyektor, AC, Sound System, Mic Meja' },
+  { id: 'ruang-2', kode: 'RS-PASCA-301', nama: 'R. Sidang Pascasarjana (Gedung Graha Lt. 3)', kapasitas: 25, tipe: 'Luring', fasilitas: 'Podium Disertasi, Video Conference Polycom, AC, TV Display 75"' },
+  { id: 'ruang-3', kode: 'RS-RKB-E201', nama: 'R. Seminar Jurusan Manajemen E-201', kapasitas: 30, tipe: 'Luring', fasilitas: 'Proyektor HD, AC, Podium Presentasi, Papan Tulis' },
+  { id: 'ruang-4', kode: 'AUD-FEB-300', nama: 'Auditorium Ujian Terbuka FEB (Lt. 3)', kapasitas: 150, tipe: 'Luring', fasilitas: 'Panggung Senat, LED Screen 4x3m, Sound System Profesional' },
+  { id: 'ruang-5', kode: 'ZOOM-PASCA-01', nama: 'Zoom Meeting Pascasarjana FEB 01 (Virtual)', kapasitas: 100, tipe: 'Daring', fasilitas: 'Cloud Recording, Host Admin Standby, Breakout Room' },
+  { id: 'ruang-6', kode: 'ZOOM-FEB-02', nama: 'Zoom Meeting FEB UTM 02 (Virtual)', kapasitas: 100, tipe: 'Daring', fasilitas: 'Cloud Recording, Co-host Support' }
+];
+
+// Alokasi Jadwal Ruangan Ujian (Termasuk deteksi tumpang tindih waktu)
+export const INITIAL_RUANGAN_UJIAN = [
+  {
+    id: 'plot-01',
+    ujianId: 'uj-01',
+    namaMahasiswa: 'Bambang Suryo Utomo, S.E., M.M.',
+    nim: '220231600004',
+    jenjang: 'S3',
+    jenisUjian: 'Ujian Tertutup Disertasi',
+    ruangId: 'ruang-2',
+    ruangNama: 'R. Sidang Pascasarjana (Gedung Graha Lt. 3)',
+    tanggal: '2026-10-12',
+    jamMulai: '09:00',
+    jamSelesai: '12:00',
+    moda: 'Luring',
+    ketuaPenguji: 'Prof. Dr. Pribanus Wantara, Drs., M.M.',
+    status: 'Terkonfirmasi',
+    catatan: 'Siapkan 7 naskah disertasi & hidangan sidang doktoral'
+  },
+  {
+    id: 'plot-02',
+    namaMahasiswa: 'Dinda Ayu Larasati',
+    nim: '210211100142',
+    jenjang: 'S1',
+    jenisUjian: 'Seminar Proposal Skripsi',
+    ruangId: 'ruang-3',
+    ruangNama: 'R. Seminar Jurusan Manajemen E-201',
+    tanggal: '2026-10-13',
+    jamMulai: '10:00',
+    jamSelesai: '11:30',
+    moda: 'Luring',
+    ketuaPenguji: 'Dr. Faidal, S.E., M.M.',
+    status: 'Terkonfirmasi',
+    catatan: 'Mahasiswa wajib membawa lembar berita acara & rubrik nilai'
+  },
+  {
+    id: 'plot-03',
+    namaMahasiswa: 'Rahmat Hidayat, S.E.',
+    nim: '220221100089',
+    jenjang: 'S2',
+    jenisUjian: 'Seminar Hasil Tesis',
+    ruangId: 'ruang-5',
+    ruangNama: 'Zoom Meeting Pascasarjana FEB 01 (Virtual)',
+    tanggal: '2026-10-14',
+    jamMulai: '13:00',
+    jamSelesai: '15:00',
+    moda: 'Daring',
+    ketuaPenguji: 'Prof. Dr. Pribanus Wantara, Drs., M.M.',
+    status: 'Terkonfirmasi',
+    catatan: 'Link Zoom akan dikirim via email H-1 pelaksanaan'
+  }
+];
+
+// Jadwal & Linimasa Periode Tahapan Akademik (Multi-Jenjang D3, S1, S2, S3)
+export const INITIAL_JADWAL_TAHAPAN = [
+  {
+    id: 'jadwal-d3-01',
+    jenjang: 'D3',
+    prodi: 'D-3 Entrepreneurship',
+    tahapKode: 'D3-T1',
+    tahapNama: 'Pengajuan Ide & Topik Proyek Bisnis',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-09-01',
+    tanggalSelesai: '2026-09-20',
+    jamDeadline: '23:59',
+    status: 'Ditutup',
+    moda: 'Daring via SIM-TA',
+    targetMahasiswa: 90,
+    terdaftarMahasiswa: 88,
+    persyaratanRingkas: 'Lulus >= 90 SKS, Form Usulan Bisnis disetujui Dosen Pembina',
+    catatanSOP: 'Persetujuan kelayakan ide usaha oleh Koorprodi.',
+    penanggungJawab: 'Subbag Akademik D3'
+  },
+  {
+    id: 'jadwal-d3-02',
+    jenjang: 'D3',
+    prodi: 'D-3 Entrepreneurship',
+    tahapKode: 'D3-T2',
+    tahapNama: 'Pendampingan & Inkubasi Usaha Lapangan',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-09-25',
+    tanggalSelesai: '2026-11-15',
+    jamDeadline: '23:59',
+    status: 'Sedang Dibuka',
+    moda: 'Hybrid',
+    targetMahasiswa: 90,
+    terdaftarMahasiswa: 82,
+    persyaratanRingkas: 'Minimal 6 kali asistensi inkubator bisnis, logbook omzet & pemasaran',
+    catatanSOP: 'Wajib mengunggah lembar logbook berkala setiap dua pekan.',
+    penanggungJawab: 'Subbag Akademik D3'
+  },
+  {
+    id: 'jadwal-d3-03',
+    jenjang: 'D3',
+    prodi: 'D-3 Entrepreneurship',
+    tahapKode: 'D3-T3',
+    tahapNama: 'Ujian Sidang Tugas Akhir & Gelar Produk',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-11-20',
+    tanggalSelesai: '2026-12-15',
+    jamDeadline: '16:00',
+    status: 'Akan Datang',
+    moda: 'Luring Gedung RKB Lt. 2',
+    targetMahasiswa: 85,
+    terdaftarMahasiswa: 0,
+    persyaratanRingkas: 'Laporan portofolio final, sertifikat TOEFL >= 400, sampel produk usaha',
+    catatanSOP: 'Gelar produk usaha dilaksanakan di lobi Gedung RKB bersama dewan penguji.',
+    penanggungJawab: 'Subbag Akademik D3'
+  },
+  {
+    id: 'jadwal-s1-01',
+    jenjang: 'S1',
+    prodi: 'S-1 Manajemen',
+    tahapKode: 'S1-T1',
+    tahapNama: 'Pengajuan Topik & Plotting Pembimbing',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-08-15',
+    tanggalSelesai: '2026-09-10',
+    jamDeadline: '23:59',
+    status: 'Ditutup',
+    moda: 'Daring via SIM-TA',
+    targetMahasiswa: 250,
+    terdaftarMahasiswa: 242,
+    persyaratanRingkas: 'KRS Aktif, Lulus >= 120 SKS, IPK >= 2.75, mengajukan 2 usulan topik',
+    catatanSOP: 'SK Pembimbing Utama diterbitkan setelah plotting Koorprodi disetujui.',
+    penanggungJawab: 'Subbag Akademik FEB UTM'
+  },
+  {
+    id: 'jadwal-s1-02',
+    jenjang: 'S1',
+    prodi: 'S-1 Manajemen',
+    tahapKode: 'S1-T2',
+    tahapNama: 'Seminar Proposal (Sempro)',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-10-01',
+    tanggalSelesai: '2026-10-28',
+    jamDeadline: '23:59',
+    status: 'Sedang Dibuka',
+    moda: 'Luring Gedung RKB Lt. 2 & 3',
+    targetMahasiswa: 200,
+    terdaftarMahasiswa: 146,
+    persyaratanRingkas: 'Proposal Bab I-III disetujui Dosen Pembimbing, Bebas Tanggungan SPP',
+    catatanSOP: 'Pendaftaran berkas verifikasi dibuka setiap hari kerja pukul 08:00 - 15:00 WIB.',
+    penanggungJawab: 'Subbag Akademik FEB UTM'
+  },
+  {
+    id: 'jadwal-s1-03',
+    jenjang: 'S1',
+    prodi: 'S-1 Manajemen',
+    tahapKode: 'S1-T3',
+    tahapNama: 'Penelitian & Bimbingan Berkala',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-10-15',
+    tanggalSelesai: '2026-12-10',
+    jamDeadline: '23:59',
+    status: 'Sedang Dibuka',
+    moda: 'Hybrid',
+    targetMahasiswa: 220,
+    terdaftarMahasiswa: 175,
+    persyaratanRingkas: 'Minimal 8 kali bimbingan terekam di sistem, Turnitin naskah <= 25%',
+    catatanSOP: 'Mahasiswa wajib membawa lembar konsultasi tercetak saat verifikasi ujian.',
+    penanggungJawab: 'Subbag Akademik FEB UTM'
+  },
+  {
+    id: 'jadwal-s1-04',
+    jenjang: 'S1',
+    prodi: 'S-1 Manajemen',
+    tahapKode: 'S1-T4',
+    tahapNama: 'Sidang Ujian Skripsi / TAKK Final',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-11-10',
+    tanggalSelesai: '2026-12-22',
+    jamDeadline: '15:00',
+    status: 'Akan Datang',
+    moda: 'Luring Gedung RKB',
+    targetMahasiswa: 180,
+    terdaftarMahasiswa: 0,
+    persyaratanRingkas: 'Lulus seluruh mata kuliah (>=144 SKS), TOEFL >= 450, Turnitin <= 25%, Draft Artikel Publikasi',
+    catatanSOP: 'Pendaftaran sidang skripsi ditutup 5 hari kerja sebelum tanggal ujian periode berjalan.',
+    penanggungJawab: 'Subbag Akademik FEB UTM'
+  },
+  {
+    id: 'jadwal-s2-01',
+    jenjang: 'S2',
+    prodi: 'S-2 Magister Manajemen',
+    tahapKode: 'S2-T1',
+    tahapNama: 'Penetapan Pembimbing & Ujian Proposal Tesis',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-09-01',
+    tanggalSelesai: '2026-09-25',
+    jamDeadline: '23:59',
+    status: 'Ditutup',
+    moda: 'Daring via SIM-TA',
+    targetMahasiswa: 50,
+    terdaftarMahasiswa: 48,
+    persyaratanRingkas: 'Lulus Teori Dasar (>= 24 SKS), Draft Usulan Tesis disetujui Calon Pembimbing',
+    catatanSOP: 'Penerbitan SK Pembimbing Tesis oleh Dekan FEB UTM.',
+    penanggungJawab: 'Subbag Pascasarjana FEB UTM'
+  },
+  {
+    id: 'jadwal-s2-02',
+    jenjang: 'S2',
+    prodi: 'S-2 Magister Manajemen',
+    tahapKode: 'S2-T2',
+    tahapNama: 'Penelitian Lapangan & Penulisan Tesis',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-09-26',
+    tanggalSelesai: '2026-11-30',
+    jamDeadline: '23:59',
+    status: 'Sedang Dibuka',
+    moda: 'Hybrid',
+    targetMahasiswa: 50,
+    terdaftarMahasiswa: 44,
+    persyaratanRingkas: 'Minimal 10 kali bimbingan terdata di SIM-TA, pengumpulan data empiris',
+    catatanSOP: 'Monitoring berkala progres bab IV dan bab V bersama pembimbing.',
+    penanggungJawab: 'Subbag Pascasarjana FEB UTM'
+  },
+  {
+    id: 'jadwal-s2-03',
+    jenjang: 'S2',
+    prodi: 'S-2 Magister Manajemen',
+    tahapKode: 'S2-T3',
+    tahapNama: 'Seminar Hasil Tesis (Semhas)',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-10-05',
+    tanggalSelesai: '2026-11-10',
+    jamDeadline: '23:59',
+    status: 'Sedang Dibuka',
+    moda: 'Hybrid (Graha Lt. 3 / Zoom)',
+    targetMahasiswa: 45,
+    terdaftarMahasiswa: 31,
+    persyaratanRingkas: 'Naskah Bab I-V lengkap, Turnitin <= 25%, TOEFL >= 475, bukti submit artikel Sinta 2',
+    catatanSOP: 'Ujian dihadiri tim 3 penguji dan pembimbing tesis.',
+    penanggungJawab: 'Subbag Pascasarjana FEB UTM'
+  },
+  {
+    id: 'jadwal-s2-04',
+    jenjang: 'S2',
+    prodi: 'S-2 Magister Manajemen',
+    tahapKode: 'S2-T4',
+    tahapNama: 'Ujian Tesis (Sidang Tertutup Magister)',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-11-15',
+    tanggalSelesai: '2026-12-20',
+    jamDeadline: '16:00',
+    status: 'Akan Datang',
+    moda: 'Luring Ruang Graha Pascasarjana',
+    targetMahasiswa: 40,
+    terdaftarMahasiswa: 0,
+    persyaratanRingkas: 'Revisi Semhas tuntas, LoA Artikel Jurnal Sinta 2 / Prosiding Internasional, Lunas SPP',
+    catatanSOP: 'Batas akhir pengumpulan naskah jilid lux 2 pekan setelah ujian dinyatakan lulus.',
+    penanggungJawab: 'Subbag Pascasarjana FEB UTM'
+  },
+  {
+    id: 'jadwal-s3-01',
+    jenjang: 'S3',
+    prodi: 'S-3 Doktor Ilmu Manajemen',
+    tahapKode: 'S3-T2',
+    tahapNama: 'Ujian Kualifikasi Doktoral',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-08-20',
+    tanggalSelesai: '2026-09-15',
+    jamDeadline: '23:59',
+    status: 'Ditutup',
+    moda: 'Luring Ruang Sidang Pascasarjana',
+    targetMahasiswa: 15,
+    terdaftarMahasiswa: 15,
+    persyaratanRingkas: 'Lulus mata kuliah keahlian (>=18 SKS), penguasaan teori fundamental manajemen',
+    catatanSOP: 'Penerbitan Surat Keterangan Lulus Kualifikasi oleh Ketua Program Studi S3.',
+    penanggungJawab: 'Sekretariat Pascasarjana S3'
+  },
+  {
+    id: 'jadwal-s3-02',
+    jenjang: 'S3',
+    prodi: 'S-3 Doktor Ilmu Manajemen',
+    tahapKode: 'S3-T4',
+    tahapNama: 'Ujian Kelayakan (Desk Review Naskah Disertasi)',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-09-15',
+    tanggalSelesai: '2026-10-05',
+    jamDeadline: '23:59',
+    status: 'Ditutup',
+    moda: 'Daring via SIM-TA (Reviewer Independen)',
+    targetMahasiswa: 12,
+    terdaftarMahasiswa: 12,
+    persyaratanRingkas: 'Draft Disertasi lengkap disetujui Promotor & Kopromotor, nilai desk review min 70',
+    catatanSOP: 'Review buta (blind review) oleh 3 penilai independen dari universitas mitra.',
+    penanggungJawab: 'Sekretariat Pascasarjana S3'
+  },
+  {
+    id: 'jadwal-s3-03',
+    jenjang: 'S3',
+    prodi: 'S-3 Doktor Ilmu Manajemen',
+    tahapKode: 'S3-T6',
+    tahapNama: 'Ujian Tertutup Disertasi (Sidang Tertutup)',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-10-01',
+    tanggalSelesai: '2026-10-31',
+    jamDeadline: '23:59',
+    status: 'Sedang Dibuka',
+    moda: 'Luring Ruang Sidang Graha Lt. 3',
+    targetMahasiswa: 10,
+    terdaftarMahasiswa: 6,
+    persyaratanRingkas: 'Nilai kelayakan >= 70, Turnitin <= 20%, TOEFL >= 500, LoA Scopus Q1/Q2, 7 eksemplar naskah',
+    catatanSOP: 'Sidang formal dipimpin Dekan FEB UTM didampingi Promotor dan 5 dewan penguji.',
+    penanggungJawab: 'Sekretariat Pascasarjana S3'
+  },
+  {
+    id: 'jadwal-s3-04',
+    jenjang: 'S3',
+    prodi: 'S-3 Doktor Ilmu Manajemen',
+    tahapKode: 'S3-T7',
+    tahapNama: 'Ujian Terbuka / Promosi Doktoral',
+    semester: 'Ganjil 2026/2027',
+    tanggalMulai: '2026-11-15',
+    tanggalSelesai: '2026-12-15',
+    jamDeadline: '12:00',
+    status: 'Akan Datang',
+    moda: 'Luring Aula Graha Utama UTM',
+    targetMahasiswa: 8,
+    terdaftarMahasiswa: 0,
+    persyaratanRingkas: 'Revisi Ujian Tertutup disetujui seluruh penguji, Surat Rekomendasi Promosi dari Promotor',
+    catatanSOP: 'Rapat senat terbuka pengukuhan gelar Doktor Ilmu Manajemen.',
+    penanggungJawab: 'Sekretariat Pascasarjana S3'
+  }
+];
+
